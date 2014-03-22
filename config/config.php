@@ -44,6 +44,7 @@ return array(
         array(
             'title' => __('Search'),
             'name' => 'search'
+        ),
         array(
             'title' => __('Texts'),
             'name' => 'text'
