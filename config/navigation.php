@@ -10,4 +10,51 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-return array();
+return array(
+    'front'   => array(),
+    'admin' => array(
+        'item' => array(
+            'label'         => _t('Item'),
+            'permission'    => array(
+                'resource'  => 'item',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guild',
+            'controller'    => 'item',
+            'action'        => 'index',
+        ),
+
+        'category' => array(
+            'label'         => _t('Category'),
+            'permission'    => array(
+                'resource'  => 'category',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guild',
+            'controller'    => 'category',
+            'action'        => 'index',
+        ),
+
+        'location' => array(
+            'label'         => _t('Location'),
+            'permission'    => array(
+                'resource'  => 'location',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guild',
+            'controller'    => 'location',
+            'action'        => 'index',
+        ),
+
+        'log' => array(
+            'label'         => _t('Logs'),
+            'permission'    => array(
+                'resource'  => 'log',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guild',
+            'controller'    => 'log',
+            'action'        => 'index',
+        ),
+    ),
+);

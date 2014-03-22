@@ -33,9 +33,9 @@ return array(
     'resource' => array(
         'database'      => 'database.php',
         'config'        => 'config.php',
-        //'permission'    => 'permission.php',
-        //'page'          => 'page.php',
-        //'navigation'    => 'navigation.php',
+        'permission'    => 'permission.php',
+        'page'          => 'page.php',
+        'navigation'    => 'navigation.php',
         //'block'         => 'block.php',
         //'route'         => 'route.php',
         //'comment'       => 'comment.php',

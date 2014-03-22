@@ -10,4 +10,26 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-return array();
+return array(
+    // Admin section
+    'admin' => array(
+        array(
+            'controller'    => 'item',
+            'permission'    => 'item',
+        ),
+        array(
+            'controller'    => 'category',
+            'permission'    => 'category',
+        ),
+        array(
+            'controller'    => 'location',
+            'permission'    => 'location',
+        ),
+        array(
+            'controller'    => 'log',
+            'permission'    => 'log',
+        ),
+    ),
+    // Front section
+    'front' => array(),
+);
