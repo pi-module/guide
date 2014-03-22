@@ -188,7 +188,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'string',
-            'value' => 'guild/image'
+            'value' => 'guide/image'
         ),
         'image_extension' => array(
             'category' => 'image',
@@ -328,7 +328,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'string',
-            'value' => 'guild'
+            'value' => 'guide'
         ),
         'file_extension' => array(
             'category' => 'file',

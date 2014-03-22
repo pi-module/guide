@@ -12,13 +12,13 @@
  */
 return array(
     // route name
-    'guild'  => array(
-        'name'      => 'guild',
-        'type'      => 'Module\Guild\Route\Guild',
+    'guide'  => array(
+        'name'      => 'guide',
+        'type'      => 'Module\Guide\Route\Guide',
         'options'   => array(
-            'route'     => '/guild',
+            'route'     => '/guide',
             'defaults'  => array(
-                'module'        => 'guild',
+                'module'        => 'guide',
                 'controller'    => 'index',
                 'action'        => 'index'
             )
