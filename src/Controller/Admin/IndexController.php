@@ -19,11 +19,9 @@ class IndexController extends ActionController
 {
     public function indexAction()
     {
-        $test = array(
-        	'Index Controller',
-        );
-        // Set view
-        $this->view()->setTemplate('empty');
-        $this->view()->assign('test', $test);
+        return $this->redirect()->toRoute('', array(
+            'controller' => 'item',
+            'action'     => 'index',
+        ));
     }
 }
