@@ -63,3 +63,9 @@ CREATE TABLE `{blog}` (
 
     PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `{log}` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+
+    PRIMARY KEY (`id`)
+);
