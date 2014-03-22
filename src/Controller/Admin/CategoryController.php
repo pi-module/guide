@@ -15,12 +15,12 @@ namespace Module\Guild\Controller\Admin;
 use Pi;
 use Pi\Mvc\Controller\ActionController;
 
-class IndexController extends ActionController
+class CategoryController extends ActionController
 {
     public function indexAction()
     {
         $test = array(
-        	'Index Controller',
+        	'Category Controller',
         );
         // Set view
         $this->view()->setTemplate('empty');
