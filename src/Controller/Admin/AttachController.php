@@ -54,10 +54,6 @@ class AttachController extends ActionController
                 $file[$row->id]['link'] = Pi::url('upload/' . $this->config('file_path') . '/' . $file[$row->id]['type'] . '/' . $file[$row->id]['path'] . '/' . $file[$row->id]['file']);
             }
         }
-        // Go to update page if empty
-        if (empty($file)) {
-            $this->jump(array('controller' => 'item', 'action' => 'index'), __('No file attached'));
-        }
         // Set paginator
         $columns = array('count' => new \Zend\Db\Sql\Predicate\Expression('count(*)'));
         $select = $this->getModel('attach')->select()->columns($columns)->where($where);
