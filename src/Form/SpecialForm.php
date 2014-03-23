@@ -15,19 +15,22 @@ namespace Module\Guide\Form;
 use Pi;
 use Pi\Form\Form as BaseForm;
 
-class AttachForm extends BaseForm
+class SpecialForm extends BaseForm
 {
-    public function __construct($name = null, $item)
+    public function __construct($name = null)
     {
         $this->module = Pi::service('module')->current();
-        $this->item = $item;
+        $this->category = array(
+            -1 => __('Home Page'),
+            0 => __('All Category'),
+        );
         parent::__construct($name);
     }
 
     public function getInputFilter()
     {
         if (!$this->filter) {
-            $this->filter = new AttachFilter;
+            $this->filter = new SpecialFilter;
         }
         return $this->filter;
     }
@@ -41,17 +44,6 @@ class AttachForm extends BaseForm
                 'type' => 'hidden',
             ),
         ));
-        // title
-        $this->add(array(
-            'name' => 'title',
-            'options' => array(
-                'label' => __('Title'),
-            ),
-            'attributes' => array(
-                'type' => 'text',
-                'description' => '',
-            )
-        ));
         // item
         $this->add(array(
             'name' => 'item',
@@ -59,13 +51,36 @@ class AttachForm extends BaseForm
             'options' => array(
                 'label' => __('Item'),
                 'module' => $this->module,
-                'value' => $this->item,
             ),
             'attributes' => array(
+                'description' => __('Select item for add to Special'),
                 'size' => 1,
                 'multiple' => 0,
             ),
-
+        ));
+        // time_publish
+        $this->add(array(
+            'name' => 'time_publish',
+            'options' => array(
+                'label' => __('Publish date'),
+            ),
+            'attributes' => array(
+                'type' => 'date',
+                'value' => date('Y-m-d'),
+                'description' => '',
+            )
+        ));
+        // time_expire
+        $this->add(array(
+            'name' => 'time_expire',
+            'options' => array(
+                'label' => __('Expire date'),
+            ),
+            'attributes' => array(
+                'type' => 'date',
+                'value' => date('Y-m-d', strtotime('+1 week')),
+                'description' => '',
+            )
         ));
         // status
         $this->add(array(
@@ -74,8 +89,10 @@ class AttachForm extends BaseForm
             'options' => array(
                 'label' => __('Status'),
                 'value_options' => array(
-                    1 => __('Online'),
-                    0 => __('Offline'),
+                    1 => __('Published'),
+                    2 => __('Pending review'),
+                    3 => __('Draft'),
+                    4 => __('Private'),
                 ),
             ),
         ));

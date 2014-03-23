@@ -264,18 +264,6 @@ class Item extends AbstractApi
             'controller'    => 'item',
             'slug'          => $item['slug'],
         ));
-        // Set cart url
-        $item['cartUrl'] = Pi::service('url')->assemble('guide', array(
-            'module'        => $this->getModule(),
-            'controller'    => 'checkout',
-            'action'        => 'add',
-            'slug'          => $item['slug'],
-        ));
-        // Set price
-        $item['price_view'] = $this->viewPrice($item['price']);
-        $item['price_discount_view'] = $this->viewPrice($item['price_discount']);
-        // Set marketable
-        $item['marketable'] = $this->marketable($item);
         // Set image url
         if ($item['image']) {
             // Set image thumb url
@@ -287,7 +275,7 @@ class Item extends AbstractApi
                 ));
         }
         // unset
-        unset($item['category']);
+        /* unset($item['category']);
         unset($item['summary']);
         unset($item['description']);
         unset($item['seo_title']);
@@ -308,7 +296,7 @@ class Item extends AbstractApi
         unset($item['price_discount_view']);
         unset($item['uid']);
         unset($item['hits']);
-        unset($item['sales']);
+        unset($item['sales']); */
         // return item
         return $item; 
     }

@@ -1,0 +1,51 @@
+<?php $this->css($this->assetModule('css/admin.css')); ?>
+<div class="guide">
+	<h3><?php echo $this->escape($title); ?></h3>
+    <?php if(!empty($list)) { ?>
+    <div class="review-list">
+		<?php foreach($list as $review) { ?>
+		<div class="media well">
+            <span class="pull-left">
+                <?php echo Pi::avatar()->get($this->escape($review['userinfo']['id']), 'medium'); ?>
+            </span>
+        	<div class="media-body">
+        		<h4 class="media-heading"><?php echo $this->escape($review['title']); ?></h4>
+        		<div class="pull-left">
+        			<strong><?php _e('By'); ?></strong> : <?php echo $this->escape($review['userinfo']['name']); ?>
+        			<br />
+        			<strong><?php _e('On'); ?></strong> : <?php echo $this->escape($review['time_create_view']); ?>
+        		</div>
+        		<div class="pull-right">
+        			<?php if($review['status'] == 1) { ?>
+        			<span class="label label-success"><?php _e('Active'); ?></span>
+                    <?php } else { ?>
+        			<span class="label label-danger"><?php _e('Inactive'); ?></span>
+                    <?php } ?>
+        			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#info-view-<?php echo $this->escape($review['id']); ?>"><i class="fa fa-eye-open"></i> <?php _e('Preview'); ?></button>
+        			<a class="btn btn-primary" title="<?php _e('Edit'); ?>" href="<?php echo $this->url('', array('action' => 'update', 'id' => $review['id'])); ?>"><?php _e('Edit'); ?></a>
+        		</div>
+        		<div id="info-view-<?php echo $this->escape($review['id']); ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        			<div class="modal-header">
+            			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        				<h3 id="myModalLabel"><?php _e('Title'); ?> : <?php echo $this->escape($review['title']); ?></h3>
+        			</div>
+        			<div class="modal-body"><?php echo $this->escape($review['description']); ?></div>
+        			<div class="modal-footer">
+            			<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true"><?php _e('Close'); ?></button>
+        			</div>
+    			</div>
+        	</div>
+    	</div>
+        <?php } ?>
+    </div>
+    <?php } else { ?>
+    <div class="alert alert-danger">
+        <h4><?php _e('Error'); ?></h4>
+        <?php if(isset($item)  && !empty($item)) { ?>
+        <p><?php echo sprintf(__('No review send yet by users for %s'), $item['title']); ?></p>
+        <?php } else { ?>
+        <p><?php _e('No review send yet by users'); ?></p>
+        <?php } ?>
+    </div>
+    <?php } ?>
+</div>

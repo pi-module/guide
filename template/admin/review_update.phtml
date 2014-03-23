@@ -1,0 +1,10 @@
+<?php $this->css($this->assetModule('css/admin.css')); ?>
+<div class="guide">
+	<h3><?php echo $this->escape($title); ?></h3>
+	<?php if(isset($user) && !empty($user)) { ?>
+	<div class="review-user">
+		<?php echo sprintf(__('This review added by %s'), $user['name']); ?>
+	</div>
+	<?php } ?> 
+	<?php include $this->templateComponent('forms'); ?>
+</div>
