@@ -79,6 +79,17 @@ return array(
             'action'        => 'index',
         ),
 
+        'attach' => array(
+            'label'         => _t('Attach'),
+            'permission'    => array(
+                'resource'  => 'attach',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'attach',
+            'action'        => 'index',
+        ),
+
         'log' => array(
             'label'         => _t('Logs'),
             'permission'    => array(

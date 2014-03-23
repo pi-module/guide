@@ -38,6 +38,10 @@ return array(
             'permission'    => 'review',
         ),
         array(
+            'controller'    => 'attach',
+            'permission'    => 'attach',
+        ),
+        array(
             'controller'    => 'log',
             'permission'    => 'log',
         ),

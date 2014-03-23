@@ -59,6 +59,12 @@ return array(
                 //'admin',
             ),
         ),
+        'attach'         => array(
+            'title'         => __('Attach'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
         'log'            => array(
             'title'         => __('Logs'),
             'access'        => array(

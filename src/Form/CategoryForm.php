@@ -10,7 +10,6 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-
 namespace Module\Guide\Form;
 
 use Pi;
@@ -18,8 +17,6 @@ use Pi\Form\Form as BaseForm;
 
 class CategoryForm  extends BaseForm
 {
-    protected $thumbUrl = '';
-    
     public function __construct($name = null, $option = array())
     {
         $this->category = array(0 => '');
