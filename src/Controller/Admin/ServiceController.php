@@ -131,4 +131,14 @@ class ServiceController extends ActionController
         $this->view()->assign('form', $form);
         $this->view()->assign('title', __('Add a category'));
     }
+
+    public function listAction()
+    {
+        $this->view()->setTemplate('empty');
+    }
+
+    public function manageAction()
+    {
+        $this->view()->setTemplate('empty');
+    }
 }

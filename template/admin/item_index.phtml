@@ -39,7 +39,7 @@
 				<a class="btn btn-primary" title="<?php _e('View'); ?>" href="<?php echo $item['itemUrl']; ?>"><i class="fa fa-edit"></i> <?php _e('View'); ?></a>
 				<a class="btn btn-primary" title="<?php _e('Attach'); ?>" href="<?php echo $this->url('', array('controller' => 'attach', 'action' => 'add', 'id' => $item['id'])); ?>"><i class="fa fa-edit"></i> <?php _e('Attach'); ?></a>
 				<a class="btn btn-primary" title="<?php _e('Review'); ?>" href="<?php echo $this->url('', array('controller' => 'review', 'item' => $item['id'])); ?>"><i class="fa fa-edit"></i> <?php _e('Review'); ?></a>
-				<a class="btn btn-primary" title="<?php _e('Service'); ?>" href="#"><i class="fa fa-edit"></i> <?php _e('Service'); ?></a>
+				<a class="btn btn-primary" title="<?php _e('Service'); ?>" href="<?php echo $this->url('', array('controller' => 'service', 'action' => 'list', 'item' => $item['id'])); ?>"><i class="fa fa-edit"></i> <?php _e('Service'); ?></a>
 				<a class="btn btn-primary" title="<?php _e('Edit'); ?>" href="<?php echo $this->url('', array('action' => 'update', 'id' => $item['id'])); ?>"><i class="fa fa-edit"></i> <?php _e('Edit'); ?></a>
 				<a class="btn btn-danger" title="<?php _e('Delete'); ?>" href="<?php echo $this->url('', array('action' => 'delete', 'id' => $item['id'])); ?>"><i class="fa fa-edit"></i> <?php _e('Delete'); ?></a>
 			</td>
@@ -55,22 +55,22 @@
 </div>
 <script type="text/javascript" >
 (function($){
-    $("#item-list").on("click","button",function(){
-       systemMessage.wait("<?php _e('Recommended in process'); ?>");
-       $.getJSON($(this).attr("data-link")).done(function(result){
-          if(result.ajaxstatus==1){
-          	 if(result.recommended==1){
-	          	 var buttonClass = 'fa fa-heart';
-          	 }
-          	 if(result.recommended==0){
-	          	 var buttonClass = 'fa fa-heart-o';
-          	 }
-          	 $('#button-' + result.id + ' i').attr('class', buttonClass);
-             systemMessage.succ(result.message);
-          }else{
-             systemMessage.fail(result.message);
-          }
-       });
-    });
+	$("#item-list").on("click","button",function(){
+		systemMessage.wait("<?php _e('Recommended in process'); ?>");
+		$.getJSON($(this).attr("data-link")).done(function(result){
+			if(result.ajaxstatus==1){
+        		if(result.recommended==1){
+	          		var buttonClass = 'fa fa-heart';
+        		}
+          		if(result.recommended==0){
+	          		var buttonClass = 'fa fa-heart-o';
+          		}
+          		$('#button-' + result.id + ' i').attr('class', buttonClass);
+        		systemMessage.succ(result.message);
+			}else{
+            	systemMessage.fail(result.message);
+        	}
+    	});
+	});
 })(jQuery)
 </script>
