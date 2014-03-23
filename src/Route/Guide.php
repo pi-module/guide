@@ -28,7 +28,7 @@ class Guide extends Standard
     );
 
     protected $controllerList = array(
-        'category', 'index'
+        'category', 'index', 'item'
     );
 
     /**
