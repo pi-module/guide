@@ -17,7 +17,7 @@ use Pi\Application\Api\AbstractApi;
 use Zend\Json\Json;
 
 /*
- * Pi::api('category', 'guide')->setLink($item, $category, $create, $update, $price, $stock, $status);
+ * Pi::api('category', 'guide')->setLink($item, $category, $create, $update, $start, $end, $status);
  * Pi::api('category', 'guide')->findFromCategory($category);
  * Pi::api('category', 'guide')->categoryList($parent);
  * Pi::api('category', 'guide')->categoryCount();
@@ -28,7 +28,7 @@ class Category extends AbstractApi
     /**
      * Set item category to link table
      */
-    public function setLink($item, $category, $create, $update, $price, $stock, $status)
+    public function setLink($item, $category, $create, $update, $start, $end, $status)
     {
         //Remove
         Pi::model('link', $this->getModule())->delete(array('item' => $item));
@@ -40,8 +40,8 @@ class Category extends AbstractApi
             $values['category'] = $category;
             $values['time_create'] = $create;
             $values['time_update'] = $update;
-            $values['price'] = $price;
-            $values['stock'] = ($stock > 0) ? 1 : 0;
+            $values['time_start'] = $start;
+            $values['time_end'] = ($end > 0) ? 1 : 0;
             $values['status'] = $status;
             // Save
             $row = Pi::model('link', $this->getModule())->createRow();
