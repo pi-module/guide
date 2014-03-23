@@ -26,6 +26,18 @@ return array(
             'permission'    => 'location',
         ),
         array(
+            'controller'    => 'extra',
+            'permission'    => 'extra',
+        ),
+        array(
+            'controller'    => 'special',
+            'permission'    => 'special',
+        ),
+        array(
+            'controller'    => 'review',
+            'permission'    => 'review',
+        ),
+        array(
             'controller'    => 'log',
             'permission'    => 'log',
         ),

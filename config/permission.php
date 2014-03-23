@@ -13,7 +13,7 @@
 return array(
     // Front section
     'front' => array(
-        'public'    => array(
+        'public'         => array(
             'title'         => _t('Global public resource'),
             'access'        => array(
                 'guest',
@@ -23,25 +23,43 @@ return array(
     ),
     // Admin section
     'admin' => array(
-        'item'        => array(
+        'item'           => array(
             'title'         => __('Item'),
             'access'        => array(
                 //'admin',
             ),
         ),
-        'category'      => array(
+        'category'       => array(
             'title'         => __('Category'),
             'access'        => array(
                 //'admin',
             ),
         ),
-        'location'         => array(
+        'location'       => array(
             'title'         => __('Location'),
             'access'        => array(
                 //'admin',
             ),
         ),
-        'log'  => array(
+        'extra'          => array(
+            'title'         => __('Extra'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
+        'special'        => array(
+            'title'         => __('Special'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
+        'review'         => array(
+            'title'         => __('Review'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
+        'log'            => array(
             'title'         => __('Logs'),
             'access'        => array(
                 //'admin',

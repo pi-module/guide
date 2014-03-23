@@ -46,6 +46,39 @@ return array(
             'action'        => 'index',
         ),
 
+        'extra' => array(
+            'label'         => _t('Extra'),
+            'permission'    => array(
+                'resource'  => 'extra',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'extra',
+            'action'        => 'index',
+        ),
+
+        'special' => array(
+            'label'         => _t('Special'),
+            'permission'    => array(
+                'resource'  => 'special',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'special',
+            'action'        => 'index',
+        ),
+
+        'review' => array(
+            'label'         => _t('Review'),
+            'permission'    => array(
+                'resource'  => 'review',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'review',
+            'action'        => 'index',
+        ),
+
         'log' => array(
             'label'         => _t('Logs'),
             'permission'    => array(
