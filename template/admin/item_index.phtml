@@ -31,7 +31,7 @@
 				<?php if($item['recommended'] == 1) { ?>
 				<button id="button-<?php echo $item['id']; ?>" type="button" class="btn btn-link" data-toggle="button" data-link="<?php echo $this->url('', array('action' => 'recommend', 'id' => $item['id'], 'recommended' => '0')); ?>" ><i class="fa fa-heart"></i></button>
 				<?php } else { ?>
-				<button id="button-<?php echo $item['id']; ?>" type="button" class="btn btn-link" data-toggle="button" data-link="<?php echo $this->url('', array('action' => 'recommend', 'id' => $item['id'], 'recommended' => '1')); ?>" ><i class="fa fa-heart-empty"></i></button>	
+				<button id="button-<?php echo $item['id']; ?>" type="button" class="btn btn-link" data-toggle="button" data-link="<?php echo $this->url('', array('action' => 'recommend', 'id' => $item['id'], 'recommended' => '1')); ?>" ><i class="fa fa-heart-o"></i></button>	
 				<?php } ?>
 				<?php echo $this->escape($item['title']); ?>
 			</td>
@@ -63,7 +63,7 @@
 	          	 var buttonClass = 'fa fa-heart';
           	 }
           	 if(result.recommended==0){
-	          	 var buttonClass = 'fa fa-heart-empty';
+	          	 var buttonClass = 'fa fa-heart-o';
           	 }
           	 $('#button-' + result.id + ' i').attr('class', buttonClass);
              systemMessage.succ(result.message);
