@@ -151,6 +151,8 @@ CREATE TABLE `{service}` (
 CREATE TABLE `{service_category}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
+    `time_create` int(10) unsigned NOT NULL,
+    `status` tinyint(1) unsigned NOT NULL,
     PRIMARY KEY (`id`)
 );
 

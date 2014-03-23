@@ -41,6 +41,12 @@ return array(
                 //'admin',
             ),
         ),
+        'service'        => array(
+            'title'         => __('Service'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
         'extra'          => array(
             'title'         => __('Extra'),
             'access'        => array(

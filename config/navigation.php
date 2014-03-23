@@ -46,6 +46,17 @@ return array(
             'action'        => 'index',
         ),
 
+        'service' => array(
+            'label'         => _t('Service'),
+            'permission'    => array(
+                'resource'  => 'service',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'service',
+            'action'        => 'index',
+        ),
+
         'extra' => array(
             'label'         => _t('Extra'),
             'permission'    => array(

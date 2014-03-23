@@ -26,6 +26,10 @@ return array(
             'permission'    => 'location',
         ),
         array(
+            'controller'    => 'service',
+            'permission'    => 'service',
+        ),
+        array(
             'controller'    => 'extra',
             'permission'    => 'extra',
         ),
