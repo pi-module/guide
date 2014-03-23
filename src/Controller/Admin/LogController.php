@@ -10,7 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-namespace Module\Guild\Controller\Admin;
+namespace Module\Guide\Controller\Admin;
 
 use Pi;
 use Pi\Mvc\Controller\ActionController;
