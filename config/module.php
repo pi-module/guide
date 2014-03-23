@@ -37,7 +37,7 @@ return array(
         'page'          => 'page.php',
         'navigation'    => 'navigation.php',
         //'block'         => 'block.php',
-        //'route'         => 'route.php',
+        'route'         => 'route.php',
         //'comment'       => 'comment.php',
     ),
 );
