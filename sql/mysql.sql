@@ -65,6 +65,7 @@ CREATE TABLE `{link}` (
 
 CREATE TABLE `{location}` (
     `id` int(10) unsigned NOT NULL auto_increment,
+    `category` int(5) unsigned NOT NULL,
     `parent` int(5) unsigned NOT NULL,
     `title` varchar(255) NOT NULL,
     `route` text,
@@ -75,8 +76,6 @@ CREATE TABLE `{location_category}` (
     `id` int (10) unsigned NOT NULL auto_increment,
     `parent` int(5) unsigned NOT NULL,
     `title` varchar(255) NOT NULL,
-    `time_create` int(10) unsigned NOT NULL,
-    `time_update` int(10) unsigned NOT NULL,
     PRIMARY KEY (`id`)
 );
 

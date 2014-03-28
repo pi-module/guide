@@ -1,0 +1,40 @@
+<?php $this->css($this->assetModule('css/admin.css')); ?>
+<div class="guide">
+	<h3><?php _e('List of all categories and locations'); ?></h3>
+	<div class="col-md-3">
+		<div class="list-group">
+		    <?php foreach($categoryList as $category) { ?>
+			<a href="<?php echo $this->escape($category['url']); ?>" class="list-group-item <?php if ($categoryId == $category['id']) { ?>active<?php } ?>"><?php echo $this->escape($category['title']); ?></a>
+		    <?php } ?>
+		</div>
+		<div class="btn-group btn-group-justified">
+			<a class="btn btn-primary" title="<?php _e('Add location category'); ?>" href="<?php echo $this->url('', array('action' => 'update')); ?>"><i class="fa fa-folder-open"></i> <?php _e('Add location category'); ?></a>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<?php if (!empty($locationList)) { ?>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<th><?php _e('ID'); ?></th>
+				<th><?php _e('Title'); ?></th>
+				<th><?php _e('Action'); ?></th>
+			</tr>
+			<?php foreach($locationList as $location) { ?>
+			<tr>
+				<td><?php echo $this->escape($location['id']); ?></td>
+				<td><?php echo $this->escape($location['title']); ?></td>
+				<td>
+					<?php if (isset($location['add'])) { ?>
+					<a class="btn btn-primary" title="<?php _e('Add child location'); ?>" href="<?php echo $this->escape($location['add']); ?>"><i class="fa fa-plus"></i> <?php _e('Add child location'); ?></a>
+					<?php } ?>
+					<a class="btn btn-primary" title="<?php _e('Edit'); ?>" href="<?php echo $this->escape($location['edit']); ?>"><i class="fa fa-edit"></i> <?php _e('Edit'); ?></a>
+				</td>
+			</tr>
+			<?php } ?>
+		</table>
+		<?php } else { ?>
+        <div class="alert alert-success"><?php _e('You can add new location category or select catelory for see list of all locations on that'); ?></div>
+		<?php } ?>
+	</div>
+	<div class="clearfix"></div>
+</div>
