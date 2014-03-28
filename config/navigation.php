@@ -47,7 +47,7 @@ return array(
         ),
 
         'service' => array(
-            'label'         => _t('Service'),
+            'label'         => _t('Service category'),
             'permission'    => array(
                 'resource'  => 'service',
             ),
