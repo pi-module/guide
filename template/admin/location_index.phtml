@@ -2,13 +2,16 @@
 <div class="guide">
 	<h3><?php _e('List of all categories and locations'); ?></h3>
 	<div class="col-md-3">
+		<?php if (!empty($categoryList)) { ?>
 		<div class="list-group">
 		    <?php foreach($categoryList as $category) { ?>
-			<a href="<?php echo $this->escape($category['url']); ?>" class="list-group-item <?php if ($categoryId == $category['id']) { ?>active<?php } ?>"><?php echo $this->escape($category['title']); ?></a>
+			<a href="<?php echo $this->escape($category['url']); ?>" class="list-group-item <?php if (isset($categoryId) && $categoryId == $category['id']) { ?>active<?php } ?>"><?php echo $this->escape($category['title']); ?></a>
 		    <?php } ?>
 		</div>
-		<div class="btn-group btn-group-justified">
-			<a class="btn btn-primary" title="<?php _e('Add location category'); ?>" href="<?php echo $this->url('', array('action' => 'update')); ?>"><i class="fa fa-folder-open"></i> <?php _e('Add location category'); ?></a>
+		<?php } ?>
+		<div class="list-group">
+			<a class="list-group-item" title="<?php _e('Add category'); ?>" href="<?php echo $this->url('', array('action' => 'update')); ?>"><i class="fa fa-folder-open"></i> <?php _e('Add category'); ?></a>
+			<a class="list-group-item" title="<?php _e('Manage category'); ?>" href="<?php echo $this->url('', array('action' => 'manage')); ?>"><i class="fa fa-cog"></i> <?php _e('Manage category'); ?></a>
 		</div>
 	</div>
 	<div class="col-md-9">

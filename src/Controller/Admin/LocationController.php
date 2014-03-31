@@ -96,8 +96,13 @@ class LocationController extends ActionController
         // Get id
         $id = $this->params('id');
         $module = $this->params('module');
+        $dd = 'new';
+        if ($id) {
+            $location_category = $this->getModel('location_category')->find($id)->toArray();
+            $dd = 'edit';
+        }
         // Set form
-        $form = new LocationCategoryForm('locationCategory');
+        $form = new LocationCategoryForm('locationCategory', array('dd' => $dd));
         if ($this->request->isPost()) {
         	$data = $this->request->getPost();
             $form->setInputFilter(new LocationCategoryFilter);
@@ -122,13 +127,13 @@ class LocationController extends ActionController
                 $operation = (empty($values['id'])) ? 'add' : 'edit';
                 Pi::api('log', 'guide')->addLog('location_category', $row->id, $operation);
                 $message = __('Category data saved successfully.');
-                $this->jump(array('action' => 'index'), $message);
+                $url = array('action' => 'index');
+                $this->jump($url, $message);
             } else {
                 $message = __('Invalid data, please check and re-submit.');
             }	
         } else {
             if ($id) {
-            	$location_category = $this->getModel('location_category')->find($id)->toArray();
                 $form->setData($location_category);
             }
         }
@@ -201,13 +206,13 @@ class LocationController extends ActionController
         // Set form
         $form = new LocationForm('location', array('type' => 'edit'));
         if ($this->request->isPost()) {
-        	$data = $this->request->getPost();
+            $data = $this->request->getPost();
             $form->setInputFilter(new LocationFilter);
             $form->setData($data);
             if ($form->isValid()) {
-            	$values = $form->getData();
-            	// Set just location fields
-            	foreach (array_keys($values) as $key) {
+                $values = $form->getData();
+                // Set just location fields
+                foreach (array_keys($values) as $key) {
                     if (!in_array($key, $this->locationColumns)) {
                         unset($values[$key]);
                     }
@@ -221,7 +226,7 @@ class LocationController extends ActionController
                 $this->jump(array('action' => 'index'), $message);
             } else {
                 $message = __('Invalid data, please check and re-submit.');
-            }	
+            }   
         } else {
             $location = $this->getModel('location')->find($id)->toArray();
             $form->setData($location);
@@ -230,5 +235,22 @@ class LocationController extends ActionController
         $this->view()->setTemplate('location_update');
         $this->view()->assign('form', $form);
         $this->view()->assign('title', __('Edit location'));
+    }
+
+    public function manageAction()
+    {
+        // Get category info
+        $categoryList = array();
+        $select = $this->getModel('location_category')->select();
+        $rowset = $this->getModel('location_category')->selectWith($select);
+        // Make list
+        foreach ($rowset as $row) {
+            $categoryList[$row->id] = $row->toArray();
+            $categoryList[$row->id]['url'] = $this->url('', array('action' => 'index', 'category' => $row->id));
+            $categoryList[$row->id]['edit'] = $this->url('', array('action' => 'update', 'id' => $row->id));
+        }
+        // Set view
+        $this->view()->setTemplate('location_manage');
+        $this->view()->assign('categoryList', $categoryList);
     }
 }

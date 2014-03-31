@@ -17,8 +17,9 @@ use Pi\Form\Form as BaseForm;
 
 class LocationCategoryForm extends BaseForm
 {
-    public function __construct($name = null, $item)
+    public function __construct($name = null, $option = array())
     {
+        $this->dd = $option['dd']; 
         $this->module = Pi::service('module')->current();
         parent::__construct($name);
     }
@@ -41,14 +42,23 @@ class LocationCategoryForm extends BaseForm
             ),
         ));
         // parent
-        $this->add(array(
-            'name' => 'parent',
-            'type' => 'Module\Guide\Form\Element\LocationCategory',
-            'options' => array(
-                'label' => __('Parent'),
-                'module' => $this->module,
-            ),
-        ));
+        if ($this->dd == 'new') {
+            $this->add(array(
+                'name' => 'parent',
+                'type' => 'Module\Guide\Form\Element\LocationCategory',
+                'options' => array(
+                    'label' => __('Parent'),
+                    'module' => $this->module,
+                ),
+            ));
+        } else {
+            $this->add(array(
+                'name' => 'parent',
+                'attributes' => array(
+                    'type' => 'hidden',
+                ),
+            ));
+        }
         // title
         $this->add(array(
             'name' => 'title',

@@ -25,13 +25,17 @@ class LocationCategory extends Select
         if (empty($this->valueOptions)) {
             $columns = array('id', 'title');
             $order = array('id DESC');
-            $select = Pi::model('location_category', $this->options['module'])->select()->columns($columns)->order($order);
+            $select = Pi::model('location_category', $this->options['module'])->select()->columns($columns)->order($order)->limit(1);
             $rowset = Pi::model('location_category', $this->options['module'])->selectWith($select);
             $options = array();
-        	$options[] = '';
+        	// Make list
             foreach ($rowset as $row) {
                 $list[$row->id] = $row->toArray();
                 $options[$row->id] = $list[$row->id]['title'];
+            }
+            // Check if empty options
+            if (empty($options)) {
+                $options[0] = __('Top category');
             }
             $this->valueOptions = $options;
         }
