@@ -27,7 +27,7 @@ class LocationController extends ActionController
     );
 
     protected $locationCategoryColumns = array(
-    	'id', 'parent', 'title'
+    	'id', 'parent', 'child', 'title'
     );
 
     public function indexAction()
@@ -123,6 +123,10 @@ class LocationController extends ActionController
                 }
                 $row->assign($values);
                 $row->save();
+                // update child
+                if ($row->parent > 0) {
+                    $this->getModel('location_category')->update(array('child' => $row->id), array('id' => $row->parent));
+                }
                 // Add log
                 $operation = (empty($values['id'])) ? 'add' : 'edit';
                 Pi::api('log', 'guide')->addLog('location_category', $row->id, $operation);
@@ -269,12 +273,16 @@ class LocationController extends ActionController
         $this->view()->assign('categoryList', $categoryList);
     }
 
-    public function findAction()
+    public function formElementAjaxAction()
     {
-
-        // Set view
-        $this->view()->setTemplate('system:component/form-popup');
-        $this->view()->assign('title', __('Update order'));
-        $this->view()->assign('form', $form);
+        $this->view()->setTemplate(false);
+        // Get id
+        $category = $this->params('category');
+        $parent = $this->params('parent');
+        $module = $this->params('module');
+        $element = array();
+        // find
+        $element = Pi::api('location', 'guide')->locationFormElement($category, $parent);
+        return $element;
     }
 }

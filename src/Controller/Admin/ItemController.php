@@ -142,6 +142,8 @@ class ItemController extends ActionController
         // Get extra field
         $fields = Pi::api('extra', 'guide')->Get();
         $option['field'] = $fields['extra'];
+        // Get location
+        $option['location'] = Pi::api('location', 'guide')->locationForm();
         // Set form
         $form = new ItemForm('item', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
@@ -152,7 +154,7 @@ class ItemController extends ActionController
             $slug = ($data['slug']) ? $data['slug'] : $data['title'];
             $data['slug'] = Pi::api('text', 'guide')->slug($slug);
             // Form filter
-            $form->setInputFilter(new ItemFilter($fields['extra']));
+            $form->setInputFilter(new ItemFilter($option));
             $form->setData($data);
             if ($form->isValid()) {
             	$values = $form->getData();
@@ -161,6 +163,17 @@ class ItemController extends ActionController
                     foreach ($fields['field'] as $field) {
                         $extra[$field]['field'] = $field;
                         $extra[$field]['data'] = $values[$field];
+                    }
+                }
+                // Set location
+                if (!empty($option['location'])) {
+                    foreach ($option['location'] as $location) {
+                        $element = sprintf('location-%s', $location['id']);
+                        $element = $values[$element];
+                        if (isset($element) && !empty($element)) {
+                            $values['location'] = $element;
+                            $values['location_category'] = $location['id'];
+                        }
                     }
                 }
                 // Tag
@@ -280,6 +293,7 @@ class ItemController extends ActionController
         // Set view
         $this->view()->setTemplate('item_update');
         $this->view()->assign('form', $form);
+        $this->view()->assign('locationCategory', $option['location']);
         $this->view()->assign('title', __('Add item'));
     }
 

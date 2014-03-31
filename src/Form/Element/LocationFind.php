@@ -23,10 +23,8 @@ class LocationFind extends ZendButton
     public function getAttributes()
     {
         $this->Attributes = array(
-            'class' => 'btn btn-success btn-sm',
+            'class' => 'btn btn-success btn-sm find-location',
             'id' => 'item-find-location',
-            'data-toggle' => 'button',
-            'data-find' => $this->attributes['link'],
         );
         return $this->Attributes;
     }

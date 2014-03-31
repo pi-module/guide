@@ -17,7 +17,7 @@ use Zend\InputFilter\InputFilter;
 
 class ItemFilter extends InputFilter
 {
-    public function __construct($extra = null)
+    public function __construct($option = array())
     {
         // id
         $this->add(array(
@@ -105,6 +105,15 @@ class ItemFilter extends InputFilter
                 ),
             ),
         ));
+        // Set extra location
+        if (!empty($option['location'])) {
+            foreach ($option['location'] as $location) {
+                $this->add(array(
+                    'name' => sprintf('location-%s', $location['id']),
+                    'required' => false,
+                ));
+            }
+        }
         // map_longitude
         $this->add(array(
             'name' => 'map_longitude',
@@ -163,8 +172,8 @@ class ItemFilter extends InputFilter
             ));
         }
         // Set extra field
-        if (!empty($extra)) {
-            foreach ($extra as $field) {
+        if (!empty($option['field'])) {
+            foreach ($option['field'] as $field) {
                 $this->add(array(
                     'name' => $field['id'],
                     'required' => false,

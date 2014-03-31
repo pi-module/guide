@@ -20,6 +20,7 @@ class ItemForm  extends BaseForm
     public function __construct($name = null, $option = array())
     {
         $this->field = $option['field'];
+        $this->location = $option['location'];
         $this->thumbUrl = (isset($option['thumbUrl'])) ? $option['thumbUrl'] : '';
         $this->removeUrl = (isset($option['removeUrl'])) ? $option['removeUrl'] : '';
         parent::__construct($name);
@@ -203,18 +204,24 @@ class ItemForm  extends BaseForm
                 'label' => __('Location options'),
             ),
         ));
-        // find
-        $this->add(array(
-            'name' => 'find',
-            'type' => 'Module\Guide\Form\Element\LocationFind',
-            'options' => array(
-                'label' => __('Find location'),
-            ),
-            'attributes' => array(
-                'link' => '',
-                'description' => __('Click to find or edit location'),
-            ),
-         ));
+        // Set extra location
+        if (!empty($this->location)) {
+            foreach ($this->location as $location) {
+                $this->add(array(
+                    'name' => sprintf('location-%s', $location['id']),
+                    'type' => 'select',
+                    'options' => array(
+                        'label' => $location['title'],
+                        'value_options' => $this->makeLocationArray($location['value']),
+                    ),
+                    'attributes' => array(
+                        'id' => sprintf('form-location-%s', $location['id']),
+                        'class' => 'form-location',
+                        'data-category' => $location['id'],
+                    )
+                ));
+            }
+        }
         // map_longitude
         $this->add(array(
             'name' => 'map_longitude',
@@ -254,7 +261,6 @@ class ItemForm  extends BaseForm
             'attributes' => array(
                 'type' => 'text',
                 'description' => '',
-                
             )
         ));
         // seo_keywords
@@ -265,8 +271,7 @@ class ItemForm  extends BaseForm
             ),
             'attributes' => array(
                 'type' => 'text',
-                'description' => '',
-                
+                'description' => '',     
             )
         ));
         // seo_description
@@ -277,8 +282,7 @@ class ItemForm  extends BaseForm
             ),
             'attributes' => array(
                 'type' => 'text',
-                'description' => '',
-                
+                'description' => '',     
             )
         ));
         // tag
@@ -344,6 +348,16 @@ class ItemForm  extends BaseForm
         $variable = explode('|', $string);
         foreach ($variable as $value) {
             $list[$value] = $value;
+        }
+        return $list;
+    }
+
+    public function makeLocationArray($array)
+    {
+        $list = array();
+        $list[0] = '';
+        foreach ($array as $value) {
+            $list[$value['id']] = $value['title'];
         }
         return $list;
     }

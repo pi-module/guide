@@ -75,6 +75,7 @@ CREATE TABLE `{location}` (
 CREATE TABLE `{location_category}` (
     `id` int (10) unsigned NOT NULL auto_increment,
     `parent` int(5) unsigned NOT NULL,
+    `child` int(5) unsigned NOT NULL,
     `title` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
 );
