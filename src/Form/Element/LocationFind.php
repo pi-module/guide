@@ -15,7 +15,7 @@ namespace Module\Guide\Form\Element;
 use Pi;
 use Zend\Form\Element\Button as ZendButton;
 
-class Remove extends ZendButton
+class LocationFind extends ZendButton
 {
     /**
      * @return array
@@ -23,10 +23,10 @@ class Remove extends ZendButton
     public function getAttributes()
     {
         $this->Attributes = array(
-            'class' => 'btn btn-danger btn-sm',
-            'id' => 'item-remove-image',
+            'class' => 'btn btn-success btn-sm',
+            'id' => 'item-find-location',
             'data-toggle' => 'button',
-            'data-link' => $this->attributes['link'],
+            'data-find' => $this->attributes['link'],
         );
         return $this->Attributes;
     }

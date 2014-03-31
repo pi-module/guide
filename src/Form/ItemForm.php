@@ -203,6 +203,18 @@ class ItemForm  extends BaseForm
                 'label' => __('Location options'),
             ),
         ));
+        // find
+        $this->add(array(
+            'name' => 'find',
+            'type' => 'Module\Guide\Form\Element\LocationFind',
+            'options' => array(
+                'label' => __('Find location'),
+            ),
+            'attributes' => array(
+                'link' => '',
+                'description' => __('Click to find or edit location'),
+            ),
+         ));
         // map_longitude
         $this->add(array(
             'name' => 'map_longitude',

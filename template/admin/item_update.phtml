@@ -12,7 +12,7 @@
 </div>
 <script type="text/javascript">
 (function($){
-    $("#item-form").on("click","button",function(){
+    $("#item-form").on("click","#item-remove-image",function(){
         systemMessage.wait("<?php _e('Remove image item in process'); ?>");
         $.getJSON($(this).attr("data-link")).done(function(result){
             if(result.status==1){
@@ -21,6 +21,9 @@
                 systemMessage.fail(result.message);
             }
         });
+    });
+    $("#item-form").on("click","#item-find-location",function(){
+        alert('to do');
     });
 })(jQuery)
 </script>
