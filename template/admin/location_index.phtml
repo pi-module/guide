@@ -38,6 +38,9 @@
 		<?php } else { ?>
         <div class="alert alert-success"><?php _e('You can add new location category or select catelory for see list of all locations on that'); ?></div>
 		<?php } ?>
+		<?php if (isset($categoryId) &&  $categoryId == 1) { ?>
+		<p><a class="btn btn-primary" title="<?php _e('Add location to top catgory'); ?>" href="<?php echo $this->url('', array('action' => 'add', 'category' => $categoryId)); ?>"><i class="fa fa-plus"></i> <?php _e('Add location to top catgory'); ?></a></p>
+		<?php } ?>
 	</div>
 	<div class="clearfix"></div>
 </div>

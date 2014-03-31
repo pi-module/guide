@@ -34,7 +34,7 @@ class LocationController extends ActionController
     {
         // Get page
         $module = $this->params('module');
-        $category = $this->params('category');
+        $categoryId = $this->params('category');
         $page = $this->params('page', 1);
         // Get category info
         $categoryList = array();
@@ -46,7 +46,7 @@ class LocationController extends ActionController
             $categoryList[$row->id]['url'] = $this->url('', array('action' => 'index', 'category' => $row->id));
         }
         // Check categtory have child or is end of tree
-        $where = array('parent' => $category);
+        $where = array('parent' => $categoryId);
         $columns = array('count' => new \Zend\Db\Sql\Predicate\Expression('count(*)'));
         $select = $this->getModel('location_category')->select()->columns($columns)->where($where);
         $count = $this->getModel('location_category')->selectWith($select)->current()->count;
@@ -55,7 +55,7 @@ class LocationController extends ActionController
         $order = array('id DESC');
         $offset = (int)($page - 1) * $this->config('admin_perpage');
         $limit = intval($this->config('admin_perpage'));
-        $where = array('category' => $category);
+        $where = array('category' => $categoryId);
         $select = $this->getModel('location')->select()->where($where)->order($order)->offset($offset)->limit($limit);
         $rowset = $this->getModel('location')->selectWith($select);
         // Make list
@@ -80,12 +80,12 @@ class LocationController extends ActionController
                 'module'        => $this->getModule(),
                 'controller'    => 'location',
                 'action'        => 'index',
-                'category'      => $category,
+                'category'      => $categoryId,
             )),
         ));
         // Set view
         $this->view()->setTemplate('location_index');
-        $this->view()->assign('categoryId', $category);
+        $this->view()->assign('categoryId', $categoryId);
         $this->view()->assign('categoryList', $categoryList);
         $this->view()->assign('locationList', $locationList);
         $this->view()->assign('paginator', $paginator);
@@ -147,6 +147,7 @@ class LocationController extends ActionController
     {
         // Get id
         $parent = $this->params('parent');
+        $category = $this->params('category');
         $module = $this->params('module');
         // Check post     
         if ($this->request->isPost()) {
@@ -175,18 +176,33 @@ class LocationController extends ActionController
                 $message = __('Invalid data, please check and re-submit.');
             }	
         } else {
-        	// find location
-        	$location = $location = $this->getModel('location')->find($parent)->toArray();
+            if (!$parent && !$category) {
+                $message = __('Please select parent or category.');
+                $this->jump(array('action' => 'index'), $message);
+            } elseif (!$parent && $category == 1) {
+                // find category
+                $category = $this->getModel('location_category')->find($category)->toArray();
+                $parentId = 0;
+                $title = $category['title'];
+                // category list select where
+                $where = array('id' => $category['id']);
+            } else {
+                // find location
+                $location = $this->getModel('location')->find($parent)->toArray();
+                $parentId = $location['id'];
+                $title = $location['title'];
+                // category list select where
+                $where = array('parent' => $location['category']);
+            }
         	// find child category
         	$categoryList = array();
-        	$where = array('parent' => $location['category']);
         	$select = $this->getModel('location_category')->select()->where($where);
             $rowset = $this->getModel('location_category')->selectWith($select);
             foreach ($rowset as $row) {
                 $list[$row->id] = $row->toArray();
                 $categoryList[$row->id] = $list[$row->id]['title'];
             }
-            $formData = array('parent' => $location['id']);
+            $formData = array('parent' => $parentId);
         	// Set form
         	$form = new LocationForm('location', array('type' => 'add', 'category' => $categoryList));
         	$form->setData($formData);
@@ -194,8 +210,7 @@ class LocationController extends ActionController
         // Set view
         $this->view()->setTemplate('location_update');
         $this->view()->assign('form', $form);
-        $this->view()->assign('title', sprintf(__('Add child location on %s'), $location['title']));
-        $this->view()->assign('message', $message);
+        $this->view()->assign('title', sprintf(__('Add child location on %s'), $title));
     }
 
     public function editAction()
@@ -252,5 +267,14 @@ class LocationController extends ActionController
         // Set view
         $this->view()->setTemplate('location_manage');
         $this->view()->assign('categoryList', $categoryList);
+    }
+
+    public function findAction()
+    {
+
+        // Set view
+        $this->view()->setTemplate('system:component/form-popup');
+        $this->view()->assign('title', __('Update order'));
+        $this->view()->assign('form', $form);
     }
 }
