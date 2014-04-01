@@ -32,8 +32,8 @@ class ItemController extends ActionController
      */
     protected $itemColumns = array(
     	'id', 'title', 'slug', 'category', 'summary', 'description', 'seo_title', 'seo_keywords', 'seo_description', 
-    	'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'hits', 'image', 'path', 'point', 
-    	'count', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 'map_latitude',
+    	'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'hits', 'image', 'path', 'vote', 
+    	'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 'map_latitude',
     	'location', 'location_category', 'blog'
     );
 

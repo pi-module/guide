@@ -15,7 +15,7 @@ return array(
     'meta'         => array(
         'title'         => __('Guide'),
         'description'   => __('Introducing guides.'),
-        'version'       => '0.5.0',
+        'version'       => '0.6.0',
         'license'       => 'New BSD',
         'logo'          => 'image/logo.png',
         'readme'        => 'docs/readme.txt',

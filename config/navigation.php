@@ -101,6 +101,17 @@ return array(
             'action'        => 'index',
         ),
 
+        'score' => array(
+            'label'         => _t('Score'),
+            'permission'    => array(
+                'resource'  => 'score',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'score',
+            'action'        => 'index',
+        ),
+
         'log' => array(
             'label'         => _t('Logs'),
             'permission'    => array(

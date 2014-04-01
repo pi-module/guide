@@ -71,6 +71,12 @@ return array(
                 //'admin',
             ),
         ),
+        'score'          => array(
+            'title'         => __('Score'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
         'log'            => array(
             'title'         => __('Logs'),
             'access'        => array(

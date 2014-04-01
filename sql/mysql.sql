@@ -16,9 +16,8 @@ CREATE TABLE `{item}` (
     `uid` int(10) unsigned NOT NULL,
     `hits` int(10) unsigned NOT NULL,
     `image` varchar(255) NOT NULL,
-    `path` varchar(16) NOT NULL,
-    `point` int(10) NOT NULL,
-    `count` int(10) unsigned NOT NULL,
+    `vote` varchar(255) NOT NULL,
+    `rating` int(10) unsigned NOT NULL,
     `favourite` int(10) unsigned NOT NULL,
     `service` tinyint(1) unsigned NOT NULL,
     `attach` tinyint(1) unsigned NOT NULL,
@@ -154,6 +153,13 @@ CREATE TABLE `{service_category}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
+    `status` tinyint(1) unsigned NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `{score}` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `title` varchar(255) NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
     PRIMARY KEY (`id`)
 );

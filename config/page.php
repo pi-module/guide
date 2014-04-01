@@ -46,6 +46,10 @@ return array(
             'permission'    => 'attach',
         ),
         array(
+            'controller'    => 'score',
+            'permission'    => 'score',
+        ),
+        array(
             'controller'    => 'log',
             'permission'    => 'log',
         ),
