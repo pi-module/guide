@@ -34,7 +34,7 @@ class ItemController extends ActionController
     	'id', 'title', 'slug', 'category', 'summary', 'description', 'seo_title', 'seo_keywords', 'seo_description', 
     	'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'hits', 'image', 'path', 'vote', 
     	'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 'map_latitude',
-    	'location', 'location_category', 'blog'
+    	'location', 'location_category', 'blog', 'customer', 'package'
     );
 
     public function indexAction()

@@ -14,8 +14,11 @@ CREATE TABLE `{item}` (
     `time_start` int(10) unsigned NOT NULL,
     `time_end` int(10) unsigned NOT NULL,
     `uid` int(10) unsigned NOT NULL,
+    `customer` int(10) unsigned NOT NULL,
+    `package` int(10) unsigned NOT NULL,
     `hits` int(10) unsigned NOT NULL,
     `image` varchar(255) NOT NULL,
+    `path` varchar(16) NOT NULL,
     `vote` varchar(255) NOT NULL,
     `rating` int(10) unsigned NOT NULL,
     `favourite` int(10) unsigned NOT NULL,
@@ -161,6 +164,62 @@ CREATE TABLE `{score}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `{package}` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `title` varchar(255) NOT NULL,
+    `description` text,
+    `features` text,
+    `status` tinyint(1) unsigned NOT NULL,
+    `time_create` int(10) unsigned NOT NULL,
+    `time_update` int(10) unsigned NOT NULL,
+    `image` varchar(255) NOT NULL,
+    `path` varchar(16) NOT NULL,
+    `price` double(16,2) NOT NULL,
+    `stock_all` int(10) unsigned NOT NULL,
+    `stock_sold` int(10) unsigned NOT NULL,
+    `stock_remained` int(10) unsigned NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `{customer}` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `uid` int(10) unsigned NOT NULL,
+    `first_name` varchar (255) NOT NULL,
+    `last_name` varchar (255) NOT NULL,
+    `email` varchar (64) NOT NULL,
+    `phone` varchar (16) NOT NULL,
+    `mobile` varchar (16) NOT NULL,
+    `company` varchar (255) NOT NULL,
+    `address` text,
+    `country` varchar (64) NOT NULL,
+    `city` varchar (64) NOT NULL,
+    `zip_code` varchar (16) NOT NULL,
+    `ip` char(15) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `{order}` (
+    `id` int(10) unsigned NOT NULL auto_increment,
+    `uid` int(10) unsigned NOT NULL,
+    `customer` int(10) unsigned NOT NULL,
+    `ip` char(15) NOT NULL,
+    `item` int(10) unsigned NOT NULL,
+    `package` int(10) unsigned NOT NULL,
+    `status_order` tinyint(1) unsigned NOT NULL,
+    `status_payment` tinyint(1) unsigned NOT NULL,
+    `time_create` int(10) unsigned NOT NULL,
+    `time_payment` int(10) unsigned NOT NULL,
+    `time_start` int(10) unsigned NOT NULL,
+    `time_end` int(10) unsigned NOT NULL,
+    `user_note` text,
+    `admin_note` text,
+    `package_price` double(16,2) NOT NULL,
+    `paid_price` double(16,2) NOT NULL,
+    `payment_method` enum('online','offline') NOT NULL,
+    `payment_adapter` varchar(64) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
