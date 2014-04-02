@@ -175,6 +175,7 @@ CREATE TABLE `{package}` (
     `status` tinyint(1) unsigned NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
     `time_update` int(10) unsigned NOT NULL,
+    `time_period` int(10) unsigned NOT NULL,
     `image` varchar(255) NOT NULL,
     `path` varchar(16) NOT NULL,
     `price` double(16,2) NOT NULL,
