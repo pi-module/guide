@@ -77,6 +77,18 @@ return array(
                 //'admin',
             ),
         ),
+        'package'        => array(
+            'title'         => __('Package'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
+        'order'          => array(
+            'title'         => __('Orders'),
+            'access'        => array(
+                //'admin',
+            ),
+        ),
         'log'            => array(
             'title'         => __('Logs'),
             'access'        => array(

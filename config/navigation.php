@@ -47,7 +47,7 @@ return array(
         ),
 
         'service' => array(
-            'label'         => _t('Service category'),
+            'label'         => _t('Service'),
             'permission'    => array(
                 'resource'  => 'service',
             ),
@@ -109,6 +109,28 @@ return array(
             'route'         => 'admin',
             'module'        => 'guide',
             'controller'    => 'score',
+            'action'        => 'index',
+        ),
+
+        'package' => array(
+            'label'         => _t('Package'),
+            'permission'    => array(
+                'resource'  => 'package',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'package',
+            'action'        => 'index',
+        ),
+
+        'order' => array(
+            'label'         => _t('Orders'),
+            'permission'    => array(
+                'resource'  => 'order',
+            ),
+            'route'         => 'admin',
+            'module'        => 'guide',
+            'controller'    => 'order',
             'action'        => 'index',
         ),
 

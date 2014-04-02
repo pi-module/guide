@@ -50,6 +50,14 @@ return array(
             'permission'    => 'score',
         ),
         array(
+            'controller'    => 'package',
+            'permission'    => 'package',
+        ),
+        array(
+            'controller'    => 'order',
+            'permission'    => 'order',
+        ),
+        array(
             'controller'    => 'log',
             'permission'    => 'log',
         ),
