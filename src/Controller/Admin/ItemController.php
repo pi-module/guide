@@ -66,7 +66,7 @@ class ItemController extends ActionController
             $itemId[] = $id['item'];
         }
         // Set info
-        $columnItem = array('id', 'title', 'slug', 'status', 'time_create', 'recommended');
+        $columnItem = array('id', 'title', 'slug', 'status', 'time_create', 'time_update', 'time_start', 'time_end', 'recommended');
         $whereItem = array('id' => $itemId);
         // Get list of item
         $select = $this->getModel('item')->select()->columns($columnItem)->where($whereItem)->order($order);
@@ -129,21 +129,26 @@ class ItemController extends ActionController
         $id = $this->params('id');
         $module = $this->params('module');
         $option = array();
+        $tree = array();
         // Find item
         if ($id) {
             $item = $this->getModel('item')->find($id)->toArray();
             $item['category'] = Json::decode($item['category']);
+            // Set image
             if ($item['image']) {
                 $thumbUrl = sprintf('upload/%s/thumb/%s/%s', $this->config('image_path'), $item['path'], $item['image']);
                 $option['thumbUrl'] = Pi::url($thumbUrl);
                 $option['removeUrl'] = $this->url('', array('action' => 'remove', 'id' => $item['id']));
             }
+            // Set location
+            $tree['id'] = $item['location_category'];
+            $tree['location'] = $item['location'];
         }
         // Get extra field
         $fields = Pi::api('extra', 'guide')->Get();
         $option['field'] = $fields['extra'];
         // Get location
-        $option['location'] = Pi::api('location', 'guide')->locationForm();
+        $option['location'] = Pi::api('location', 'guide')->locationForm($tree);
         // Set form
         $form = new ItemForm('item', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
@@ -286,6 +291,9 @@ class ItemController extends ActionController
                 // Set time
                 $item['time_start'] = date('Y-m-d', $item['time_start']);
                 $item['time_end'] = date('Y-m-d', $item['time_end']);
+                // Set location
+                $name = sprintf('location-%s', $item['location_category']);
+                $item[$name] = $item['location'];
                 // Set data 
                 $form->setData($item);
             }

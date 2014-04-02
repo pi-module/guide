@@ -17,13 +17,13 @@ use Pi\Application\Api\AbstractApi;
 use Zend\Json\Json;
 
 /*
- * Pi::api('location', 'guide')->locationForm();
+ * Pi::api('location', 'guide')->locationForm($tree);
  * Pi::api('location', 'guide')->locationFormElement($category, $parent);
  */
 
 class Location extends AbstractApi
 {
-	public function locationForm()
+	public function locationForm($tree = array())
 	{
         // Set category
         $category = array();
@@ -38,6 +38,11 @@ class Location extends AbstractApi
             } else {
                 $category[$row->id]['value'] = array();
             }
+        }
+        // set tree
+        if (!empty($tree) && !empty($category)) {
+            $location = Pi::model('location', $this->getModule())->find($tree['location']);
+            $category[$tree['id']]['value'] = $this->locationFormElement($tree['id'], $location->parent);
         }
         return $category;
 	}
@@ -54,5 +59,4 @@ class Location extends AbstractApi
         }
         return $location;
     }
-
 }	
