@@ -1,0 +1,79 @@
+<?php
+    $this->css($this->assetModule('css/front.css'));
+	$this->jQuery();
+	$this->js($this->assetModule('js/jquery.magnific-popup.min.js'));
+	$this->footScript()->appendScript("$('.gallery').each(function() {
+    	$(this).magnificPopup({
+        	delegate: 'a',
+        	type: 'image',
+        	gallery: {
+          	enabled:true
+        	}
+    	});
+	});");
+	$this->css($this->assetModule('css/magnific-popup.css'));
+?>
+<div class="guide">
+	<div class="itemItem">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><?php echo $this->escape($itemItem['title']); ?></h3>
+		</div>
+		<div class="panel-body">
+			<div class="col-md-8">
+				<?php include $this->template('front/extra'); ?>
+				<div class="itemInfoBox well clearfix">
+					<div><?php include $this->template('front/category'); ?></div>
+					<div><?php include $this->template('front/tag'); ?></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="itemImage gallery text-center">
+					<div class="itemImageMain">
+						<div class="col-sm-6 col-md-12">
+							<div class="thumbnail">
+								<a href="<?php echo $itemItem['largeUrl']; ?>" title="<?php echo $this->escape($itemItem['title']); ?>">
+									<img src="<?php echo $itemItem['mediumUrl']; ?>" alt="<?php echo $this->escape($itemItem['title']); ?>" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="itemImageAttach"><?php include $this->template('front/attach_image'); ?></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="itemBody">
+					<p><strong><?php _e('Description'); ?></strong></p>
+					<div class="itemSummary"><?php echo $itemItem['summary']; ?></div>
+					<div class="itemDescription"><?php echo $itemItem['description']; ?></div>
+					<div class="itemMedia">
+						<?php include $this->template('front/attach_audio'); ?>
+					    <?php include $this->template('front/extra_audio'); ?>
+					    <?php include $this->template('front/attach_video'); ?>
+					    <?php include $this->template('front/extra_video'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<div class="social-list text-left">
+				<ul class="list-inline">
+					<?php if($config['social_facebook']) { ?>
+					<li class="social-facebook"><?php echo $this->facebook(); ?></li>
+					<?php } ?>
+					<?php if($config['social_twitter']) { ?>
+					<li class="social-twitter"><?php echo $this->twitter(); ?></li>
+					<?php } ?>
+					<?php if($config['social_gplus']) { ?>
+					<li class="social-gplus"><?php echo $this->plusone(); ?></li>
+					<?php } ?>
+				</ul>
+	    	</div>
+		</div>
+	</div>
+	<?php //include $this->template('front/attach'); ?>
+	<?php //include $this->template('front/review'); ?>
+	<?php //include $this->template('front/related'); ?>
+	<?php //include $this->template('front/list'); ?>
+	</div>
+</div>

@@ -15,17 +15,56 @@ namespace Module\Guide\Controller\Front;
 use Pi;
 use Pi\Mvc\Controller\ActionController;
 
-class ItemController extends ActionController
+class ItemController extends IndexController
 {
     public function indexAction()
     {
-        $test = array(
-            'Item Controller',
-            'Index Action',
-        );
+        // Get info from url
+        $slug = $this->params('slug');
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
+        // Get category list
+        $categoryList = Pi::api('category', 'guide')->categoryList();
+        // Find item
+        $item = $this->getModel('item')->find($slug, 'slug');
+        $item = Pi::api('item', 'guide')->canonizeitem($item, $categoryList);
+        // Check item
+        if (!$item || $item['status'] != 1) {
+            $this->jump(array('', 'module' => $module, 'controller' => 'index'), __('The item not found.'), 'error');
+        }
+        // Update Hits
+        $this->getModel('item')->update(array('hits' => $item['hits'] + 1), array('id' => $item['id']));
+        // Get extra
+        if ($item['extra'] && $config['view_extra']) {
+            $extra = Pi::api('extra', 'guide')->item($item['id']);
+            $this->view()->assign('extra', $extra);
+        }
+        // Get attached files
+        if ($item['attach'] && $config['view_attach']) {
+            $attach = Pi::api('item', 'guide')->AttachList($item['id']);
+            $this->view()->assign('attach', $attach);
+        }
+        // Get new items in category
+        if ($config['view_incategory']) {
+            $where = array('status' => 1, 'category' => $item['category']);
+            $itemList = $this->itemList($where);
+            $this->view()->assign('itemList', $itemList);
+            $this->view()->assign('itemTitle', __('New items'));
+        }
+        // Set tag
+        if ($config['view_tag']) {
+            $tag = Pi::service('tag')->get($module, $item['id'], '');
+            $this->view()->assign('tag', $tag);  
+        }
         // Set view
-        $this->view()->setTemplate('empty');
-        $this->view()->assign('test', $test);
+        $this->view()->headTitle($item['seo_title']);
+        $this->view()->headDescription($item['seo_description'], 'set');
+        $this->view()->headKeywords($item['seo_keywords'], 'set');
+        $this->view()->setTemplate('item_item');
+        $this->view()->assign('itemItem', $item);
+        $this->view()->assign('categoryItem', $item['categories']);
+        $this->view()->assign('config', $config);
     }
 
     public function printAction()
