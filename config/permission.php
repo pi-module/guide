@@ -14,9 +14,15 @@ return array(
     // Front section
     'front' => array(
         'public'         => array(
-            'title'         => _t('Global public resource'),
+            'title'         => __('Global public resource'),
             'access'        => array(
                 'guest',
+                'member',
+            ),
+        ),
+        'manage'         => array(
+            'title'         => __('Manage'),
+            'access'        => array(
                 'member',
             ),
         ),

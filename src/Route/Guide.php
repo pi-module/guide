@@ -54,10 +54,14 @@ class Guide extends Standard
             switch ($matches['controller']) {
                 // category controller
                 case 'category':
-                    $matches['slug'] = $this->decode($parts[1]);
-                    // Set sort
-                    if (isset($parts[2]) && $parts[2] == 'sort') {
-                        $matches['sort'] = $this->decode($parts[3]);
+                    if ($parts[1] == 'list') {
+                        $matches['action'] = 'list';
+                    } else {
+                        $matches['slug'] = $this->decode($parts[1]);
+                        // Set sort
+                        if (isset($parts[2]) && $parts[2] == 'sort') {
+                            $matches['sort'] = $this->decode($parts[3]);
+                        }
                     }
                     break;
 

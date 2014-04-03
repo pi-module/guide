@@ -11,10 +11,65 @@
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
 return array(
-    'front'   => array(),
+    'front'   => array(
+        'category' => array(
+            'label'         => __('Category list'),
+            'permission'    => array(
+                'resource'  => 'public',
+            ),
+            'route'         => 'guide',
+            'module'        => 'guide',
+            'controller'    => 'category',
+            'action'        => 'list',
+        ),
+
+        'tag' => array(
+            'label'         => __('Tag list'),
+            'permission'    => array(
+                'resource'  => 'public',
+            ),
+            'route'         => 'guide',
+            'module'        => 'guide',
+            'controller'    => 'tag',
+            'action'        => 'list',
+        ),
+
+        'package' => array(
+            'label'         => __('Package'),
+            'permission'    => array(
+                'resource'  => 'public',
+            ),
+            'route'         => 'guide',
+            'module'        => 'guide',
+            'controller'    => 'package',
+            'action'        => 'index',
+        ),
+
+        'search' => array(
+            'label'         => __('Search'),
+            'permission'    => array(
+                'resource'  => 'public',
+            ),
+            'route'         => 'guide',
+            'module'        => 'guide',
+            'controller'    => 'search',
+            'action'        => 'index',
+        ),
+
+        'manage' => array(
+            'label'         => __('Manage'),
+            'permission'    => array(
+                'resource'  => 'manage',
+            ),
+            'route'         => 'guide',
+            'module'        => 'guide',
+            'controller'    => 'manage',
+            'action'        => 'index',
+        ),
+    ),
     'admin' => array(
         'item' => array(
-            'label'         => _t('Item'),
+            'label'         => __('Item'),
             'permission'    => array(
                 'resource'  => 'item',
             ),
@@ -25,7 +80,7 @@ return array(
         ),
 
         'category' => array(
-            'label'         => _t('Category'),
+            'label'         => __('Category'),
             'permission'    => array(
                 'resource'  => 'category',
             ),
@@ -36,7 +91,7 @@ return array(
         ),
 
         'location' => array(
-            'label'         => _t('Location'),
+            'label'         => __('Location'),
             'permission'    => array(
                 'resource'  => 'location',
             ),
@@ -47,7 +102,7 @@ return array(
         ),
 
         'service' => array(
-            'label'         => _t('Service'),
+            'label'         => __('Service'),
             'permission'    => array(
                 'resource'  => 'service',
             ),
@@ -58,7 +113,7 @@ return array(
         ),
 
         'extra' => array(
-            'label'         => _t('Extra'),
+            'label'         => __('Extra'),
             'permission'    => array(
                 'resource'  => 'extra',
             ),
@@ -69,7 +124,7 @@ return array(
         ),
 
         'special' => array(
-            'label'         => _t('Special'),
+            'label'         => __('Special'),
             'permission'    => array(
                 'resource'  => 'special',
             ),
@@ -80,7 +135,7 @@ return array(
         ),
 
         'review' => array(
-            'label'         => _t('Review'),
+            'label'         => __('Review'),
             'permission'    => array(
                 'resource'  => 'review',
             ),
@@ -91,7 +146,7 @@ return array(
         ),
 
         'attach' => array(
-            'label'         => _t('Attach'),
+            'label'         => __('Attach'),
             'permission'    => array(
                 'resource'  => 'attach',
             ),
@@ -102,7 +157,7 @@ return array(
         ),
 
         'score' => array(
-            'label'         => _t('Score'),
+            'label'         => __('Score'),
             'permission'    => array(
                 'resource'  => 'score',
             ),
@@ -113,7 +168,7 @@ return array(
         ),
 
         'package' => array(
-            'label'         => _t('Package'),
+            'label'         => __('Package'),
             'permission'    => array(
                 'resource'  => 'package',
             ),
@@ -124,7 +179,7 @@ return array(
         ),
 
         'order' => array(
-            'label'         => _t('Orders'),
+            'label'         => __('Orders'),
             'permission'    => array(
                 'resource'  => 'order',
             ),
@@ -135,7 +190,7 @@ return array(
         ),
 
         'log' => array(
-            'label'         => _t('Logs'),
+            'label'         => __('Logs'),
             'permission'    => array(
                 'resource'  => 'log',
             ),

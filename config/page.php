@@ -63,5 +63,44 @@ return array(
         ),
     ),
     // Front section
-    'front' => array(),
+    'front' => array(
+        array(
+            'controller'    => 'index',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'category',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'category',
+            'action'        => 'list',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'tag',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'tag',
+            'action'        => 'list',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'item',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'manage',
+            'permission'    => 'manage',
+        ),
+        array(
+            'controller'    => 'package',
+            'permission'    => 'public',
+        ),
+        array(
+            'controller'    => 'search',
+            'permission'    => 'public',
+        ),
+    ),
 );

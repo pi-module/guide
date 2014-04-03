@@ -61,4 +61,7 @@ class CategoryController extends IndexController
         $this->view()->assign('paginator', $paginator);
         $this->view()->assign('config', $config);
     }
+
+    public function listAction()
+    {}
 }
