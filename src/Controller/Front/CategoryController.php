@@ -68,5 +68,37 @@ class CategoryController extends IndexController
     }
 
     public function listAction()
-    {}
+    {
+        // Get info from url
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
+        // Set info
+        $categories = array();
+        $where = array('status' => 1);
+        $order = array('id DESC', 'time_create DESC');
+        $select = $this->getModel('category')->select()->order($order);
+        $rowset = $this->getModel('category')->selectWith($select);
+        // Make list
+        foreach ($rowset as $row) {
+            $categories[$row->id] = $row->toArray();
+            $categories[$row->id]['url'] = $this->url('', array(
+                'module'        => $module,
+                'controller'    => 'category',
+                'slug'          => $categories[$row->id]['slug'],
+            ));
+        }
+        // Set header and title
+        $title = __('Category list');
+        $seoTitle = Pi::api('text', 'guide')->title($title);
+        $seoDescription = Pi::api('text', 'guide')->description($title);
+        $seoKeywords = Pi::api('text', 'guide')->keywords($title);
+        // Set view
+        $this->view()->headTitle($seoTitle);
+        $this->view()->headDescription($seoDescription, 'set');
+        $this->view()->headKeywords($seoKeywords, 'set');
+        $this->view()->setTemplate('category');
+        $this->view()->assign('categories', $categories);
+        $this->view()->assign('config', $config);
+    }
 }
