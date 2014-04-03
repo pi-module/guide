@@ -21,6 +21,73 @@ class ItemController extends ActionController
     {
         $test = array(
             'Item Controller',
+            'Index Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function printAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Print Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function reviewAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Review Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function addReviewAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Add Review Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function serviceAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Service Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function blogAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Blog Action',
+        );
+        // Set view
+        $this->view()->setTemplate('empty');
+        $this->view()->assign('test', $test);
+    }
+
+    public function storyAction()
+    {
+        $test = array(
+            'Item Controller',
+            'Story Action',
         );
         // Set view
         $this->view()->setTemplate('empty');

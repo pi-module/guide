@@ -87,7 +87,6 @@ class IndexController extends ActionController
         foreach ($rowset as $row) {
             $item[$row->id] = Pi::api('item', 'guide')->canonizeItem($row, $categoryList);
         }
-        print_r($item);
         // return item
         return $item;
     }
@@ -150,6 +149,7 @@ class IndexController extends ActionController
     public function canonizePaginator($template)
     {
         $template['slug'] = (isset($template['slug'])) ? $template['slug'] : '';
+        $template['action'] = (isset($template['action'])) ? $template['action'] : 'index';
         // paginator
         $paginator = Paginator::factory(intval($template['count']));
         $paginator->setItemCountPerPage(intval($this->config('view_perpage')));

@@ -10,7 +10,6 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-
 namespace Module\Guide\Route;
 
 use Pi\Mvc\Router\Http\Standard;
@@ -28,7 +27,7 @@ class Guide extends Standard
     );
 
     protected $controllerList = array(
-        'category', 'index', 'item'
+        'category', 'index', 'item', 'json', 'manage', 'package', 'search', 'tag'
     );
 
     /**
@@ -51,9 +50,86 @@ class Guide extends Standard
         }
 
         // Make Match
-        if (isset($matches['controller'])) {
+        if (isset($matches['controller']) && !empty($parts[1])) {
             switch ($matches['controller']) {
-               
+                // category controller
+                case 'category':
+                    $matches['slug'] = $this->decode($parts[1]);
+                    // Set sort
+                    if (isset($parts[2]) && $parts[2] == 'sort') {
+                        $matches['sort'] = $this->decode($parts[3]);
+                    }
+                    break;
+
+                // index controller
+                case 'index':
+                    if ($parts[1] == 'sort') {
+                        $matches['sort'] = $this->decode($parts[2]);
+                    }
+                    break;
+
+                // item controller
+                case 'item':
+                    if ($parts[1] == 'print') {
+                        $matches['action'] = 'print';
+                        $matches['slug'] = $this->decode($parts[2]);
+                    } elseif($parts[1] == 'review') {
+                        $matches['action'] = 'review';
+                        $matches['slug'] = $this->decode($parts[2]);
+                    } elseif($parts[1] == 'addReview') {
+                        $matches['action'] = 'addReview';
+                        $matches['slug'] = $this->decode($parts[2]);    
+                    } elseif($parts[1] == 'service') {
+                        $matches['action'] = 'service';
+                        $matches['slug'] = $this->decode($parts[2]);
+                    } elseif($parts[1] == 'blog') {
+                        $matches['action'] = 'blog';
+                        $matches['slug'] = $this->decode($parts[2]);
+                    } elseif($parts[1] == 'story') {
+                        $matches['action'] = 'story';
+                        $matches['slug'] = $this->decode($parts[2]);
+                    } else {
+                        $matches['slug'] = $this->decode($parts[1]);
+                    }
+                    break;
+
+                // json controller
+                case 'json':
+
+                    break;
+
+                // manage controller
+                case 'manage':
+
+                    break;
+
+                // package controller
+                case 'package':
+
+                    break;
+
+                // search controller
+                case 'search':
+                    if ($parts[1] == 'result') {
+                        $matches['action'] = 'result';
+                        if (isset($parts[2]) && $parts[2] == 'sort') {
+                            $matches['sort'] = $this->decode($parts[3]);
+                        }
+                    }
+                    break;
+
+                // tag controller
+                case 'tag':
+                    if ($parts[1] == 'term') {
+                        $matches['action'] = 'term';
+                        $matches['slug'] = urldecode($parts[2]);
+                        if (isset($parts[3]) && $parts[3] == 'sort') {
+                            $matches['sort'] = $this->decode($parts[4]);
+                        }
+                    } elseif ($parts[1] == 'list') {
+                        $matches['action'] = 'list';
+                    }
+                    break;
             }    
         } 
 
