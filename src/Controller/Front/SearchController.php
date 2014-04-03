@@ -15,12 +15,12 @@ namespace Module\Guide\Controller\Front;
 use Pi;
 use Pi\Mvc\Controller\ActionController;
 
-class IndexController extends ActionController
+class SearchController extends IndexController
 {
     public function indexAction()
     {
         $test = array(
-            'Index Controller',
+            'Search Controller',
         );
         // Set view
         $this->view()->setTemplate('empty');
