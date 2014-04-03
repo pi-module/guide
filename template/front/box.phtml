@@ -1,0 +1,29 @@
+<?php $this->css($this->assetModule('css/front.css')); ?>
+<div class="col-sm-4 col-md-3 itemBox">
+    <div class="thumbnail">
+        <?php if($item['image']) { ?>
+        <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><img src="<?php echo $item['thumbUrl']; ?>" alt="<?php echo $this->escape($item['title']); ?>" /></a>
+        <?php } ?>
+        <div class="caption">
+            <h4>
+                <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a>
+            </h4>
+            <?php if(isset($item['price']) && $config['view_price'] && $config['order_method'] != 'inactive') { ?>
+            <div class="clearfix">
+                <?php if($item['stock'] > 0) { ?>
+                <div class="pull-left itemPrice">
+                    <strong><?php echo $this->escape($item['price_view']); ?></strong>
+                </div>
+                <div class="pull-right">
+                    <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>" class="btn btn-danger btn-xs"><i class="fa fa-eye"></i> <?php _e('View'); ?></a>
+                </div>
+                <?php } else { ?>
+                <div class="label label-danger">
+                    <strong><?php _e('Out of stock'); ?></strong>
+                </div>
+                <?php } ?>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>

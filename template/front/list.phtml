@@ -1,0 +1,13 @@
+<?php if (isset($itemList) && !empty($itemList)) { ?>
+<div class="itemList clearfix">
+	<?php if (isset($itemTitle) && !empty($itemTitle)) { ?>
+	<div class="page-header">
+		<h4><?php echo $itemTitle; ?></h4>
+	</div>
+	<?php } ?>
+	<?php foreach($itemList as $item) { ?>
+	<?php include $this->template('front/box'); ?>
+	<?php } ?>
+</div>
+<div class="clearfix"></div>
+<?php } ?>
