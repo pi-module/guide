@@ -22,13 +22,18 @@ class TagController extends IndexController
         // Get info from url
         $module = $this->params('module');
         $slug = $this->params('slug');
-        // Get config
-        $config = Pi::service('registry')->config->read($module);
+        // Check tag
+        if (!Pi::service('module')->isActive('tag')) {
+            $url = array('', 'module' => $module, 'controller' => 'index', 'action' => 'index');
+            $this->jump($url, __('Tag module not installed.'), 'error');
+        }
         // Check slug
         if (!isset($slug) || empty($slug)) {
             $url = array('', 'module' => $module, 'controller' => 'index', 'action' => 'index');
             $this->jump($url, __('The tag not set.'), 'error');
         }
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
         // Get id from tag module
         $tagId = array();
         $tags = Pi::service('tag')->getList($slug, $module);
@@ -77,6 +82,12 @@ class TagController extends IndexController
     {
         // Get info from url
         $module = $this->params('module');
+        // Check tag
+        if (!Pi::service('module')->isActive('tag')) {
+            $url = array('', 'module' => $module, 'controller' => 'index', 'action' => 'index');
+            $this->jump($url, __('Tag module not installed.'), 'error');
+        }
+        // Set info
     	$where = array('module' => $module);
         $order = array('count DESC', 'id DESC');
     	$select = Pi::model('stats', 'tag')->select()->where($where)->order($order);
