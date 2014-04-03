@@ -26,8 +26,12 @@ class IndexController extends ActionController
         $module = $this->params('module');
         // Get config
         $config = Pi::service('registry')->config->read($module);
-        // Set item info
-        $where = array('status' => 1);
+        // Set info
+        $where = array(
+            'status'          => 1,
+            'time_start < ?'  => time(),
+            'time_end > ?'    => time(),
+        );
         // Get item List
         $itemList = $this->itemList($where);
         // Set paginator info

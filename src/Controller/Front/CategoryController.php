@@ -31,7 +31,12 @@ class CategoryController extends IndexController
             $this->jump(array('', 'module' => $module, 'controller' => 'index'), __('The category not found.'), 'error');
         }
         // Set info
-        $where = array('status' => 1, 'category' => $category['id']);
+        $where = array(
+            'status'          => 1,
+            'time_start < ?'  => time(),
+            'time_end > ?'    => time(),
+            'category'        => $category['id'],
+        );
         // Get item List
         $itemList = $this->itemList($where);
         // Set paginator info

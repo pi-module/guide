@@ -47,7 +47,12 @@ class ItemController extends IndexController
         }
         // Get new items in category
         if ($config['view_incategory']) {
-            $where = array('status' => 1, 'category' => $item['category']);
+            $where = array(
+                'status'          => 1,
+                'time_start < ?'  => time(),
+                'time_end > ?'    => time(),
+                'category'        => $item['category'],
+            );
             $itemList = $this->itemList($where);
             $this->view()->assign('itemList', $itemList);
             $this->view()->assign('itemTitle', __('New items'));

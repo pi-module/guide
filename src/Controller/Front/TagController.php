@@ -41,7 +41,12 @@ class TagController extends IndexController
             $this->jump($url, __('The tag not found.'), 'error');
         }
         // Set info
-        $where = array('status' => 1, 'item' => $tagId);
+        $where = array(
+            'status'          => 1,
+            'time_start < ?'  => time(),
+            'time_end > ?'    => time(),
+            'item'            => $tagId,
+        );
         // Get item List
         $itemList = $this->itemList($where);
         // Set paginator info
