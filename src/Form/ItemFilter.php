@@ -134,6 +134,96 @@ class ItemFilter extends InputFilter
                 ),
             ),
         ));
+        // address1
+        $this->add(array(
+            'name' => 'address1',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // address2
+        $this->add(array(
+            'name' => 'address2',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // city
+        $this->add(array(
+            'name' => 'city',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // zipcode
+        $this->add(array(
+            'name' => 'zipcode',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // phone1
+        $this->add(array(
+            'name' => 'phone1',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // phone2
+        $this->add(array(
+            'name' => 'phone2',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // mobile
+        $this->add(array(
+            'name' => 'mobile',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // website
+        $this->add(array(
+            'name' => 'website',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // email
+        $this->add(array(
+            'name' => 'email',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // seo_title
         $this->add(array(
             'name' => 'seo_title',

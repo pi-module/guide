@@ -244,6 +244,105 @@ class ItemForm  extends BaseForm
                 'description' => '',
             )
         ));
+        // address1
+        $this->add(array(
+            'name' => 'address1',
+            'options' => array(
+                'label' => __('Address 1'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // address2
+        $this->add(array(
+            'name' => 'address2',
+            'options' => array(
+                'label' => __('Address 2'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // city
+        $this->add(array(
+            'name' => 'city',
+            'options' => array(
+                'label' => __('City'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // zipcode
+        $this->add(array(
+            'name' => 'zipcode',
+            'options' => array(
+                'label' => __('Zip code'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // phone1
+        $this->add(array(
+            'name' => 'phone1',
+            'options' => array(
+                'label' => __('Phone 1'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // phone2
+        $this->add(array(
+            'name' => 'phone2',
+            'options' => array(
+                'label' => __('Phone 2'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // mobile
+        $this->add(array(
+            'name' => 'mobile',
+            'options' => array(
+                'label' => __('Mobile'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // website
+        $this->add(array(
+            'name' => 'website',
+            'options' => array(
+                'label' => __('Website'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // email
+        $this->add(array(
+            'name' => 'email',
+            'options' => array(
+                'label' => __('Email'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // extra_seo
         $this->add(array(
             'name' => 'extra_seo',

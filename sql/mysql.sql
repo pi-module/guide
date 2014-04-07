@@ -31,7 +31,15 @@ CREATE TABLE `{item}` (
     `map_latitude` varchar(16) NOT NULL,
     `location` int(10) unsigned NOT NULL,
     `location_category` int(10) unsigned NOT NULL,
-    `blog` varchar(255) NOT NULL,
+    `address1` varchar(255) NOT NULL,
+    `address2` varchar(255) NOT NULL,
+    `city` varchar(16) NOT NULL,
+    `zipcode` varchar(16) NOT NULL,
+    `phone1` varchar(16) NOT NULL,
+    `phone2` varchar(16) NOT NULL,
+    `mobile` varchar(16) NOT NULL,
+    `website` varchar(64) NOT NULL,
+    `email` varchar(64) NOT NULL,
     PRIMARY KEY (`id`)
 ); 
 

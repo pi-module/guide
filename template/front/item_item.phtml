@@ -41,7 +41,38 @@
 					<div><?php include $this->template('front/category'); ?></div>
 					<div><?php include $this->template('front/tag'); ?></div>
 				</div>
-				<?php include $this->template('front/extra'); ?>
+				<div class="col-md-6">
+					<?php if(!empty($itemItem['address1'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Address 1'); ?></strong> : <?php echo $this->escape($itemItem['address1']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['address2'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Address 2'); ?></strong> : <?php echo $this->escape($itemItem['address2']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['city'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('City'); ?></strong> : <?php echo $this->escape($itemItem['city']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['zipcode'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Zip code'); ?></strong> : <?php echo $this->escape($itemItem['zipcode']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['phone1'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Phone 1'); ?></strong> : <?php echo $this->escape($itemItem['phone1']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['phone2'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Phone 2'); ?></strong> : <?php echo $this->escape($itemItem['phone2']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['mobile'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Mobile'); ?></strong> : <?php echo $this->escape($itemItem['mobile']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['website'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Website'); ?></strong> : <?php echo $this->escape($itemItem['website']); ?></div>
+					<?php } ?>
+					<?php if(!empty($itemItem['email'])) { ?>
+					<div class="itemInfoText"><strong><?php _e('Email'); ?></strong> : <?php echo $this->escape($itemItem['email']); ?></div>
+					<?php } ?>
+				</div>
+				<div class="col-md-6">
+					<?php include $this->template('front/extra'); ?>
+				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="itemImage gallery text-center">

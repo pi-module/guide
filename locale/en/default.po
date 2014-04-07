@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-07 14:57+0330\n"
+"POT-Creation-Date: 2014-04-07 17:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -50,7 +50,7 @@ msgstr ""
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationCategoryForm.php:78
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:72
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationFindForm.php:50
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:340
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:439
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:74
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:97
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:149
@@ -147,7 +147,7 @@ msgstr ""
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:80
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:86
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:61
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:78
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:109
 msgid "Description"
 msgstr ""
 
@@ -208,35 +208,80 @@ msgstr ""
 msgid "Latitude"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:252
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:251
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:46
+msgid "Address 1"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:262
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:49
+msgid "Address 2"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:273
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:52
+msgid "City"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:284
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:55
+msgid "Zip code"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:295
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:58
+msgid "Phone 1"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:306
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:61
+msgid "Phone 2"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:317
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:64
+msgid "Mobile"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:328
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:67
+msgid "Website"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:339
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:70
+msgid "Email"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:351
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:155
 msgid "SEO options"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:259
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:358
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:162
 msgid "SEO Title"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:270
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:369
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:174
 msgid "SEO Keywords"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:281
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:380
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:186
 msgid "SEO Description"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:294
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:393
 msgid "Tags"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:298
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:397
 msgid "Use `|` as delimiter to separate tag terms"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:309
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:408
 msgid "Extra fields"
 msgstr ""
 
@@ -1347,11 +1392,11 @@ msgstr ""
 msgid "Attached files"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:77
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:108
 msgid "Map"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:79
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:110
 msgid "Services"
 msgstr ""
 
