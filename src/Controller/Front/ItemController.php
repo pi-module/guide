@@ -57,6 +57,11 @@ class ItemController extends IndexController
             $this->view()->assign('itemList', $itemList);
             $this->view()->assign('itemTitle', __('New items'));
         }
+        // Get service
+        if ($config['view_service']) {
+            $services = Pi::api('service', 'guide')->getService($item['id']);
+            $this->view()->assign('services', $services);  
+        }
         // Set tag
         if ($config['view_tag']) {
             $tag = Pi::service('tag')->get($module, $item['id'], '');

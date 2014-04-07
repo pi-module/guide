@@ -119,6 +119,10 @@ class Guide extends Standard
                         if (isset($parts[2]) && $parts[2] == 'sort') {
                             $matches['sort'] = $this->decode($parts[3]);
                         }
+                    } elseif ($parts[1] == 'ajax') {
+                        $matches['action'] = 'ajax';
+                        $matches['category'] = $parts[3];
+                        $matches['parent'] = $parts[5];
                     }
                     break;
 

@@ -15,7 +15,7 @@ return array(
     'meta'         => array(
         'title'         => __('Guide'),
         'description'   => __('Introducing guides.'),
-        'version'       => '0.0.9',
+        'version'       => '0.1.3',
         'license'       => 'New BSD',
         'logo'          => 'image/logo.png',
         'readme'        => 'docs/readme.txt',
@@ -36,7 +36,7 @@ return array(
         'permission'    => 'permission.php',
         'page'          => 'page.php',
         'navigation'    => 'navigation.php',
-        //'block'         => 'block.php',
+        'block'         => 'block.php',
         'route'         => 'route.php',
         //'comment'       => 'comment.php',
     ),

@@ -65,6 +65,7 @@ class IndexController extends ActionController
     {
         // Set info
         $id = array();
+        $item = array();
         $page = $this->params('page', 1);
         $module = $this->params('module');
         $sort = $this->params('sort', 'start');
@@ -98,17 +99,13 @@ class IndexController extends ActionController
     public function searchList($where)
     {
         // Set info
-        $id = array();
+        $item = array();
         $page = $this->params('page', 1);
         $module = $this->params('module');
         $sort = $this->params('sort', 'start');
         $offset = (int)($page - 1) * $this->config('view_perpage');
         $limit = intval($this->config('view_perpage'));
         $order = $this->setOrder($sort);
-        // Set show just have stock
-        if (isset($stock) && $stock == 1) {
-            $where['stock'] > 0;
-        }
         // Get category list
         $categoryList = Pi::api('category', 'guide')->categoryList();
         // Get list of item
@@ -119,7 +116,7 @@ class IndexController extends ActionController
             $item[$row->id] = Pi::api('item', 'guide')->canonizeItem($row, $categoryList);
         }
         // return item
-        return $item;   
+        return $item;
     }
 
     public function itemPaginator($template, $where)

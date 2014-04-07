@@ -69,14 +69,6 @@ return array(
             'filter' => 'number_int',
             'value' => 20
         ),
-        'view_related' => array(
-            'category' => 'view',
-            'title' => __('Show related products'),
-            'description' => '',
-            'edit' => 'checkbox',
-            'filter' => 'number_int',
-            'value' => 1
-        ),
         'view_extra' => array(
             'category' => 'view',
             'title' => __('Show extra fields'),
@@ -87,7 +79,15 @@ return array(
         ),
         'view_attach' => array(
             'category' => 'view',
-            'title' => __('Show product attacehed files'),
+            'title' => __('Show item attacehed files'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 1
+        ),
+        'view_service' => array(
+            'category' => 'view',
+            'title' => __('Show service'),
             'description' => '',
             'edit' => 'checkbox',
             'filter' => 'number_int',
@@ -95,29 +95,13 @@ return array(
         ),
         'view_incategory' => array(
             'category' => 'view',
-            'title' => __('Show product attacehed files'),
+            'title' => __('Show incategory items'),
             'description' => '',
             'edit' => 'checkbox',
             'filter' => 'number_int',
             'value' => 1
         ),
-        'view_price' => array(
-            'category' => 'view',
-            'title' => __('Show product price'),
-            'description' => '',
-            'edit' => 'checkbox',
-            'filter' => 'number_int',
-            'value' => 1
-        ),
-        'view_review_official' => array(
-            'category' => 'view',
-            'title' => __('Show official review'),
-            'description' => '',
-            'edit' => 'checkbox',
-            'filter' => 'number_int',
-            'value' => 1
-        ),
-        'view_review_user' => array(
+        'view_review' => array(
             'category' => 'view',
             'title' => __('Show user review'),
             'description' => '',
@@ -143,25 +127,9 @@ return array(
         ),
         'view_special_number' => array(
             'category' => 'view',
-            'title' => __('Number of products on special'),
+            'title' => __('Number of items on special'),
             'description' => '',
             'edit' => 'text',
-            'filter' => 'number_int',
-            'value' => 1
-        ),
-        'view_price_title' => array(
-            'category' => 'view',
-            'title' => __('Price title'),
-            'description' => '',
-            'edit' => 'text',
-            'filter' => 'string',
-            'value' => __('Volume'),
-        ),
-        'view_stock' => array(
-            'category' => 'view',
-            'title' => __('Show stock count'),
-            'description' => '',
-            'edit' => 'checkbox',
             'filter' => 'number_int',
             'value' => 1
         ),
@@ -360,14 +328,6 @@ return array(
         'search_type' => array(
             'category' => 'search',
             'title' => __('Show search type'),
-            'description' => '',
-            'edit' => 'checkbox',
-            'filter' => 'number_int',
-            'value' => 1
-        ),
-        'search_price' => array(
-            'category' => 'search',
-            'title' => __('Show search price'),
             'description' => '',
             'edit' => 'checkbox',
             'filter' => 'number_int',

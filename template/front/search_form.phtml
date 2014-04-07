@@ -1,0 +1,45 @@
+<?php
+    $this->css(array(
+        $this->assetModule('css/front.css'),
+        $this->assetModule('script/system-ui.css', 'system'),
+    ));
+    $this->jQuery();
+    $this->backbone();
+    $this->js($this->assetModule('script/system-msg.js', 'system'));
+?>
+<div id="item-form" class="guide">
+    <?php include $this->templateComponent('forms'); ?>
+</div>
+<script>
+(function($) {
+    var page = {
+        el: $('#item-form'),
+        modal: $('<div class="modal fade">').appendTo(document.body),
+        $: function(selector) {
+            return this.el.find(selector);
+        },
+        init: function() {
+            _.bindAll(this);
+            this.$('#item-find-location').on("click",this.locationAction);
+            <?php foreach($locationCategory as $location) { ?>
+            this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
+            <?php } ?>
+        },
+        <?php foreach($locationCategory as $location) { ?>
+        locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
+            var url = "<?php echo $this->url('', array('controller' => 'search', 'action' => 'ajax')); ?>";
+            var category = <?php echo $this->escape($location["child"]); ?>;
+            var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
+            $.getJSON(url + "/category/" + category + "/parent/" + parent).done(function(result) {
+                var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
+                $.each(result, function( index, value ) {
+                    htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
+                });
+                $('#form-location-' + category).html(htmlOptins);
+            });
+        },
+        <?php } ?>
+    }
+    page.init();
+})(jQuery)
+</script>

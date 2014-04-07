@@ -1,0 +1,15 @@
+<?php if (isset($services) && !empty($services)) { ?>
+	<div class="itemServiceList">
+	<?php foreach($services as $service) { ?>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><?php echo $this->escape($service['title']); ?></h3></div>
+			<div class="panel-body"><?php echo sprintf(__('List of all servies from %s category'), $service['title']); ?></div>
+			<ul class="list-group">
+				<?php foreach($service['parameter'] as $parameter) { ?>
+				<li class="list-group-item"><?php echo $this->escape($parameter['title']); ?> | <?php echo $this->escape($parameter['price_view']); ?></li>
+				<?php } ?>
+			</ul>
+	    </div>
+	<?php } ?>
+	</div>
+<?php } ?>

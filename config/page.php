@@ -67,40 +67,49 @@ return array(
         array(
             'controller'    => 'index',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'category',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'category',
             'action'        => 'list',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'tag',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'tag',
             'action'        => 'list',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'item',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'manage',
             'permission'    => 'manage',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'package',
             'permission'    => 'public',
+            'block'         => 1,
         ),
         array(
             'controller'    => 'search',
             'permission'    => 'public',
+            'block'         => 1,
         ),
     ),
 );

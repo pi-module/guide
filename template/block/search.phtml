@@ -1,0 +1,161 @@
+<?php
+    $this->jQuery();
+    $this->backbone();
+?>
+<div id="item-form" class="guide">
+    <?php $form = $block['form']; ?>
+    <?php $locationCategory = $block['locationCategory']; ?>
+
+
+
+<?php
+/*
+ * Message at form top
+ */
+$hiddenMessages = $form->getHiddenMessages();
+if ($hiddenMessages) {
+?>
+    <div class="alert alert-danger">
+        <?php
+        if (!empty($hiddenMessages['security'])) {
+            foreach ($hiddenMessages['security'] as $elMessage) {
+                echo '<p>' . $elMessage . '</p>';
+            }
+            unset($hiddenMessages['security']);
+        }
+        ?>
+        <?php foreach ($hiddenMessages as $elName => $elMessages) { ?>
+            <dl>
+                <dt><?php echo $elName; ?></dt>
+                <?php foreach ($elMessages as $elMessage) { ?>
+                    <dd><?php echo $message; ?></dd>
+                <?php } ?>
+            </dl>
+         <?php } ?>
+    </div>
+<?php
+}
+
+$form->prepare();
+$form->setAttribute('class', 'form-horizontal');
+echo $this->form()->openTag($form);
+
+/**#@+
+ * Preparation
+ */
+$elements   = $form->elementList();
+$validate   = $form->getMessages();
+$groups     = $form->getGroups();
+$this->FormElementErrors()->setMessageOpenFormat('')->setMessageCloseString('');
+/**#@-**/
+
+/**#@++
+ * Temporary function for element display
+ */
+$_this = $this;
+$renderElement = function ($element) use ($_this)
+{
+    $emptyControl = array('checkbox', 'multi_checkbox', 'radio', 'file');
+    $type = $element->getAttribute('type') ? : 'text';
+    $isEmptyControl = in_array($type, $emptyControl);
+    $isCheckbox = $type == 'checkbox';
+    $desc = $element->getAttribute('description');
+
+    if (!$isEmptyControl) {
+        $class      = $element->getAttribute('class');
+        $attrClass  = 'form-control' . ($class ? ' ' . $class : '');
+        $element->setAttribute('class', $attrClass);
+    }
+
+    $rendered = sprintf(
+        '<div class="form-group%s"><label class="col-md-3 control-label">%s</label>',
+        $element->getMessages() ? ' has-error' : '',
+        $isCheckbox ?  '' : $element->getLabel()
+    );
+
+    $rendered .= sprintf(
+        '<div class="col-md-9">%s</div><div class="col-md-9 help-block">%s</div></div>',
+        $_this->formElement($element),
+        $_this->formElementErrors($element)
+    );
+    echo $rendered;
+};
+
+$renderRow = function ($element) use ($_this, $validate, $renderElement)
+{
+    if (method_exists($element, 'getElements')) {
+        echo '<legend>' .  $_this->formLabel($element) . '</legend>';
+
+        $eles = $element->elementList();
+        foreach ($eles['active'] as $ele) {
+            $renderElement($ele);
+        }
+    } else {
+        $renderElement($element);
+    }
+};
+/**#@-**/
+
+if (!$groups) {
+    foreach ($elements['active'] as $element) {
+        $renderRow($element);
+    }
+} else {
+    foreach ($groups as $group) {
+    ?>
+        <legend><?php echo _escape($group['label']); ?></legend>
+        <?php
+        foreach ($group['elements'] as $name) {
+            $element = $form->get($name);
+            $renderRow($element);
+        }
+    }
+}
+
+/**#@+
+ * Add hidden elements
+ */
+foreach ($elements['hidden'] as $element) {
+    echo $this->formElement($element);
+}
+/**#@-**/
+
+echo sprintf(
+        '<div class="form-group"><div class="col-md-offset-2 col-md-10">%s</div></div>', 
+        $this->formElement($elements['submit'])
+    );
+echo $this->form()->closeTag();
+?>
+</div>
+<script>
+(function($) {
+    var page = {
+        el: $('#item-form'),
+        $: function(selector) {
+            return this.el.find(selector);
+        },
+        init: function() {
+            _.bindAll(this);
+            this.$('#item-find-location').on("click",this.locationAction);
+            <?php foreach($locationCategory as $location) { ?>
+            this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
+            <?php } ?>
+        },
+        <?php foreach($locationCategory as $location) { ?>
+        locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
+            var url = "<?php echo $this->url('guide', array('module' => 'guide', 'controller' => 'search', 'action' => 'ajax')); ?>";
+            var category = <?php echo $this->escape($location["child"]); ?>;
+            var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
+            $.getJSON(url + "/category/" + category + "/parent/" + parent).done(function(result) {
+                var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
+                $.each(result, function( index, value ) {
+                    htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
+                });
+                $('#form-location-' + category).html(htmlOptins);
+            });
+        },
+        <?php } ?>
+    }
+    page.init();
+})(jQuery)
+</script>
