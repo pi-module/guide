@@ -1,0 +1,1360 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: guide\n"
+"POT-Creation-Date: 2014-04-07 14:57+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/html/local/pi/pi-release-2.4.0/usr/module/"
+"guide\n"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationCategoryForm.php:50
+msgid "Parent"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationCategoryForm.php:66
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:46
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:48
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:47
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:46
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:66
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationForm.php:74
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:62
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:48
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:22
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:43
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:17
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:14
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:30
+msgid "Title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationCategoryForm.php:78
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:72
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationFindForm.php:50
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:340
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:74
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:97
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:149
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:125
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:104
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:145
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationForm.php:86
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:199
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:210
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:87
+msgid "Submit"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:109
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:60
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:82
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:135
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:90
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:101
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:75
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:75
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:31
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:56
+msgid "Status"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:60
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:111
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:62
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:84
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:137
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:92
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:103
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:77
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:51
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:39
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:39
+msgid "Published"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:61
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:112
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:63
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:85
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:138
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:93
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:104
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:78
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:52
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:40
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:40
+msgid "Pending review"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:62
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:113
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:64
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:86
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:139
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:94
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:105
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:79
+msgid "Draft"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceCategoryForm.php:63
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:114
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ScoreForm.php:65
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:87
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:140
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:95
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:106
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:80
+msgid "Private"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:44
+msgid "General options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:70
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:74
+msgid "slug"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:82
+msgid "Summary"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:96
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ReviewForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:80
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:86
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:61
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:78
+msgid "Description"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:123
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:50
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:80
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LocationForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:43
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:52
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:39
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:83
+msgid "Category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:143
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:106
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:126
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:100
+msgid "Remove image"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:159
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:122
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:113
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:142
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:116
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:25
+msgid "Image"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:172
+msgid "Time options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:179
+msgid "Time start"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:184
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:196
+#, php-format
+msgid "Set like %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:191
+msgid "Time end"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:204
+msgid "Location options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:229
+msgid "Longitude"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:240
+msgid "Latitude"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:252
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:155
+msgid "SEO options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:259
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:162
+msgid "SEO Title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:270
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:174
+msgid "SEO Keywords"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:281
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:186
+msgid "SEO Description"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:294
+msgid "Tags"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:298
+msgid "Use `|` as delimiter to separate tag terms"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:309
+msgid "Extra fields"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:69
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:136
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:15
+msgid "Price"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:60
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:77
+msgid "Online"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:61
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:78
+msgid "Offline"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:70
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:26
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:52
+msgid "Type"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:72
+msgid "Text : type text content"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:73
+msgid "Link : add url for click"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:74
+msgid "Video : add flv or mp4 url for play on video player"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:75
+msgid "Audio : add mp3 url for play on audio player"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:76
+msgid "File : add file link for download"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:77
+msgid "Currency : add view price for anything"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:78
+msgid "Date : add date for view"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:79
+msgid "Number : add number"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:80
+msgid "Select : add select box for choose"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:88
+msgid "Value"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:103
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:45
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:32
+msgid "Search"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:24
+msgid "Home Page"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/Element/Category.php:67
+msgid "All Category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:52
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:45
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/AttachForm.php:60
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:60
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:33
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:72
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:26
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:12
+msgid "Item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:56
+msgid "Select item for add to Special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:65
+msgid "Publish date"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SpecialForm.php:77
+msgid "Expire date"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:44
+msgid "Title search type"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:46
+msgid "Included"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:47
+msgid "Start with"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:48
+msgid "End with"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/SearchForm.php:49
+msgid "According"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:40
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:11
+msgid "Section"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:42
+msgid "All"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:44
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:56
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:57
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:116
+msgid "Extra"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:46
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:64
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:45
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:94
+msgid "Location"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:47
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ReviewController.php:138
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:68
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:69
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:138
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:41
+msgid "Review"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:48
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:72
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:63
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:127
+msgid "Special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:76
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:75
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:149
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:40
+msgid "Attach"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:50
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:80
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:51
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:105
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:42
+msgid "Service"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:8
+msgid "User"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/LogForm.php:70
+msgid "Filter"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:50
+msgid "Parent Category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:129
+msgid "Price options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:147
+msgid "Stock"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:159
+msgid "Period"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:161
+msgid "One Month"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:162
+msgid "Three months"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:163
+msgid "Six Months"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:164
+msgid "Annual"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:176
+msgid "Features options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:190
+msgid "This name used as feature title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:200
+msgid "Use 0 or 1 for yes/no view or type value"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/Element/LocationCategory.php:38
+msgid "Top category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:206
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:83
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:138
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:126
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:197
+msgid "Problem in upload image. please try again"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:276
+msgid "Item data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:305
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:11
+msgid "Add item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:338
+msgid "This item deleted"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:340
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:371
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:407
+msgid "Please select item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:358
+#, php-format
+msgid "%s set recommended successfully"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:365
+#, php-format
+msgid "Error in set recommended for %s item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:400
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:228
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:193
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:262
+#, php-format
+msgid "Image of %s removed"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:403
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:231
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:196
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:265
+msgid "Image not remove"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:84
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:178
+msgid "You must select item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:89
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:186
+msgid "Your selected item not exist"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:106
+#, php-format
+msgid "Attach files to %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:115
+msgid "You must select file"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:138
+msgid "All changes in file saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:141
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:137
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:180
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:247
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ScoreController.php:90
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:190
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:151
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:124
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:228
+msgid "Invalid data, please check and re-submit."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:150
+msgid "Edit file"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:250
+msgid "Your attached file remove successfully"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/AttachController.php:255
+msgid "Please select file"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:133
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:187
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:121
+msgid "Category data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:147
+msgid "Add location category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:177
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:244
+msgid "Location data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:184
+msgid "Please select parent or category."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:217
+#, php-format
+msgid "Add child location on %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LocationController.php:256
+msgid "Edit location"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ScoreController.php:87
+msgid "Score data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ScoreController.php:101
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:4
+msgid "Add score options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:109
+msgid "Extra field data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:122
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:10
+msgid "Add Extra"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:154
+msgid "Selected field delete"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:156
+msgid "Please select field"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:203
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:135
+msgid "Add a category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:235
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:269
+msgid "Please select category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:79
+msgid "Name "
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:81
+msgid "Value "
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:147
+msgid "Package data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:169
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:4
+msgid "Add package"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:200
+msgid "Please select package"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/SpecialController.php:102
+msgid "Special data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/SpecialController.php:114
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:4
+msgid "Add Special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/SpecialController.php:125
+msgid "Selected special delete"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/SpecialController.php:127
+msgid "Please select special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ReviewController.php:81
+#, php-format
+msgid "List of all reviews from %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ReviewController.php:84
+msgid "List of all reviews"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ReviewController.php:100
+msgid "Review not find"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ReviewController.php:126
+msgid "Review data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:225
+msgid "Service data saved successfully."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:238
+#, php-format
+msgid "Add a service to %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:126
+msgid "View filtered logs"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:133
+msgid "Not valid"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/LogController.php:139
+msgid "Not set"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/IndexController.php:50
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/CategoryController.php:55
+msgid "Special items"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/IndexController.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/ItemController.php:58
+msgid "New items"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/ItemController.php:34
+msgid "The item not found."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/CategoryController.php:31
+msgid "The category not found."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/CategoryController.php:63
+#, php-format
+msgid "New items on %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/CategoryController.php:92
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/category.phtml:4
+msgid "Category list"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:28
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:88
+msgid "Tag module not installed."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:33
+msgid "The tag not set."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:46
+msgid "The tag not found."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:66
+#, php-format
+msgid "All items by %s tag"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/TagController.php:106
+msgid "List of all used tags on guide"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/SearchController.php:45
+msgid "Your search successfully. Go to result page"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/SearchController.php:66
+msgid "Your search session is empty, please search again"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/SearchController.php:141
+#, php-format
+msgid "Search result of %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/SearchController.php:143
+msgid "Search result"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:17
+msgid "Global public resource"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:24
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:60
+msgid "Manage"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:81
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:160
+msgid "Score"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:87
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:38
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:171
+msgid "Package"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:93
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:182
+msgid "Orders"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:99
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:193
+msgid "Logs"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:27
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/tag_list.phtml:8
+msgid "Tag list"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:16
+msgid "Guide"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:17
+msgid "Introducing guides."
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:17
+msgid "Admin"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:21
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:39
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/box.phtml:18
+msgid "View"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:29
+msgid "Social"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:33
+msgid "File"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:37
+msgid "Vote"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:41
+msgid "Favourite"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:49
+msgid "Texts"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:57
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:66
+msgid "Perpage"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:74
+msgid "Show extra fields"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:82
+msgid "Show item attacehed files"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:90
+msgid "Show service"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:98
+msgid "Show incategory items"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:106
+msgid "Show user review"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:114
+msgid "Show submit review"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:122
+msgid "Show special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:130
+msgid "Number of items on special"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:138
+msgid "Show Tags"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:147
+msgid "Image Size"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:155
+msgid "Image path"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:163
+msgid "Image Extension"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:171
+msgid "Large Image height"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:179
+msgid "Large Image width"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:187
+msgid "Medium Image height"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:195
+msgid "Medium Image width"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:203
+msgid "Thumb Image height"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:211
+msgid "Thumb Image width"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:219
+msgid "Use lightbox"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:227
+msgid "Add Watermark"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:235
+msgid "Watermark Image"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:242
+msgid "Watermark Positio"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:248
+msgid "Top Left"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:249
+msgid "Top Right"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:250
+msgid "Bottom Left"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:251
+msgid "Bottom Right"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:262
+msgid "Show Google Plus"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:270
+msgid "Show facebook"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:278
+msgid "Show Twitter"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:287
+msgid "File Size"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:295
+msgid "File path"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:303
+msgid "File Extension"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:312
+msgid "Use vote system"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:321
+msgid "Use favourite system"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:330
+msgid "Show search type"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:338
+msgid "Show search category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:347
+msgid "Module main title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:348
+msgid "Title for main page and all non-title pages"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:355
+msgid "Module main description"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:363
+msgid "Module main keywords"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:371
+msgid "Module search page title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:379
+msgid "Module search page description"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:387
+msgid "Module search page keywords"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:150
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_update.phtml:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/search_form.phtml:34
+msgid "Select element"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_update.phtml:17
+msgid "Remove image item in process"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:12
+msgid "List of extra fields"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:28
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:33
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:26
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:43
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:22
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:31
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:31
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:25
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:25
+msgid "Edit"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:29
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:38
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:44
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:23
+msgid "Delete"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:3
+msgid "List of all categories and locations"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:13
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:7
+msgid "Add category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:14
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:8
+msgid "Manage category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:21
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:9
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:9
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:9
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:13
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:7
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:9
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:9
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:15
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:7
+msgid "ID"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:23
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:11
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:18
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:13
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:11
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:11
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:11
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:11
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:17
+msgid "Action"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:31
+msgid "Add child location"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:39
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:31
+msgid ""
+"You can add new location category or select catelory for see list of all "
+"locations on that"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_index.phtml:42
+msgid "Add location to top catgory"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:4
+msgid "Add Category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:6
+msgid "List of Categores"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_update.phtml:6
+#, php-format
+msgid "This review added by %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:28
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_edit.phtml:47
+msgid "Back"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:29
+msgid "Finish"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:37
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:8
+msgid "PerView"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:48
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:10
+msgid "Create"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:60
+msgid "Hits"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:64
+msgid "Size"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:69
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:34
+msgid "Close"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:110
+msgid "In process"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:13
+msgid "List of item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:53
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:41
+msgid "Trash"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:59
+msgid "Recommended in process"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:6
+msgid "List of specials"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:11
+msgid "Publish"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/special_index.phtml:12
+msgid "Expire"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/score_index.phtml:6
+msgid "List score options"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:4
+msgid "Add Service"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:6
+#, php-format
+msgid "List of all service from %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:10
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/service.phtml:6
+#, php-format
+msgid "List of all servies from %s category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:3
+msgid "List of attached files"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:9
+msgid "Information"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:30
+msgid "Get"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:32
+msgid "Edit from item"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:44
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:43
+msgid "Error"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_index.phtml:45
+msgid "No file upload yet"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/package_index.phtml:6
+msgid "List packages"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:4
+msgid "Add Service Category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_index.phtml:6
+msgid "List of Service Categores"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_update.phtml:16
+msgid "Remove image category in process"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:3
+msgid "Manage location category"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:6
+msgid "Location list"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/location_manage.phtml:24
+msgid "Locations"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:14
+msgid "By"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:16
+msgid "On"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:20
+msgid "Active"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:22
+msgid "Inactive"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:24
+msgid "Preview"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:45
+#, php-format
+msgid "No review send yet by users for %s"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/review_index.phtml:47
+msgid "No review send yet by users"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:4
+msgid "List of user logs"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:9
+msgid "Ip"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:10
+msgid "Time"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/log_index.phtml:13
+msgid "Operation"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_manage.phtml:16
+msgid "Remove image service in process"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_edit.phtml:37
+msgid "Get it"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_edit.phtml:40
+msgid "File title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_edit.phtml:41
+msgid "Item title"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/attach.phtml:5
+msgid "Attached archives"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/attach.phtml:17
+msgid "Attached docs"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/attach.phtml:29
+msgid "Attached pdfs"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/attach.phtml:41
+msgid "Attached files"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:77
+msgid "Map"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:79
+msgid "Services"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/box.phtml:22
+msgid "Out of stock"
+msgstr ""
