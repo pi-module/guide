@@ -36,12 +36,12 @@
 			<h3 class="panel-title"><?php echo $this->escape($itemItem['title']); ?></h3>
 		</div>
 		<div class="panel-body">
-			<div class="col-md-8">
+			<div class="col-md-7">
 				<div class="itemInfoBox well clearfix">
 					<div><?php include $this->template('front/category'); ?></div>
 					<div><?php include $this->template('front/tag'); ?></div>
 				</div>
-				<div class="col-md-6">
+				<div class="clearfix">
 					<?php if(!empty($itemItem['address1'])) { ?>
 					<div class="itemInfoText"><strong><?php _e('Address 1'); ?></strong> : <?php echo $this->escape($itemItem['address1']); ?></div>
 					<?php } ?>
@@ -69,12 +69,10 @@
 					<?php if(!empty($itemItem['email'])) { ?>
 					<div class="itemInfoText"><strong><?php _e('Email'); ?></strong> : <?php echo $this->escape($itemItem['email']); ?></div>
 					<?php } ?>
-				</div>
-				<div class="col-md-6">
 					<?php include $this->template('front/extra'); ?>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-5">
 				<div class="itemImage gallery text-center">
 					<div class="itemImageMain">
 						<div class="col-sm-6 col-md-12">

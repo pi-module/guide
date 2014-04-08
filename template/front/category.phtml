@@ -1,8 +1,10 @@
 <?php if (isset($categories) && !empty($categories)) { ?>
 <div class="clearfix categoryList">
+	<?php if($config['view_title']) { ?>
 	<div class="page-header">
 		<h4><?php _e('Category list'); ?></h4>
 	</div>
+    <?php } ?>
 	<?php foreach($categories as $category) { ?>
 	<div class="col-sm-3 col-md-2">
 		<?php if($category['image']) { ?>

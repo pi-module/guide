@@ -1,16 +1,14 @@
 <div class="guide-block">
     <div class="guide-block-item clearfix">
     <?php foreach($block['resources'] as $item) { ?>
-        <div class="col-sm-6 col-md-6 itemBox">
-            <div class="thumbnail">
+        <div class="col-sm-6 col-md-4 itemBox">
+            <div class="text-center">
                 <?php if($item['image']) { ?>
-                <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><img src="<?php echo $item['thumbUrl']; ?>" alt="<?php echo $this->escape($item['title']); ?>" /></a>
+                <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><img class="img-thumbnail" src="<?php echo $item['thumbUrl']; ?>" alt="<?php echo $this->escape($item['title']); ?>" /></a>
                 <?php } ?>
-                <div class="caption">
-                    <h4>
-                        <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a>
-                    </h4>
-                </div>
+                <!-- <h4>
+                    <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a>
+                </h4> -->
             </div>
         </div>
     <?php } ?>

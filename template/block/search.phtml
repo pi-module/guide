@@ -2,7 +2,7 @@
     $this->jQuery();
     $this->backbone();
 ?>
-<div id="item-form" class="guide">
+<div id="item-form" class="guide-search-block">
     <?php $form = $block['form']; ?>
     <?php $locationLevel = $block['locationLevel']; ?>
 <?php
@@ -108,7 +108,6 @@ if (!$groups) {
         }
     }
 }
-
 /**#@+
  * Add hidden elements
  */
@@ -144,7 +143,7 @@ echo $this->form()->closeTag();
             var level = <?php echo $this->escape($location["child"]); ?>;
             var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
             $.getJSON(url + "/level/" + level + "/parent/" + parent).done(function(result) {
-                var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
+                var htmlOptins = "<option value='0'><?php _b('Select element'); ?></option>";
                 $.each(result, function( index, value ) {
                     htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
                 });
@@ -156,3 +155,12 @@ echo $this->form()->closeTag();
     page.init();
 })(jQuery)
 </script>
+<?php 
+_b('Title search type');
+_b('Included');
+_b('Start with');
+_b('According');
+_b('Category');
+_b('All Category');
+_b('Title');
+?>

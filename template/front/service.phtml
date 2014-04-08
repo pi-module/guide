@@ -6,7 +6,11 @@
 			<div class="panel-body"><?php echo sprintf(__('List of all servies from %s category'), $service['title']); ?></div>
 			<ul class="list-group">
 				<?php foreach($service['parameter'] as $parameter) { ?>
-				<li class="list-group-item"><?php echo $this->escape($parameter['title']); ?> | <?php echo $this->escape($parameter['price_view']); ?></li>
+				<li class="list-group-item">
+					<strong><?php echo $this->escape($parameter['title']); ?></strong>
+					<?php if (!empty($parameter['description'])) { ?> | <?php echo $this->escape($parameter['description']); ?><?php } ?>
+					<?php if (!empty($parameter['price_view'])) { ?> | <?php echo $this->escape($parameter['price_view']); ?><?php } ?>
+				</li>
 				<?php } ?>
 			</ul>
 	    </div>

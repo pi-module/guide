@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-08 11:12+0330\n"
+"POT-Creation-Date: 2014-04-08 15:02+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -139,7 +139,7 @@ msgstr "خلاصه"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:80
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:86
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:61
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:109
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:107
 msgid "Description"
 msgstr "توضیحات"
 
@@ -770,7 +770,7 @@ msgid "New items on %s"
 msgstr "موارد جدید در %s"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/CategoryController.php:92
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/category.phtml:4
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/category.phtml:5
 msgid "Category list"
 msgstr "فهرست شاخه ها"
 
@@ -813,15 +813,14 @@ msgstr "نتایج جستجوی %s"
 msgid "Search result"
 msgstr "نتایج جستجو"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:147
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_update.phtml:17
+msgid "Remove image item in process"
+msgstr "حذف تصویر در حال اجرا است"
+
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_update.phtml:49
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/search_form.phtml:34
 msgid "Select element"
 msgstr "لطفا انتخاب نمایید"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_update.phtml:17
-msgid "Remove image item in process"
-msgstr "حذف تصویر در حال اجرا است"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:12
 msgid "List of extra fields"
@@ -895,7 +894,6 @@ msgstr "فهرست شاخه ها"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/category_index.phtml:25
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:39
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/box.phtml:18
 msgid "View"
 msgstr "نمایش"
 
@@ -1102,11 +1100,11 @@ msgstr "پی دی اف های پیوست شده"
 msgid "Attached files"
 msgstr "فایل های پیوست شده"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:108
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:106
 msgid "Map"
 msgstr "نقشه"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:110
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:108
 msgid "Services"
 msgstr "خدمات"
 
@@ -1114,9 +1112,8 @@ msgstr "خدمات"
 msgid "Tag list"
 msgstr "فهرست برچسب ها"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/box.phtml:22
-msgid "Out of stock"
-msgstr "نا موجود"
+#~ msgid "Out of stock"
+#~ msgstr "نا موجود"
 
 #~ msgid "Parent"
 #~ msgstr "والد"

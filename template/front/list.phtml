@@ -1,6 +1,6 @@
 <?php if (isset($itemList) && !empty($itemList)) { ?>
 <div class="itemList clearfix">
-	<?php if (isset($itemTitle) && !empty($itemTitle)) { ?>
+	<?php if ($config['view_title'] && isset($itemTitle) && !empty($itemTitle)) { ?>
 	<div class="page-header">
 		<h4><?php echo $itemTitle; ?></h4>
 	</div>

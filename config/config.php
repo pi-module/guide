@@ -145,6 +145,22 @@ return array(
             'filter' => 'number_int',
             'value' => 1
         ),
+        'view_category' => array(
+            'category' => 'view',
+            'title' => _a('Show category list'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 1
+        ),
+        'view_title' => array(
+            'category' => 'view',
+            'title' => _a('Show list title'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 1
+        ),
         // Image
         'image_size' => array(
             'category' => 'image',

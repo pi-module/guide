@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-08 11:11+0330\n"
+"POT-Creation-Date: 2014-04-08 15:03+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -236,178 +236,186 @@ msgstr "تعداد موارد ویژه"
 msgid "Show Tags"
 msgstr "نمایش برچسب ها"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:151
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:150
+msgid "Show category list"
+msgstr "نمایش فهرست شاخه ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:158
+msgid "Show list title"
+msgstr "نمایش عنوان فهرست ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:167
 msgid "Image Size"
 msgstr "حجم تصویر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:159
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:175
 msgid "Image path"
 msgstr "مسیر ذخیره تصویر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:167
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:183
 msgid "Image Extension"
 msgstr "پسوند های مجار برای تصویر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:175
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:191
 msgid "Large Image height"
 msgstr "ارتفاع تصویر بزرگ"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:183
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:199
 msgid "Large Image width"
 msgstr "عرض تصویر بزرگ"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:191
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:207
 msgid "Medium Image height"
 msgstr "ارتفاع تصویر متوسط"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:199
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:215
 msgid "Medium Image width"
 msgstr "عرض تصویر متوسط"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:207
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:223
 msgid "Thumb Image height"
 msgstr "ارتفاع تصویر بندانگشتی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:215
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:231
 msgid "Thumb Image width"
 msgstr "عرض تصویر بندانگشتی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:223
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:239
 msgid "Use lightbox"
 msgstr "استفاده از لایت باکس"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:231
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:247
 msgid "Add Watermark"
 msgstr "اضافه کردن واترمارک به تصویر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:239
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:255
 msgid "Watermark Image"
 msgstr "تصویر واترمارک"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:246
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:262
 msgid "Watermark Positio"
 msgstr "موقعیت واترمارک"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:252
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:268
 msgid "Top Left"
 msgstr "بالا چپ"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:253
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:269
 msgid "Top Right"
 msgstr "بالا راست"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:254
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:270
 msgid "Bottom Left"
 msgstr "پایین چپ"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:255
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:271
 msgid "Bottom Right"
 msgstr "پایین راست"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:266
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:282
 msgid "Show Google Plus"
 msgstr "نمایش گوگل پلاس"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:274
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:290
 msgid "Show facebook"
 msgstr "نمایش فیسبوک"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:282
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:298
 msgid "Show Twitter"
 msgstr "نمایش تویتر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:291
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:307
 msgid "File Size"
 msgstr "حجم فایل"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:299
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:315
 msgid "File path"
 msgstr "مسیر ذخیره فایل"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:307
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:323
 msgid "File Extension"
 msgstr "سوند های مجار برای فایل"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:316
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:332
 msgid "Use vote system"
 msgstr "استفاده از سیستم رای"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:325
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:341
 msgid "Use favourite system"
 msgstr "استفاده از سیستم مورد علاقه"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:334
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:350
 msgid "Show search type"
 msgstr "نمایش نوع جستجوی عنوان"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:342
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:358
 msgid "Show search category"
 msgstr "نمایش شاخه در جستجو"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:351
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:367
 msgid "Module main title"
 msgstr "عنوان اصلی ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:352
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:368
 msgid "Title for main page and all non-title pages"
 msgstr "عنوان برای صفحه اصلی و تمام صفحات بدون عنوان"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:359
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:375
 msgid "Module main description"
 msgstr "توضیحات اصلی ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:367
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:383
 msgid "Module main keywords"
 msgstr "کلمات کلیدی اصلی ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:375
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:391
 msgid "Module search page title"
 msgstr "عنوان صفحه جستجو ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:383
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:399
 msgid "Module search page description"
 msgstr "توضیحات صفحه جستجو ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:391
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:407
 msgid "Module search page keywords"
 msgstr "کلمات کلیدی صفحه جستجو ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:400
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:416
 msgid "Level 1 name"
 msgstr "نام برای طرح ۱"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:403
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:419
 msgid "Level 1"
 msgstr "سطح ۱"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:407
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:423
 msgid "Level 2 name"
 msgstr "نام برای طرح ۲"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:410
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:426
 msgid "Level 2"
 msgstr "سطح ۲"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:414
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:430
 msgid "Level 3 name"
 msgstr "نام برای طرح ۳"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:417
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:433
 msgid "Level 3"
 msgstr "سطح ۳"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:421
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:437
 msgid "Level 4 name"
 msgstr "نام برای طرح ۴"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:424
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:440
 msgid "Level 4"
 msgstr "سطح ۴"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:428
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:444
 msgid "Level 5 name"
 msgstr "نام برای طرح ۵"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:431
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:447
 msgid "Level 5"
 msgstr "سطح ۵"
