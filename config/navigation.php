@@ -13,7 +13,7 @@
 return array(
     'front'   => array(
         'category' => array(
-            'label'         => __('Category list'),
+            'label'         => _a('Category list'),
             'permission'    => array(
                 'resource'  => 'public',
             ),
@@ -24,7 +24,7 @@ return array(
         ),
 
         'tag' => array(
-            'label'         => __('Tag list'),
+            'label'         => _a('Tag list'),
             'permission'    => array(
                 'resource'  => 'public',
             ),
@@ -35,7 +35,7 @@ return array(
         ),
 
         'package' => array(
-            'label'         => __('Package'),
+            'label'         => _a('Package'),
             'permission'    => array(
                 'resource'  => 'public',
             ),
@@ -46,7 +46,7 @@ return array(
         ),
 
         'search' => array(
-            'label'         => __('Search'),
+            'label'         => _a('Search'),
             'permission'    => array(
                 'resource'  => 'public',
             ),
@@ -57,7 +57,7 @@ return array(
         ),
 
         'manage' => array(
-            'label'         => __('Manage'),
+            'label'         => _a('Manage'),
             'permission'    => array(
                 'resource'  => 'manage',
             ),
@@ -69,7 +69,7 @@ return array(
     ),
     'admin' => array(
         'item' => array(
-            'label'         => __('Item'),
+            'label'         => _a('Item'),
             'permission'    => array(
                 'resource'  => 'item',
             ),
@@ -80,7 +80,7 @@ return array(
         ),
 
         'category' => array(
-            'label'         => __('Category'),
+            'label'         => _a('Category'),
             'permission'    => array(
                 'resource'  => 'category',
             ),
@@ -91,7 +91,7 @@ return array(
         ),
 
         'location' => array(
-            'label'         => __('Location'),
+            'label'         => _a('Location'),
             'permission'    => array(
                 'resource'  => 'location',
             ),
@@ -102,7 +102,7 @@ return array(
         ),
 
         'service' => array(
-            'label'         => __('Service'),
+            'label'         => _a('Service'),
             'permission'    => array(
                 'resource'  => 'service',
             ),
@@ -113,7 +113,7 @@ return array(
         ),
 
         'extra' => array(
-            'label'         => __('Extra'),
+            'label'         => _a('Extra'),
             'permission'    => array(
                 'resource'  => 'extra',
             ),
@@ -124,7 +124,7 @@ return array(
         ),
 
         'special' => array(
-            'label'         => __('Special'),
+            'label'         => _a('Special'),
             'permission'    => array(
                 'resource'  => 'special',
             ),
@@ -135,7 +135,7 @@ return array(
         ),
 
         'review' => array(
-            'label'         => __('Review'),
+            'label'         => _a('Review'),
             'permission'    => array(
                 'resource'  => 'review',
             ),
@@ -146,7 +146,7 @@ return array(
         ),
 
         'attach' => array(
-            'label'         => __('Attach'),
+            'label'         => _a('Attach'),
             'permission'    => array(
                 'resource'  => 'attach',
             ),
@@ -157,7 +157,7 @@ return array(
         ),
 
         'score' => array(
-            'label'         => __('Score'),
+            'label'         => _a('Score'),
             'permission'    => array(
                 'resource'  => 'score',
             ),
@@ -168,7 +168,7 @@ return array(
         ),
 
         'package' => array(
-            'label'         => __('Package'),
+            'label'         => _a('Package'),
             'permission'    => array(
                 'resource'  => 'package',
             ),
@@ -179,7 +179,7 @@ return array(
         ),
 
         'order' => array(
-            'label'         => __('Orders'),
+            'label'         => _a('Orders'),
             'permission'    => array(
                 'resource'  => 'order',
             ),
@@ -190,7 +190,7 @@ return array(
         ),
 
         'log' => array(
-            'label'         => __('Logs'),
+            'label'         => _a('Logs'),
             'permission'    => array(
                 'resource'  => 'log',
             ),

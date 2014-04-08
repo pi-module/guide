@@ -14,14 +14,14 @@ return array(
     // Front section
     'front' => array(
         'public'         => array(
-            'title'         => __('Global public resource'),
+            'title'         => _a('Global public resource'),
             'access'        => array(
                 'guest',
                 'member',
             ),
         ),
         'manage'         => array(
-            'title'         => __('Manage'),
+            'title'         => _a('Manage'),
             'access'        => array(
                 'member',
             ),
@@ -30,73 +30,73 @@ return array(
     // Admin section
     'admin' => array(
         'item'           => array(
-            'title'         => __('Item'),
+            'title'         => _a('Item'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'category'       => array(
-            'title'         => __('Category'),
+            'title'         => _a('Category'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'location'       => array(
-            'title'         => __('Location'),
+            'title'         => _a('Location'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'service'        => array(
-            'title'         => __('Service'),
+            'title'         => _a('Service'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'extra'          => array(
-            'title'         => __('Extra'),
+            'title'         => _a('Extra'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'special'        => array(
-            'title'         => __('Special'),
+            'title'         => _a('Special'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'review'         => array(
-            'title'         => __('Review'),
+            'title'         => _a('Review'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'attach'         => array(
-            'title'         => __('Attach'),
+            'title'         => _a('Attach'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'score'          => array(
-            'title'         => __('Score'),
+            'title'         => _a('Score'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'package'        => array(
-            'title'         => __('Package'),
+            'title'         => _a('Package'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'order'          => array(
-            'title'         => __('Orders'),
+            'title'         => _a('Orders'),
             'access'        => array(
                 //'admin',
             ),
         ),
         'log'            => array(
-            'title'         => __('Logs'),
+            'title'         => _a('Logs'),
             'access'        => array(
                 //'admin',
             ),

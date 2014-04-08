@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: guide\n"
+"POT-Creation-Date: 2014-04-08 10:54+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _a;_t\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/html/local/pi/pi-release-2.4.0/usr/module/"
+"guide\n"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:17
+msgid "Global public resource"
+msgstr "دسترسی های عمومی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:24
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:60
+msgid "Manage"
+msgstr "مدیریت"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:33
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:72
+msgid "Item"
+msgstr "مورد"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:39
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:83
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:90
+msgid "Category"
+msgstr "شاخه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:45
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:94
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:53
+msgid "Location"
+msgstr "مکان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:51
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:105
+msgid "Service"
+msgstr "خدمات"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:57
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:116
+msgid "Extra"
+msgstr "فیلد اضافی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:63
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:127
+msgid "Special"
+msgstr "ویژه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:69
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:138
+msgid "Review"
+msgstr "بررسی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:75
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:149
+msgid "Attach"
+msgstr "پیوست"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:81
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:160
+msgid "Score"
+msgstr "امتیاز دهی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:87
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:38
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:171
+msgid "Package"
+msgstr "بسته ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:93
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:182
+msgid "Orders"
+msgstr "سفارش ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:99
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:193
+msgid "Logs"
+msgstr "گزارش ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:91
+msgid "Category list"
+msgstr "فهرست شاخه ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:27
+msgid "Tag list"
+msgstr "فهرست برچسب ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:114
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:45
+msgid "Search"
+msgstr "جستجو"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:16
+msgid "New Items"
+msgstr "موارد جدید"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:17
+msgid "New Items list"
+msgstr "فهرست موارد جدید"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:22
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:59
+msgid "Number"
+msgstr "تعداد"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:29
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:66
+msgid "Show just recommended"
+msgstr "فقط نمایش موارد پیشنهاد شده"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:36
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:73
+msgid "Show More link to module page"
+msgstr "نمایش لینک ادامه به ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:43
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:80
+msgid "Set More link to module page"
+msgstr "درج لینک ادامه به ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:53
+msgid "Random Item"
+msgstr "موارد تصادفی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:54
+msgid "Random Item list"
+msgstr "فهرست موارد تصادفی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:96
+msgid "Category show type"
+msgstr "نوع نمایش شاخه بندی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:102
+msgid "Simple list"
+msgstr "فهرست ساده"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:103
+msgid "Advanced list"
+msgstr "فهرست پیشرفته"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:115
+msgid "Item search form"
+msgstr "فرم جستجو"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:16
+msgid "Guide"
+msgstr "اصناف"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:17
+msgid "Introducing guides."
+msgstr "مرجع معرفی اصناف"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:17
+msgid "Admin"
+msgstr "بخش مدیر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:21
+msgid "View"
+msgstr "نمایش"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:25
+msgid "Image"
+msgstr "تصویر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:29
+msgid "Social"
+msgstr "شبکه های اجتماعی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:33
+msgid "File"
+msgstr "فایل"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:37
+msgid "Vote"
+msgstr "رای"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:41
+msgid "Favourite"
+msgstr "علاقه مندی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:49
+msgid "Texts"
+msgstr "متن ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:61
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:70
+msgid "Perpage"
+msgstr "تعداد در هر صفحه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:78
+msgid "Show extra fields"
+msgstr "نمایش فیلد های اضافی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:86
+msgid "Show item attacehed files"
+msgstr "نمایش فایل های پیوست شده"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:94
+msgid "Show service"
+msgstr "نمایش خدمات"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:102
+msgid "Show incategory items"
+msgstr "نمایش موارد مشابه در این شاخه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:110
+msgid "Show user review"
+msgstr "نمایش بررسی تخصصی کاربران"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:118
+msgid "Show submit review"
+msgstr "نمایش دکمه ارسال بررسی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:126
+msgid "Show special"
+msgstr "نمایش موارد ویژه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:134
+msgid "Number of items on special"
+msgstr "تعداد موارد ویژه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:142
+msgid "Show Tags"
+msgstr "نمایش برچسب ها"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:151
+msgid "Image Size"
+msgstr "حجم تصویر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:159
+msgid "Image path"
+msgstr "مسیر ذخیره تصویر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:167
+msgid "Image Extension"
+msgstr "پسوند های مجار برای تصویر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:175
+msgid "Large Image height"
+msgstr "ارتفاع تصویر بزرگ"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:183
+msgid "Large Image width"
+msgstr "عرض تصویر بزرگ"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:191
+msgid "Medium Image height"
+msgstr "ارتفاع تصویر متوسط"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:199
+msgid "Medium Image width"
+msgstr "عرض تصویر متوسط"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:207
+msgid "Thumb Image height"
+msgstr "ارتفاع تصویر بندانگشتی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:215
+msgid "Thumb Image width"
+msgstr "عرض تصویر بندانگشتی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:223
+msgid "Use lightbox"
+msgstr "استفاده از لایت باکس"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:231
+msgid "Add Watermark"
+msgstr "اضافه کردن واترمارک به تصویر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:239
+msgid "Watermark Image"
+msgstr "تصویر واترمارک"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:246
+msgid "Watermark Positio"
+msgstr "موقعیت واترمارک"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:252
+msgid "Top Left"
+msgstr "بالا چپ"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:253
+msgid "Top Right"
+msgstr "بالا راست"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:254
+msgid "Bottom Left"
+msgstr "پایین چپ"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:255
+msgid "Bottom Right"
+msgstr "پایین راست"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:266
+msgid "Show Google Plus"
+msgstr "نمایش گوگل پلاس"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:274
+msgid "Show facebook"
+msgstr "نمایش فیسبوک"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:282
+msgid "Show Twitter"
+msgstr "نمایش تویتر"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:291
+msgid "File Size"
+msgstr "حجم فایل"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:299
+msgid "File path"
+msgstr "مسیر ذخیره فایل"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:307
+msgid "File Extension"
+msgstr "سوند های مجار برای فایل"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:316
+msgid "Use vote system"
+msgstr "استفاده از سیستم رای"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:325
+msgid "Use favourite system"
+msgstr "استفاده از سیستم مورد علاقه"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:334
+msgid "Show search type"
+msgstr "نمایش نوع جستجوی عنوان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:342
+msgid "Show search category"
+msgstr "نمایش شاخه در جستجو"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:351
+msgid "Module main title"
+msgstr "عنوان اصلی ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:352
+msgid "Title for main page and all non-title pages"
+msgstr "عنوان برای صفحه اصلی و تمام صفحات بدون عنوان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:359
+msgid "Module main description"
+msgstr "توضیحات اصلی ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:367
+msgid "Module main keywords"
+msgstr "کلمات کلیدی اصلی ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:375
+msgid "Module search page title"
+msgstr "عنوان صفحه جستجو ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:383
+msgid "Module search page description"
+msgstr "توضیحات صفحه جستجو ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:391
+msgid "Module search page keywords"
+msgstr "کلمات کلیدی صفحه جستجو ماژول"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:400
+msgid "Level 1 name"
+msgstr "نام برای طرح ۱"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:403
+msgid "Level 1"
+msgstr "سطح ۱"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:407
+msgid "Level 2 name"
+msgstr "نام برای طرح ۲"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:410
+msgid "Level 2"
+msgstr "سطح ۲"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:414
+msgid "Level 3 name"
+msgstr "نام برای طرح ۳"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:417
+msgid "Level 3"
+msgstr "سطح ۳"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:421
+msgid "Level 4 name"
+msgstr "نام برای طرح ۴"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:424
+msgid "Level 4"
+msgstr "سطح ۴"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:428
+msgid "Level 5 name"
+msgstr "نام برای طرح ۵"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:431
+msgid "Level 5"
+msgstr "سطح ۵"

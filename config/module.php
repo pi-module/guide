@@ -13,8 +13,8 @@
 return array(
     // Module meta
     'meta'         => array(
-        'title'         => __('Guide'),
-        'description'   => __('Introducing guides.'),
+        'title'         => _a('Guide'),
+        'description'   => _a('Introducing guides.'),
         'version'       => '0.1.3',
         'license'       => 'New BSD',
         'logo'          => 'image/logo.png',
