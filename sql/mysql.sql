@@ -30,7 +30,7 @@ CREATE TABLE `{item}` (
     `map_longitude` varchar(16) NOT NULL,
     `map_latitude` varchar(16) NOT NULL,
     `location` int(10) unsigned NOT NULL,
-    `location_category` int(10) unsigned NOT NULL,
+    `location_level` tinyint(1) unsigned NOT NULL,
     `address1` varchar(255) NOT NULL,
     `address2` varchar(255) NOT NULL,
     `city` varchar(16) NOT NULL,
@@ -75,17 +75,8 @@ CREATE TABLE `{link}` (
 
 CREATE TABLE `{location}` (
     `id` int(10) unsigned NOT NULL auto_increment,
-    `category` int(5) unsigned NOT NULL,
+    `level` tinyint(1) unsigned NOT NULL,
     `parent` int(5) unsigned NOT NULL,
-    `title` varchar(255) NOT NULL,
-    `route` text,
-    PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `{location_category}` (
-    `id` int (10) unsigned NOT NULL auto_increment,
-    `parent` int(5) unsigned NOT NULL,
-    `child` int(5) unsigned NOT NULL,
     `title` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
 );

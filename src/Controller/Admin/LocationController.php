@@ -15,53 +15,34 @@ namespace Module\Guide\Controller\Admin;
 use Pi;
 use Pi\Mvc\Controller\ActionController;
 use Pi\Paginator\Paginator;
-use Module\Guide\Form\LocationCategoryForm;
-use Module\Guide\Form\LocationCategoryFilter;
 use Module\Guide\Form\LocationForm;
 use Module\Guide\Form\LocationFilter;
 
 class LocationController extends ActionController
 {
     protected $locationColumns = array(
-    	'id', 'category', 'parent', 'title', 'route'
-    );
-
-    protected $locationCategoryColumns = array(
-    	'id', 'parent', 'child', 'title'
+        'id', 'level', 'parent', 'title', 'route'
     );
 
     public function indexAction()
     {
         // Get page
         $module = $this->params('module');
-        $categoryId = $this->params('category');
+        $level = $this->params('level', 1);
         $page = $this->params('page', 1);
-        // Get category info
-        $categoryList = array();
-        $select = $this->getModel('location_category')->select();
-        $rowset = $this->getModel('location_category')->selectWith($select);
-        // Make list
-        foreach ($rowset as $row) {
-            $categoryList[$row->id] = $row->toArray();
-            $categoryList[$row->id]['url'] = $this->url('', array('action' => 'index', 'category' => $row->id));
-        }
-        // Check categtory have child or is end of tree
-        $where = array('parent' => $categoryId);
-        $columns = array('count' => new \Zend\Db\Sql\Predicate\Expression('count(*)'));
-        $select = $this->getModel('location_category')->select()->columns($columns)->where($where);
-        $count = $this->getModel('location_category')->selectWith($select)->current()->count;
+        $locationLevel = Pi::api('location', 'guide')->locationLevel();
         // Get info
         $locationList = array();
         $order = array('id DESC');
         $offset = (int)($page - 1) * $this->config('admin_perpage');
         $limit = intval($this->config('admin_perpage'));
-        $where = array('category' => $categoryId);
+        $where = array('level' => $level);
         $select = $this->getModel('location')->select()->where($where)->order($order)->offset($offset)->limit($limit);
         $rowset = $this->getModel('location')->selectWith($select);
         // Make list
         foreach ($rowset as $row) {
             $locationList[$row->id] = $row->toArray();
-            if ($count > 0) {
+            if ($level != 5) {
             	$locationList[$row->id]['add'] = $this->url('', array('action' => 'add', 'parent' => $row->id));
             }
             $locationList[$row->id]['edit'] = $this->url('', array('action' => 'edit', 'id' => $row->id));
@@ -80,84 +61,24 @@ class LocationController extends ActionController
                 'module'        => $this->getModule(),
                 'controller'    => 'location',
                 'action'        => 'index',
-                'category'      => $categoryId,
+                'level'         => $level,
             )),
         ));
         // Set view
         $this->view()->setTemplate('location_index');
-        $this->view()->assign('categoryId', $categoryId);
-        $this->view()->assign('categoryList', $categoryList);
+        $this->view()->assign('level', $level);
+        $this->view()->assign('locationLevel', $locationLevel);
         $this->view()->assign('locationList', $locationList);
         $this->view()->assign('paginator', $paginator);
     }
 
-    public function updateAction()
-    {
-        // Get id
-        $id = $this->params('id');
-        $module = $this->params('module');
-        $dd = 'new';
-        if ($id) {
-            $location_category = $this->getModel('location_category')->find($id)->toArray();
-            $dd = 'edit';
-        }
-        // Set form
-        $form = new LocationCategoryForm('locationCategory', array('dd' => $dd));
-        if ($this->request->isPost()) {
-        	$data = $this->request->getPost();
-            $form->setInputFilter(new LocationCategoryFilter);
-            $form->setData($data);
-            if ($form->isValid()) {
-            	$values = $form->getData();
-            	// Set just service_category fields
-            	foreach (array_keys($values) as $key) {
-                    if (!in_array($key, $this->locationCategoryColumns)) {
-                        unset($values[$key]);
-                    }
-                }
-                // Save values
-                if (!empty($values['id'])) {
-                    $row = $this->getModel('location_category')->find($values['id']);
-                } else {
-                    $row = $this->getModel('location_category')->createRow();
-                }
-                $row->assign($values);
-                $row->save();
-                // update child
-                if ($row->parent > 0) {
-                    $this->getModel('location_category')->update(array('child' => $row->id), array('id' => $row->parent));
-                }
-                // Add log
-                $operation = (empty($values['id'])) ? 'add' : 'edit';
-                Pi::api('log', 'guide')->addLog('location_category', $row->id, $operation);
-                $message = __('Category data saved successfully.');
-                $url = array('action' => 'index');
-                $this->jump($url, $message);
-            } else {
-                $message = __('Invalid data, please check and re-submit.');
-            }	
-        } else {
-            if ($id) {
-                $form->setData($location_category);
-            }
-        }
-        // Set view
-        $this->view()->setTemplate('location_category_update');
-        $this->view()->assign('form', $form);
-        $this->view()->assign('title', __('Add location category'));
-    }
-
     public function addAction()
     {
-        // Get id
-        $parent = $this->params('parent');
-        $category = $this->params('category');
-        $module = $this->params('module');
         // Check post     
         if ($this->request->isPost()) {
         	$data = $this->request->getPost();
         	// Set form
-        	$form = new LocationForm('location', array('type' => 'save'));
+        	$form = new LocationForm('location');
             $form->setInputFilter(new LocationFilter);
             $form->setData($data);
             if ($form->isValid()) {
@@ -180,41 +101,38 @@ class LocationController extends ActionController
                 $message = __('Invalid data, please check and re-submit.');
             }	
         } else {
-            if (!$parent && !$category) {
-                $message = __('Please select parent or category.');
-                $this->jump(array('action' => 'index'), $message);
-            } elseif (!$parent && $category == 1) {
-                // find category
-                $category = $this->getModel('location_category')->find($category)->toArray();
+            // Get id
+            $level = $this->params('level');
+            $module = $this->params('module');
+            $locationLevel = Pi::api('location', 'guide')->locationLevel();
+            // find location
+            if ($level && $level == 1) {
                 $parentId = 0;
-                $title = $category['title'];
-                // category list select where
-                $where = array('id' => $category['id']);
+                $title = sprintf(__('Add top location as %s'), $locationLevel[$level]);
             } else {
-                // find location
+                $parent = $this->params('parent');
                 $location = $this->getModel('location')->find($parent)->toArray();
+                if ($location['level'] < 5) {
+                    $level = $location['level'] + 1;
+                } else {
+                    $message = sprintf(__('You can not add child location on %s'), $locationLevel[5]);
+                    $this->jump(array('action' => 'index'), $message);
+                }
                 $parentId = $location['id'];
-                $title = $location['title'];
-                // category list select where
-                $where = array('parent' => $location['category']);
+                $title = sprintf(__('Add child location on %s as %s'), $location['title'], $locationLevel[$level]);
             }
-        	// find child category
-        	$categoryList = array();
-        	$select = $this->getModel('location_category')->select()->where($where);
-            $rowset = $this->getModel('location_category')->selectWith($select);
-            foreach ($rowset as $row) {
-                $list[$row->id] = $row->toArray();
-                $categoryList[$row->id] = $list[$row->id]['title'];
-            }
-            $formData = array('parent' => $parentId);
+            $formData = array(
+                'parent' => $parentId,
+                'level'  => $level,
+            );
         	// Set form
-        	$form = new LocationForm('location', array('type' => 'add', 'category' => $categoryList));
+        	$form = new LocationForm('location');
         	$form->setData($formData);
         }
         // Set view
         $this->view()->setTemplate('location_update');
         $this->view()->assign('form', $form);
-        $this->view()->assign('title', sprintf(__('Add child location on %s'), $title));
+        $this->view()->assign('title', $title);
     }
 
     public function editAction()
@@ -223,7 +141,7 @@ class LocationController extends ActionController
         $id = $this->params('id');
         $module = $this->params('module');
         // Set form
-        $form = new LocationForm('location', array('type' => 'edit'));
+        $form = new LocationForm('location');
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
             $form->setInputFilter(new LocationFilter);
@@ -256,33 +174,14 @@ class LocationController extends ActionController
         $this->view()->assign('title', __('Edit location'));
     }
 
-    public function manageAction()
-    {
-        // Get category info
-        $categoryList = array();
-        $select = $this->getModel('location_category')->select();
-        $rowset = $this->getModel('location_category')->selectWith($select);
-        // Make list
-        foreach ($rowset as $row) {
-            $categoryList[$row->id] = $row->toArray();
-            $categoryList[$row->id]['url'] = $this->url('', array('action' => 'index', 'category' => $row->id));
-            $categoryList[$row->id]['edit'] = $this->url('', array('action' => 'update', 'id' => $row->id));
-        }
-        // Set view
-        $this->view()->setTemplate('location_manage');
-        $this->view()->assign('categoryList', $categoryList);
-    }
-
     public function formElementAjaxAction()
     {
         $this->view()->setTemplate(false);
         // Get id
-        $category = $this->params('category');
+        $level = $this->params('level');
         $parent = $this->params('parent');
-        $module = $this->params('module');
-        $element = array();
         // find
-        $element = Pi::api('location', 'guide')->locationFormElement($category, $parent);
+        $element = Pi::api('location', 'guide')->locationFormElement($level, $parent);
         return $element;
     }
 }

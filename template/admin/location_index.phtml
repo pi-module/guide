@@ -1,18 +1,14 @@
 <?php $this->css($this->assetModule('css/admin.css')); ?>
 <div class="guide">
-	<h3><?php _e('List of all categories and locations'); ?></h3>
+	<h3><?php _e('List of all locations'); ?></h3>
 	<div class="col-md-3">
-		<?php if (!empty($categoryList)) { ?>
+		<?php if (!empty($locationLevel)) { ?>
 		<div class="list-group">
-		    <?php foreach($categoryList as $category) { ?>
-			<a href="<?php echo $this->escape($category['url']); ?>" class="list-group-item <?php if (isset($categoryId) && $categoryId == $category['id']) { ?>active<?php } ?>"><?php echo $this->escape($category['title']); ?></a>
+		    <?php foreach ($locationLevel as $key => $value) { ?>
+			<a href="<?php echo $this->url('', array('action' => 'index', 'level' => $key)); ?>" class="list-group-item <?php if ($key == $level) { ?>active<?php } ?>"><?php echo $value; ?></a>
 		    <?php } ?>
 		</div>
 		<?php } ?>
-		<div class="list-group">
-			<a class="list-group-item" title="<?php _e('Add category'); ?>" href="<?php echo $this->url('', array('action' => 'update')); ?>"><i class="fa fa-folder-open"></i> <?php _e('Add category'); ?></a>
-			<a class="list-group-item" title="<?php _e('Manage category'); ?>" href="<?php echo $this->url('', array('action' => 'manage')); ?>"><i class="fa fa-cog"></i> <?php _e('Manage category'); ?></a>
-		</div>
 	</div>
 	<div class="col-md-9">
 		<?php if (!empty($locationList)) { ?>
@@ -35,11 +31,9 @@
 			</tr>
 			<?php } ?>
 		</table>
-		<?php } else { ?>
-        <div class="alert alert-success"><?php _e('You can add new location category or select catelory for see list of all locations on that'); ?></div>
 		<?php } ?>
-		<?php if (isset($categoryId) &&  $categoryId == 1) { ?>
-		<p><a class="btn btn-primary" title="<?php _e('Add location to top catgory'); ?>" href="<?php echo $this->url('', array('action' => 'add', 'category' => $categoryId)); ?>"><i class="fa fa-plus"></i> <?php _e('Add location to top catgory'); ?></a></p>
+		<?php if ($level == 1) { ?>
+		<p><a class="btn btn-primary" title="<?php _e('Add top location'); ?>" href="<?php echo $this->url('', array('action' => 'add', 'level' => 1)); ?>"><i class="fa fa-plus"></i> <?php _e('Add top location'); ?></a></p>
 		<?php } ?>
 	</div>
 	<div class="clearfix"></div>

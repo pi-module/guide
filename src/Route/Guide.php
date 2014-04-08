@@ -121,7 +121,7 @@ class Guide extends Standard
                         }
                     } elseif ($parts[1] == 'ajax') {
                         $matches['action'] = 'ajax';
-                        $matches['category'] = $parts[3];
+                        $matches['level'] = $parts[3];
                         $matches['parent'] = $parts[5];
                     }
                     break;

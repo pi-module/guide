@@ -49,6 +49,10 @@ return array(
             'title' => __('Texts'),
             'name' => 'text'
         ),
+        array(
+            'title' => __('Location'),
+            'name' => 'location'
+        ),
     ),
     'item' => array(
     	// Admin
@@ -389,6 +393,42 @@ return array(
             'edit' => 'text',
             'filter' => 'string',
             'value' => ''
+        ),
+        // Location
+        'location_level_1' => array(
+            'category' => 'location',
+            'title' => __('Level 1 name'),
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => __('Level 1')
+        ),
+        'location_level_2' => array(
+            'category' => 'location',
+            'title' => __('Level 2 name'),
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => __('Level 2')
+        ),
+        'location_level_3' => array(
+            'category' => 'location',
+            'title' => __('Level 3 name'),
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => __('Level 3')
+        ),
+        'location_level_4' => array(
+            'category' => 'location',
+            'title' => __('Level 4 name'),
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => __('Level 4')
+        ),
+        'location_level_5' => array(
+            'category' => 'location',
+            'title' => __('Level 5 name'),
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => __('Level 5')
         ),
     ),
 );

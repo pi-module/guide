@@ -29,9 +29,9 @@ class LocationFilter extends InputFilter
             'name' => 'parent',
             'required' => false,
         ));
-        // category
+        // level
         $this->add(array(
-            'name' => 'category',
+            'name' => 'level',
             'required' => true,
         ));
         // title

@@ -34,7 +34,7 @@ class ItemController extends ActionController
     	'id', 'title', 'slug', 'category', 'summary', 'description', 'seo_title', 'seo_keywords', 'seo_description', 
     	'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'customer', 'package','hits', 'image', 'path', 
         'vote', 'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 'map_latitude',
-    	'location', 'location_category', 'address1', 'address2', 'city', 'zipcode', 'phone1', 'phone2', 'mobile', 'website', 'email'
+    	'location', 'location_level', 'address1', 'address2', 'city', 'zipcode', 'phone1', 'phone2', 'mobile', 'website', 'email'
     );
 
     public function indexAction()
@@ -129,7 +129,7 @@ class ItemController extends ActionController
         $id = $this->params('id');
         $module = $this->params('module');
         $option = array();
-        $tree = array();
+        $location = '';
         // Find item
         if ($id) {
             $item = $this->getModel('item')->find($id)->toArray();
@@ -141,14 +141,13 @@ class ItemController extends ActionController
                 $option['removeUrl'] = $this->url('', array('action' => 'remove', 'id' => $item['id']));
             }
             // Set location
-            $tree['id'] = $item['location_category'];
-            $tree['location'] = $item['location'];
+            $location = $item['location'];
         }
         // Get extra field
         $fields = Pi::api('extra', 'guide')->Get();
         $option['field'] = $fields['extra'];
         // Get location
-        $option['location'] = Pi::api('location', 'guide')->locationForm($tree);
+        $option['location'] = Pi::api('location', 'guide')->locationForm($location);
         // Set form
         $form = new ItemForm('item', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
@@ -177,7 +176,7 @@ class ItemController extends ActionController
                         $element = $values[$element];
                         if (isset($element) && !empty($element)) {
                             $values['location'] = $element;
-                            $values['location_category'] = $location['id'];
+                            $values['location_level'] = $location['id'];
                         }
                     }
                 }
@@ -292,7 +291,7 @@ class ItemController extends ActionController
                 $item['time_start'] = date('Y-m-d', $item['time_start']);
                 $item['time_end'] = date('Y-m-d', $item['time_end']);
                 // Set location
-                $name = sprintf('location-%s', $item['location_category']);
+                $name = sprintf('location-%s', $item['location_level']);
                 $item[$name] = $item['location'];
                 // Set data 
                 $form->setData($item);
@@ -301,7 +300,7 @@ class ItemController extends ActionController
         // Set view
         $this->view()->setTemplate('item_update');
         $this->view()->assign('form', $form);
-        $this->view()->assign('locationCategory', $option['location']);
+        $this->view()->assign('locationLevel', $option['location']);
         $this->view()->assign('title', __('Add item'));
     }
 

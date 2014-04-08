@@ -17,42 +17,56 @@ use Pi\Application\Api\AbstractApi;
 use Zend\Json\Json;
 
 /*
- * Pi::api('location', 'guide')->locationForm($tree);
- * Pi::api('location', 'guide')->locationFormElement($category, $parent);
+ * Pi::api('location', 'guide')->locationLevel();
+ * Pi::api('location', 'guide')->locationForm($location);
+ * Pi::api('location', 'guide')->locationFormElement($level, $parent);
  * Pi::api('location', 'guide')->locationSearch($form);
- * Pi::api('location', 'guide')->locationAllChild($id, $category);
  */
 
 class Location extends AbstractApi
 {
-	public function locationForm($tree = array())
+	public function locationLevel()
+    {
+        // Get config
+        $config = Pi::service('registry')->config->read($this->getModule());
+        // Set level array
+        $level = array(
+            1 => $config['location_level_1'],
+            2 => $config['location_level_2'],
+            3 => $config['location_level_3'],
+            4 => $config['location_level_4'],
+            5 => $config['location_level_5']
+        );
+        return $level;
+    }
+
+    public function locationForm($location = '')
 	{
-        // Set category
-        $category = array();
-        // Get category info
-        $select = Pi::model('location_category', $this->getModule())->select();
-        $rowset = Pi::model('location_category', $this->getModule())->selectWith($select);
+        $return = array();
+        $locationLevel = $this->locationLevel();
         // Make list
-        foreach ($rowset as $row) {
-            $category[$row->id] = $row->toArray();
-            if ($row->parent == 0) {
-                $category[$row->id]['value'] = $this->locationFormElement($row->id, $row->parent);
+        foreach ($locationLevel as $key => $value) {
+            $return[$key]['id'] = $key;
+            $return[$key]['title'] = $value;
+            $return[$key]['child'] = $key + 1;
+            if ($key == 1) {
+                $return[$key]['value'] = $this->locationFormElement($key, 0);
             } else {
-                $category[$row->id]['value'] = array();
+                $return[$key]['value'] = array();
             }
         }
         // set tree
-        if (!empty($tree) && !empty($category)) {
-            $location = Pi::model('location', $this->getModule())->find($tree['location']);
-            $category[$tree['id']]['value'] = $this->locationFormElement($tree['id'], $location->parent);
+        if (!empty($location) && !empty($return)) {
+            $location = Pi::model('location', $this->getModule())->find($location);
+            $return[$location->level]['value'] = $this->locationFormElement($location->level, $location->parent);
         }
-        return $category;
+        return $return;
 	}
 
-	public function locationFormElement($category, $parent)
+	public function locationFormElement($level, $parent)
     {
         $location = array();
-        $where = array('category' => $category, 'parent' => $parent);
+        $where = array('level' => $level, 'parent' => $parent);
         $select = Pi::model('location', $this->getModule())->select()->where($where);
         $rowset = Pi::model('location', $this->getModule())->selectWith($select);
         foreach ($rowset as $row) {
@@ -65,20 +79,20 @@ class Location extends AbstractApi
     public function locationSearch($form)
     {
         $location_id = '';
-        $location_category = '';
+        $location_level = '';
         $locationForm = $this->locationForm();
         foreach ($locationForm as $location) {
             $element = sprintf('location-%s', $location['id']);
             $element = $form[$element];
             if (isset($element) && !empty($element)) {
                 $location_id = $element;
-                $location_category = $location['id'];
+                $location_level = $location['id'];
             }
         }
-        if (empty($location_id) || empty($location_category)) {
+        if (empty($location_id) || empty($location_level)) {
             return '';
         }
-        $where = array('category > ?' => $location_category);
+        $where = array('level > ?' => $location_level);
         $select = Pi::model('location', $this->getModule())->select()->where($where);
         $rowset = Pi::model('location', $this->getModule())->selectWith($select);
         foreach ($rowset as $row) {

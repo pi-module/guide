@@ -55,7 +55,7 @@ class SearchController extends IndexController
         $this->view()->headKeywords($config['text_keywords_search'], 'set');
         $this->view()->setTemplate('search_form');
         $this->view()->assign('form', $form);
-        $this->view()->assign('locationCategory', $option['location']);
+        $this->view()->assign('locationLevel', $option['location']);
     }
 
     public function resultAction()
@@ -160,12 +160,12 @@ class SearchController extends IndexController
     {
         $this->view()->setTemplate(false);
         // Get id
-        $category = $this->params('category');
+        $level = $this->params('level');
         $parent = $this->params('parent');
         $module = $this->params('module');
         $element = array();
         // find
-        $element = Pi::api('location', 'guide')->locationFormElement($category, $parent);
+        $element = Pi::api('location', 'guide')->locationFormElement($level, $parent);
         return $element;
     }
 }

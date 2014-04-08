@@ -114,7 +114,7 @@ class Block
         $form = new SearchForm('search', $formOption);
         $form->setAttribute('action', $action);
         $block['form'] = $form;
-        $block['locationCategory'] = $formOption['location'];
+        $block['locationLevel'] = $formOption['location'];
         return $block;
     }
 

@@ -19,9 +19,6 @@ class LocationForm extends BaseForm
 {
     public function __construct($name = null, $option = array())
     {
-        $this->module = Pi::service('module')->current();
-        $this->category = (isset($option['category'])) ? $option['category'] : '';
-        $this->type = $option['type'];
         parent::__construct($name);
     }
 
@@ -49,24 +46,13 @@ class LocationForm extends BaseForm
                 'type' => 'hidden',
             ),
         ));
-        // category
-        if ($this->type == 'add') {
-            $this->add(array(
-                'name' => 'category',
-                'type' => 'select',
-                'options' => array(
-                    'label' => __('Category'),
-                    'value_options' => $this->category,
-                ),
-            ));
-        } else {
-            $this->add(array(
-                'name' => 'category',
-                'attributes' => array(
-                    'type' => 'hidden',
-                ),
-            ));
-        }
+        // level
+        $this->add(array(
+            'name' => 'level',
+            'attributes' => array(
+                'type' => 'hidden',
+            ),
+        ));
         // title
         $this->add(array(
             'name' => 'title',
