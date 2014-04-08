@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-07 14:57+0330\n"
+"POT-Creation-Date: 2014-04-08 11:11+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,71 +16,52 @@ msgstr ""
 "X-Poedit-SearchPath-0: /var/www/html/local/pi/pi-release-2.4.0/usr/module/"
 "guide\n"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:16
-msgid "New Items"
-msgstr "موارد جدید"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:17
-msgid "New Items list"
-msgstr "فهرست موارد جدید"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:22
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:59
-msgid "Number"
-msgstr "تعداد"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:29
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:66
-msgid "Show just recommended"
-msgstr "فقط نمایش موارد سفارشی شده"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:36
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:73
-msgid "Show More link to module page"
-msgstr "نمایش لینک ادامه به صفحه ماژول"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:43
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:80
-msgid "Set More link to module page"
-msgstr "درج لینک ادامه به صفحه ماژول"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:53
-msgid "Random Item"
-msgstr "موارد تصادفی"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:54
-msgid "Random Item list"
-msgstr "فهرست موارد تصادفی"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:90
-msgid "Category"
-msgstr "شاخه ها"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:91
-msgid "Category list"
-msgstr "فهرست شاخه ها"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:96
-msgid "Category show type"
-msgstr "نوع نمایش شاخه ها"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:102
-msgid "Simple list"
-msgstr "فهرست ساده"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:103
-msgid "Advanced list"
-msgstr "فهرست پیشرفته"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:114
-msgid "Search"
-msgstr "جستجو"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:115
-msgid "Item search form"
-msgstr "فرم جستجو"
-
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:20
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:20
 msgid "More items"
 msgstr "موارد بیشتر"
+
+#~ msgid "New Items"
+#~ msgstr "موارد جدید"
+
+#~ msgid "New Items list"
+#~ msgstr "فهرست موارد جدید"
+
+#~ msgid "Number"
+#~ msgstr "تعداد"
+
+#~ msgid "Show just recommended"
+#~ msgstr "فقط نمایش موارد سفارشی شده"
+
+#~ msgid "Show More link to module page"
+#~ msgstr "نمایش لینک ادامه به صفحه ماژول"
+
+#~ msgid "Set More link to module page"
+#~ msgstr "درج لینک ادامه به صفحه ماژول"
+
+#~ msgid "Random Item"
+#~ msgstr "موارد تصادفی"
+
+#~ msgid "Random Item list"
+#~ msgstr "فهرست موارد تصادفی"
+
+#~ msgid "Category"
+#~ msgstr "شاخه ها"
+
+#~ msgid "Category list"
+#~ msgstr "فهرست شاخه ها"
+
+#~ msgid "Category show type"
+#~ msgstr "نوع نمایش شاخه ها"
+
+#~ msgid "Simple list"
+#~ msgstr "فهرست ساده"
+
+#~ msgid "Advanced list"
+#~ msgstr "فهرست پیشرفته"
+
+#~ msgid "Search"
+#~ msgstr "جستجو"
+
+#~ msgid "Item search form"
+#~ msgstr "فرم جستجو"

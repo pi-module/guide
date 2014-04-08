@@ -104,12 +104,13 @@ class ExtraController extends ActionController
                 }
                 $row->assign($values);
                 $row->save();
-                // Check it save or not
-                if ($row->id) {
-                    $message = __('Extra field data saved successfully.');
-                    $url = array('action' => 'index');
-                    $this->jump($url, $message);
-                }
+                // Add log
+                $operation = (empty($values['id'])) ? 'add' : 'edit';
+                Pi::api('log', 'guide')->addLog('extra', $row->id, $operation);
+                // Jump
+                $message = __('Extra field data saved successfully.');
+                $url = array('action' => 'index');
+                $this->jump($url, $message);
             }
         } else {
             if ($id) {

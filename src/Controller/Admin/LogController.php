@@ -79,6 +79,22 @@ class LogController extends ActionController
                 case 'service':
                     $list[$row->id]['section_view'] =  __('Service');
                     break;
+
+                case 'service_category':
+                    $list[$row->id]['section_view'] =  __('Service category');
+                    break;
+
+                case 'package':
+                    $list[$row->id]['section_view'] =  __('Package');
+                    break;
+                    
+                case 'score':
+                    $list[$row->id]['section_view'] =  __('Score');
+                    break;
+
+                case 'order':
+                    $list[$row->id]['section_view'] =  __('Orders');
+                    break;    
             }
         }
         // Set paginator
