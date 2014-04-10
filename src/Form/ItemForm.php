@@ -75,6 +75,17 @@ class ItemForm  extends BaseForm
                 
             )
         ));
+        // type
+        $this->add(array(
+            'name' => 'type',
+            'options' => array(
+                'label' => __('Type activity'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // summary
         $this->add(array(
             'name' => 'summary',

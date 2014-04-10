@@ -36,13 +36,31 @@
 			<h3 class="panel-title"><?php echo $this->escape($itemItem['title']); ?></h3>
 		</div>
 		<div class="panel-body">
-			<div class="col-md-7">
+			<div class="col-md-8">
 				<div class="itemInfoBox well clearfix">
-					<div><?php include $this->template('front/category'); ?></div>
-					<div><?php include $this->template('front/tag'); ?></div>
+					<p><strong><?php _e('Type activity'); ?></strong> : <?php echo $this->escape($itemItem['type']); ?></p>
+					<p><strong><?php _e('Date'); ?></strong> : <?php echo $this->escape($itemItem['time_create_view']); ?></p>
+					<p><strong><?php _e('Viewed'); ?></strong> : <?php echo _number($this->escape($itemItem['hits'])); ?> <?php _e('Times'); ?></p>
 				</div>
+				<div class="itemInfoBox well clearfix">
+					<div class="clearfix"><?php include $this->template('front/category'); ?></div>
+				</div>
+				<div class="itemInfoBox well clearfix">
+					<div class="clearfix"><?php include $this->template('front/tag'); ?></div>
+				</div>
+				<div class="itemInfoBox clearfix">
+            		<?php if($config['social_facebook']) { ?>
+            		<span class="productFacebook"><?php echo $this->facebook(); ?></span>
+            		<?php } ?>
+            		<?php if($config['social_twitter']) { ?>
+            		<span class="productTwitter"><?php echo $this->twitter(); ?></span>
+            		<?php } ?>
+            		<?php if($config['social_gplus']) { ?>
+            		<span class="productPlusone"><?php echo $this->plusone(); ?></span>
+            		<?php } ?>
+    			</div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-4">
 				<div class="itemImage gallery text-center">
 					<div class="itemImageMain">
 						<div class="col-sm-6 col-md-12">
@@ -55,34 +73,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 clearfix">
-        		<div class="productSocial pull-left clearfix">
-            		<?php if($config['social_facebook']) { ?>
-            		<span class="productFacebook"><?php echo $this->facebook(); ?></span>
-            		<?php } ?>
-            		<?php if($config['social_twitter']) { ?>
-            		<span class="productTwitter"><?php echo $this->twitter(); ?></span>
-            		<?php } ?>
-            		<?php if($config['social_gplus']) { ?>
-            		<span class="productPlusone"><?php echo $this->plusone(); ?></span>
-            		<?php } ?>
-        		</div>
-        		<div class="clearfix"></div>
-    		</div>
 			<!-- Nav tabs -->
 			<div class="col-md-12">
 				<ul class="nav nav-tabs nav-pills nav-justified">
-					<li class="active"><a href="#tab-1" data-toggle="tab"><?php _e('Map'); ?></a></li>
-					<li><a href="#tab-2" data-toggle="tab"><?php _e('Description'); ?></a></li>
+					<li><a href="#tab-1" data-toggle="tab"><?php _e('Map'); ?></a></li>
+					<li class="active"><a href="#tab-2" data-toggle="tab"><?php _e('Description'); ?></a></li>
 					<li><a href="#tab-3" data-toggle="tab"><?php _e('Services'); ?></a></li>
 					<li><a href="#tab-4" data-toggle="tab"><?php _e('Attachs'); ?></a></li>
 					<li><a href="#tab-5" data-toggle="tab"><?php _e('Reviews'); ?></a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active itemTabBody" id="tab-1">
+					<div class="tab-pane itemTabBody" id="tab-1">
 						<div id="map_canvas"></div>
 					</div>
-					<div class="tab-pane itemTabBody" id="tab-2">
+					<div class="tab-pane active itemTabBody" id="tab-2">
 						<div class="itemSummary"><?php echo $itemItem['summary']; ?></div>
 						<div class="itemDescription"><?php echo $itemItem['description']; ?></div>
 						<div class="clearfix">
@@ -138,6 +142,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- End nav tabs -->
 		</div>
 	</div>
 	<?php //include $this->template('front/list'); ?>

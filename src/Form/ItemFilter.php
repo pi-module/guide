@@ -50,6 +50,16 @@ class ItemFilter extends InputFilter
                 )),
             ),
         ));
+        // type
+        $this->add(array(
+            'name' => 'type',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // summary
         $this->add(array(
             'name' => 'summary',

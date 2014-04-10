@@ -192,7 +192,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 800
+            'value' => 600
         ),
         'image_largew' => array(
             'category' => 'image',
@@ -200,7 +200,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 800
+            'value' => 600
         ),
         'image_mediumh' => array(
             'category' => 'image',
@@ -208,7 +208,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 300
+            'value' => 250
         ),
         'image_mediumw' => array(
             'category' => 'image',
@@ -216,7 +216,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 300
+            'value' => 250
         ),
         'image_thumbh' => array(
             'category' => 'image',
@@ -224,7 +224,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 150
+            'value' => 120
         ),
         'image_thumbw' => array(
             'category' => 'image',
@@ -232,7 +232,7 @@ return array(
             'description' => '',
             'edit' => 'text',
             'filter' => 'number_int',
-            'value' => 150
+            'value' => 120
         ),
         'image_lightbox' => array(
             'category' => 'image',

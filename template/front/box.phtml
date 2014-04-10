@@ -1,11 +1,16 @@
 <?php $this->css($this->assetModule('css/front.css')); ?>
-<div class="col-sm-6 col-md-4 itemBox">
-    <div class="text-center">
-        <?php if($item['image']) { ?>
-        <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><img class="img-thumbnail" src="<?php echo $item['thumbUrl']; ?>" alt="<?php echo $this->escape($item['title']); ?>" /></a>
-        <?php } ?>
-        <h4>
-            <a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a>
-        </h4>
-    </div>
+<div class="col-sm-12 col-md-6 itemBox">
+	<div class="clearfix">
+		<div class="col-sm-12 col-md-6">
+			<?php if($item['image']) { ?>
+        	<a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><img class="img-thumbnail" src="<?php echo $item['mediumUrl']; ?>" alt="<?php echo $this->escape($item['title']); ?>" /></a>
+        	<?php } ?>
+		</div>
+        <div class="col-sm-12 col-md-6">
+        	<h4><a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a></h4>
+        	<p><?php echo $this->escape($item['address1']); ?></p>
+        	<p><?php echo $this->escape($item['phone1']); ?></p>
+        	<p><?php echo $this->escape($item['type']); ?> | <?php echo $this->escape($item['city']); ?> | <?php echo $this->escape($item['area']); ?></p>
+        </div>
+	</div>
 </div>

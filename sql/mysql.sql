@@ -1,6 +1,7 @@
 CREATE TABLE `{item}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
+    `type` varchar(255) NOT NULL,
     `slug` varchar(255) NOT NULL,
     `category` varchar(255) NOT NULL,
     `summary` text,
