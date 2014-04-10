@@ -41,36 +41,6 @@
 					<div><?php include $this->template('front/category'); ?></div>
 					<div><?php include $this->template('front/tag'); ?></div>
 				</div>
-				<div class="clearfix">
-					<?php if(!empty($itemItem['address1'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Address 1'); ?></strong> : <?php echo $this->escape($itemItem['address1']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['address2'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Address 2'); ?></strong> : <?php echo $this->escape($itemItem['address2']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['city'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('City'); ?></strong> : <?php echo $this->escape($itemItem['city']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['zipcode'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Zip code'); ?></strong> : <?php echo $this->escape($itemItem['zipcode']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['phone1'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Phone 1'); ?></strong> : <?php echo $this->escape($itemItem['phone1']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['phone2'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Phone 2'); ?></strong> : <?php echo $this->escape($itemItem['phone2']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['mobile'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Mobile'); ?></strong> : <?php echo $this->escape($itemItem['mobile']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['website'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Website'); ?></strong> : <?php echo $this->escape($itemItem['website']); ?></div>
-					<?php } ?>
-					<?php if(!empty($itemItem['email'])) { ?>
-					<div class="itemInfoText"><strong><?php _e('Email'); ?></strong> : <?php echo $this->escape($itemItem['email']); ?></div>
-					<?php } ?>
-					<?php include $this->template('front/extra'); ?>
-				</div>
 			</div>
 			<div class="col-md-5">
 				<div class="itemImage gallery text-center">
@@ -83,7 +53,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="itemImageAttach"><?php include $this->template('front/attach_image'); ?></div>
 				</div>
 			</div>
 			<div class="col-md-12 clearfix">
@@ -106,6 +75,8 @@
 					<li class="active"><a href="#tab-1" data-toggle="tab"><?php _e('Map'); ?></a></li>
 					<li><a href="#tab-2" data-toggle="tab"><?php _e('Description'); ?></a></li>
 					<li><a href="#tab-3" data-toggle="tab"><?php _e('Services'); ?></a></li>
+					<li><a href="#tab-4" data-toggle="tab"><?php _e('Attachs'); ?></a></li>
+					<li><a href="#tab-5" data-toggle="tab"><?php _e('Reviews'); ?></a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active itemTabBody" id="tab-1">
@@ -114,6 +85,46 @@
 					<div class="tab-pane itemTabBody" id="tab-2">
 						<div class="itemSummary"><?php echo $itemItem['summary']; ?></div>
 						<div class="itemDescription"><?php echo $itemItem['description']; ?></div>
+						<div class="clearfix">
+							<div class="col-md-6">
+								<?php if(!empty($itemItem['address1'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Address 1'); ?></strong> : <?php echo $this->escape($itemItem['address1']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['address2'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Address 2'); ?></strong> : <?php echo $this->escape($itemItem['address2']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['city'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('City'); ?></strong> : <?php echo $this->escape($itemItem['city']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['zipcode'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Zip code'); ?></strong> : <?php echo $this->escape($itemItem['zipcode']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['phone1'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Phone 1'); ?></strong> : <?php echo $this->escape($itemItem['phone1']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['phone2'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Phone 2'); ?></strong> : <?php echo $this->escape($itemItem['phone2']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['mobile'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Mobile'); ?></strong> : <?php echo $this->escape($itemItem['mobile']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['website'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Website'); ?></strong> : <?php echo $this->escape($itemItem['website']); ?></div>
+								<?php } ?>
+								<?php if(!empty($itemItem['email'])) { ?>
+								<div class="itemInfoText"><strong><?php _e('Email'); ?></strong> : <?php echo $this->escape($itemItem['email']); ?></div>
+								<?php } ?>
+							</div>
+							<div class="col-md-6">
+								<?php include $this->template('front/extra'); ?>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane itemTabBody" id="tab-3">
+						<?php include $this->template('front/service'); ?>
+					</div>
+					<div class="tab-pane itemTabBody" id="tab-4">
+						<div class="itemImageAttach gallery text-center"><?php include $this->template('front/attach_image'); ?></div>
 						<div class="itemMedia">
 							<?php include $this->template('front/attach_audio'); ?>
 					    	<?php include $this->template('front/extra_audio'); ?>
@@ -121,15 +132,14 @@
 					    	<?php include $this->template('front/extra_video'); ?>
 						</div>
 					</div>
-					<div class="tab-pane itemTabBody" id="tab-3">
-						<?php include $this->template('front/service'); ?>
+					<div class="tab-pane itemTabBody" id="tab-5">
+						<p><?php _e('Not yet'); ?></p>
+						<?php //include $this->template('front/review'); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php //include $this->template('front/attach'); ?>
-	<?php //include $this->template('front/review'); ?>
 	<?php //include $this->template('front/list'); ?>
 	</div>
 </div>

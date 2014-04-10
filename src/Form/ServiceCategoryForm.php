@@ -17,8 +17,11 @@ use Pi\Form\Form as BaseForm;
 
 class ServiceCategoryForm extends BaseForm
 {
-    public function __construct($name = null, $item)
+    public function __construct($name = null, $option = array())
     {
+        $this->module = Pi::service('module')->current();
+        $this->thumbUrl = $option['thumbUrl'];
+        $this->removeUrl = empty($option['removeUrl']) ? '' : $option['removeUrl'];
         parent::__construct($name);
     }
 
@@ -64,6 +67,46 @@ class ServiceCategoryForm extends BaseForm
                 ),
             ),
         ));
+        // Image
+        if ($this->thumbUrl) {
+            $this->add(array(
+                'name' => 'imageview',
+                'type' => 'Module\Guide\Form\Element\Image',
+                'options' => array(
+                    //'label' => __('Image'),
+                ),
+                'attributes' => array(
+                    'src' => $this->thumbUrl,
+                ),
+            ));
+            $this->add(array(
+                'name' => 'remove',
+                'type' => 'Module\Guide\Form\Element\Remove',
+                'options' => array(
+                    'label' => __('Remove image'),
+                ),
+                'attributes' => array(
+                    'link' => $this->removeUrl,
+                ),
+            ));
+            $this->add(array(
+                'name' => 'image',
+                'attributes' => array(
+                    'type' => 'hidden',
+                ),
+            ));
+        } else {
+            $this->add(array(
+                'name' => 'image',
+                'options' => array(
+                    'label' => __('Image'),
+                ),
+                'attributes' => array(
+                    'type' => 'file',
+                    'description' => '',
+                )
+            ));
+        }
         // Save
         $this->add(array(
             'name' => 'submit',

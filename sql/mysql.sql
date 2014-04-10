@@ -33,7 +33,8 @@ CREATE TABLE `{item}` (
     `location_level` tinyint(1) unsigned NOT NULL,
     `address1` varchar(255) NOT NULL,
     `address2` varchar(255) NOT NULL,
-    `city` varchar(16) NOT NULL,
+    `city` varchar(32) NOT NULL,
+    `area` varchar(32) NOT NULL,
     `zipcode` varchar(16) NOT NULL,
     `phone1` varchar(16) NOT NULL,
     `phone2` varchar(16) NOT NULL,
@@ -154,6 +155,8 @@ CREATE TABLE `{service}` (
 CREATE TABLE `{service_category}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
+    `image` varchar(255) NOT NULL,
+    `path` varchar(16) NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
     PRIMARY KEY (`id`)

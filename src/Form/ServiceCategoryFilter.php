@@ -34,6 +34,11 @@ class ServiceCategoryFilter extends InputFilter
                 ),
             ),
         ));
+        // image
+        $this->add(array(
+            'name' => 'image',
+            'required' => false,
+        ));
         // status
         $this->add(array(
             'name' => 'status',

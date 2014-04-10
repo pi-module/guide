@@ -32,9 +32,10 @@ class ItemController extends ActionController
      */
     protected $itemColumns = array(
     	'id', 'title', 'slug', 'category', 'summary', 'description', 'seo_title', 'seo_keywords', 'seo_description', 
-    	'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'customer', 'package','hits', 'image', 'path', 
-        'vote', 'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 'map_latitude',
-    	'location', 'location_level', 'address1', 'address2', 'city', 'zipcode', 'phone1', 'phone2', 'mobile', 'website', 'email'
+        'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'customer', 'package','hits', 'image', 
+        'path', 'vote', 'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 
+        'map_latitude', 'location', 'location_level', 'address1', 'address2', 'city', 'area', 'zipcode', 'phone1', 
+        'phone2', 'mobile', 'website', 'email'
     );
 
     public function indexAction()

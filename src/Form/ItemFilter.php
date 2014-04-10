@@ -154,6 +154,16 @@ class ItemFilter extends InputFilter
                 ),
             ),
         ));
+        // area
+        $this->add(array(
+            'name' => 'area',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // city
         $this->add(array(
             'name' => 'city',

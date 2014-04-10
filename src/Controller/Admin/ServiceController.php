@@ -39,7 +39,7 @@ class ServiceController extends ActionController
      * Category Columns
      */
     protected $serviceCategoryColumns = array(
-    	'id', 'title', 'time_create', 'status'
+    	'id', 'title', 'image', 'path', 'time_create', 'status'
     );
 
     public function indexAction()
@@ -89,14 +89,47 @@ class ServiceController extends ActionController
         // Get id
         $id = $this->params('id');
         $module = $this->params('module');
+        // Find service
+        if ($id) {
+            $service_category = $this->getModel('service_category')->find($id)->toArray();
+            if ($service_category['image']) {
+                $service_category['thumbUrl'] = sprintf('upload/%s/thumb/%s/%s', $this->config('image_path'), $service_category['path'], $service_category['image']);
+                $option['thumbUrl'] = Pi::url($service_category['thumbUrl']);
+                $option['removeUrl'] = $this->url('', array('action' => 'remove', 'id' => $service_category['id'], 'table' => 'service_category'));
+            }
+        }
         // Set form
         $form = new ServiceCategoryForm('serviceCategory');
+        $form->setAttribute('enctype', 'multipart/form-data');
         if ($this->request->isPost()) {
         	$data = $this->request->getPost();
             $form->setInputFilter(new ServiceCategoryFilter);
             $form->setData($data);
             if ($form->isValid()) {
             	$values = $form->getData();
+                // upload image
+                if (!empty($file['image']['name'])) {
+                    // Set upload path
+                    $values['path'] = sprintf('%s/%s', date('Y'), date('m'));
+                    $originalPath = Pi::path(sprintf('upload/%s/original/%s', $this->config('image_path'), $values['path']));
+                    // Upload
+                    $uploader = new Upload;
+                    $uploader->setDestination($originalPath);
+                    $uploader->setRename($this->ServiceImagePrefix . '%random%');
+                    $uploader->setExtension($this->config('image_extension'));
+                    $uploader->setSize($this->config('image_size'));
+                    if ($uploader->isValid()) {
+                        $uploader->receive();
+                        // Get image name
+                        $values['image'] = $uploader->getUploaded('image');
+                        // process image
+                        Pi::api('image', 'guide')->process($values['image'], $values['path']);
+                    } else {
+                        $this->jump(array('action' => 'update'), __('Problem in upload image. please try again'));
+                    }
+                } elseif (!isset($values['image'])) {
+                    $values['image'] = '';  
+                }
             	// Set just service_category fields
             	foreach (array_keys($values) as $key) {
                     if (!in_array($key, $this->serviceCategoryColumns)) {
@@ -125,7 +158,6 @@ class ServiceController extends ActionController
             }	
         } else {
             if ($id) {
-            	$service_category = $this->getModel('service_category')->find($id)->toArray();
                 $form->setData($service_category);
             }
         }
@@ -242,10 +274,11 @@ class ServiceController extends ActionController
     {
         // Get id and status
         $id = $this->params('id');
+        $table = $this->params('table', 'service');
         // set category
-        $service = $this->getModel('service')->find($id);
+        $row = $this->getModel($table)->find($id);
         // Check
-        if ($service && !empty($id)) {
+        if ($row && !empty($id)) {
             // remove file
             /* $files = array(
                 Pi::path(sprintf('upload/%s/original/%s/%s', $this->config('image_path'), $category->path, $category->image)),
@@ -255,11 +288,11 @@ class ServiceController extends ActionController
             );
             Pi::service('file')->remove($files); */
             // clear DB
-            $service->image = '';
-            $service->path = '';
+            $row->image = '';
+            $row->path = '';
             // Save
-            if ($service->save()) {
-                $message = sprintf(__('Image of %s removed'), $service->title);
+            if ($row->save()) {
+                $message = sprintf(__('Image of %s removed'), $row->title);
                 $status = 1;
             } else {
                 $message = __('Image not remove');

@@ -266,6 +266,17 @@ class ItemForm  extends BaseForm
                 'description' => '',
             )
         ));
+        // area
+        $this->add(array(
+            'name' => 'area',
+            'options' => array(
+                'label' => __('Area'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // city
         $this->add(array(
             'name' => 'city',
