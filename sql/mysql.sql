@@ -42,7 +42,18 @@ CREATE TABLE `{item}` (
     `mobile` varchar(16) NOT NULL,
     `website` varchar(64) NOT NULL,
     `email` varchar(64) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `slug` (`slug`),
+    KEY `title` (`title`),
+    KEY `time_start` (`time_start`),
+    KEY `time_end` (`time_end`),
+    KEY `recommended` (`recommended`),
+    KEY `status` (`status`),
+    KEY `location` (`location`),
+    KEY `item_list` (`status`, `id`),
+    KEY `item_order_start` (`time_start`, `id`),
+    KEY `item_order_hits` (`hits`, `id`),
+    KEY `item_order_rating` (`rating`, `id`)
 ); 
 
 CREATE TABLE `{category}` (
@@ -60,7 +71,11 @@ CREATE TABLE `{category}` (
     `time_update` int(10) unsigned NOT NULL,
     `setting` text,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `slug` (`slug`),
+    KEY `title` (`title`),
+    KEY `time_create` (`time_create`),
+    KEY `status` (`status`)
 ); 
 
 CREATE TABLE `{link}` (
@@ -72,7 +87,14 @@ CREATE TABLE `{link}` (
     `time_start` int(10) unsigned NOT NULL,
     `time_end` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    `rating` int(10) unsigned NOT NULL,
+    `hits` int(10) unsigned NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `link_select` (`status`, `time_start`, `time_end`),
+    KEY `link_order_start` (`time_start`, `id`),
+    KEY `link_order_end` (`time_end`, `id`),
+    KEY `link_order_rating` (`rating`, `id`),
+    KEY `link_order_hits` (`hits`, `id`)
 );
 
 CREATE TABLE `{location}` (
@@ -80,7 +102,10 @@ CREATE TABLE `{location}` (
     `level` tinyint(1) unsigned NOT NULL,
     `parent` int(5) unsigned NOT NULL,
     `title` varchar(255) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `title` (`title`),
+    KEY `parent` (`parent`),
+    KEY `level` (`level`)
 );
 
 CREATE TABLE `{attach}` (
@@ -94,7 +119,12 @@ CREATE TABLE `{attach}` (
     `type` enum('archive','image','video','audio','pdf','doc','other') NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
     `hits` int(10) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `title` (`title`),
+    KEY `item` (`item`),
+    KEY `time_create` (`time_create`),
+    KEY `type` (`type`),
+    KEY `item_status` (`item`, `status`)
 );
 
 CREATE TABLE `{field}` (
@@ -106,7 +136,12 @@ CREATE TABLE `{field}` (
     `status` tinyint(1) unsigned NOT NULL default '1',
     `search` tinyint(1) unsigned NOT NULL default '1',
     `value` text,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `title` (`title`),
+    KEY `order` (`order`),
+    KEY `status` (`status`),
+    KEY `search` (`search`),
+    KEY `order_status` (`order`, `status`)
 );
 
 CREATE TABLE `{field_data}` (
@@ -114,7 +149,11 @@ CREATE TABLE `{field_data}` (
     `field` int(10) unsigned NOT NULL,
     `item` int(10) unsigned NOT NULL,
     `data` varchar(255) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `field` (`field`),
+    KEY `item` (`item`),
+    KEY `data` (`data`),
+    KEY `field_item` (`field`, `item`)
 );
 
 CREATE TABLE `{special}` (
@@ -123,7 +162,11 @@ CREATE TABLE `{special}` (
     `time_publish` int(10) unsigned NOT NULL,
     `time_expire` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL default '1',
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `special_select` (`status`, `time_publish`, `time_expire`),
+    KEY `item` (`item`),
+    KEY `time_publish` (`time_publish`),
+    KEY `status` (`status`)
 );
 
 CREATE TABLE `{review}` (
@@ -136,7 +179,9 @@ CREATE TABLE `{review}` (
     `path` varchar(16) NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `review_select` (`status`, `item`),
+    KEY `time_create` (`time_create`)
 );
 
 CREATE TABLE `{service}` (
@@ -150,7 +195,11 @@ CREATE TABLE `{service}` (
     `item` int(10) unsigned NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `service_select` (`status`, `item`),
+    KEY `title` (`title`),
+    KEY `status` (`status`),
+    KEY `time_create` (`time_create`)
 );
 
 CREATE TABLE `{service_category}` (
@@ -160,14 +209,18 @@ CREATE TABLE `{service_category}` (
     `path` varchar(16) NOT NULL,
     `time_create` int(10) unsigned NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `status` (`status`),
+    KEY `title` (`title`),
+    KEY `time_create` (`time_create`)
 );
 
 CREATE TABLE `{score}` (
     `id` int(10) unsigned NOT NULL auto_increment,
     `title` varchar(255) NOT NULL,
     `status` tinyint(1) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `status` (`status`)
 );
 
 CREATE TABLE `{package}` (
@@ -185,7 +238,10 @@ CREATE TABLE `{package}` (
     `stock_all` int(10) unsigned NOT NULL,
     `stock_sold` int(10) unsigned NOT NULL,
     `stock_remained` int(10) unsigned NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `title` (`title`),
+    KEY `status` (`status`),
+    KEY `time_create` (`time_create`)
 );
 
 CREATE TABLE `{customer}` (
@@ -202,7 +258,13 @@ CREATE TABLE `{customer}` (
     `city` varchar (64) NOT NULL,
     `zip_code` varchar (16) NOT NULL,
     `ip` char(15) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uid` (`uid`),
+    KEY `first_name` (`first_name`),
+    KEY `last_name` (`last_name`),
+    KEY `email` (`email`),
+    KEY `phone` (`phone`),
+    KEY `mobile` (`mobile`)
 );
 
 CREATE TABLE `{order}` (
@@ -224,7 +286,13 @@ CREATE TABLE `{order}` (
     `paid_price` double(16,2) NOT NULL,
     `payment_method` enum('online','offline') NOT NULL,
     `payment_adapter` varchar(64) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `uid` (`uid`),
+    KEY `customer` (`customer`),
+    KEY `item` (`item`),
+    KEY `status_order` (`status_order`),
+    KEY `status_payment` (`status_payment`),
+    KEY `time_create` (`time_create`)
 );
 
 CREATE TABLE `{log}` (
@@ -236,5 +304,7 @@ CREATE TABLE `{log}` (
     `item` int(10) unsigned NOT NULL,
     `operation` varchar (32) NOT NULL,
     `description` text,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    KEY `uid` (`uid`),
+    KEY `time_create` (`time_create`)
 );

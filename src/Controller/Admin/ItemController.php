@@ -242,7 +242,17 @@ class ItemController extends ActionController
                 $row->assign($values);
                 $row->save();
                 // Category
-                Pi::api('category', 'guide')->setLink($row->id, $row->category, $row->time_create, $row->time_update, $row->time_start, $row->time_end, $row->status);
+                Pi::api('category', 'guide')->setLink(
+                    $row->id, 
+                    $row->category, 
+                    $row->time_create, 
+                    $row->time_update, 
+                    $row->time_start, 
+                    $row->time_end, 
+                    $row->status,
+                    $row->rating,
+                    $row->hits
+                );
                 // Tag
                 if (isset($tag) && is_array($tag) && Pi::service('module')->isActive('tag')) {
                     if (empty($values['id'])) {

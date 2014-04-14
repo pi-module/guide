@@ -35,6 +35,7 @@ class ItemController extends IndexController
         }
         // Update Hits
         $this->getModel('item')->update(array('hits' => $item['hits'] + 1), array('id' => $item['id']));
+        $this->getModel('link')->update(array('hits' => $item['hits'] + 1), array('item' => $item['id']));
         // Get extra
         if ($item['extra'] && $config['view_extra']) {
             $extra = Pi::api('extra', 'guide')->item($item['id']);
@@ -93,28 +94,6 @@ class ItemController extends IndexController
         $test = array(
             'Item Controller',
             'Review Action',
-        );
-        // Set view
-        $this->view()->setTemplate('empty');
-        $this->view()->assign('test', $test);
-    }
-
-    public function addReviewAction()
-    {
-        $test = array(
-            'Item Controller',
-            'Add Review Action',
-        );
-        // Set view
-        $this->view()->setTemplate('empty');
-        $this->view()->assign('test', $test);
-    }
-
-    public function serviceAction()
-    {
-        $test = array(
-            'Item Controller',
-            'Service Action',
         );
         // Set view
         $this->view()->setTemplate('empty');
