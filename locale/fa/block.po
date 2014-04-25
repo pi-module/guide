@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-10 11:48+0330\n"
+"POT-Creation-Date: 2014-04-25 18:29+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: /var/www/html/local/pi/pi-release-2.4.0/usr/module/"
 "guide\n"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:18
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:18
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:24
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:24
 msgid "More items"
 msgstr "موارد بیشتر"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-10 11:48+0330\n"
+"POT-Creation-Date: 2014-04-25 18:29+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -148,6 +148,7 @@ msgid "slug"
 msgstr ""
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:82
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:41
 msgid "Type activity"
 msgstr ""
 
@@ -302,7 +303,6 @@ msgstr ""
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ExtraForm.php:70
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/extra_index.phtml:26
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/attach_add.phtml:52
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:41
 msgid "Type"
 msgstr ""
 
@@ -527,36 +527,36 @@ msgstr ""
 msgid "Problem in upload image. please try again"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:276
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:286
 msgid "Item data saved successfully."
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:305
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:315
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/item_index.phtml:11
 msgid "Add item"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:338
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:348
 msgid "This item deleted"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:340
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:371
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:407
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:350
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:381
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:417
 msgid "Please select item"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:358
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:368
 #, php-format
 msgid "%s set recommended successfully"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:365
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:375
 #, php-format
 msgid "Error in set recommended for %s item"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:400
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:410
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:228
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:193
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:295
@@ -564,7 +564,7 @@ msgstr ""
 msgid "Image of %s removed"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:403
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:413
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:231
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:196
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:298
@@ -764,7 +764,7 @@ msgid "Special items"
 msgstr ""
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/IndexController.php:58
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/ItemController.php:58
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Front/ItemController.php:59
 msgid "New items"
 msgstr ""
 
