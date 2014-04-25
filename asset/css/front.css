@@ -6,3 +6,36 @@
 .itemTabBody {
 	margin: 10px;
 }
+
+/* Module block */
+.category-menu {
+    margin: 0;
+    width: 100%;
+}
+
+.category-menu li {
+    width: 100%;
+    font-size: 1em;
+}
+
+.category-menu li > a {
+    color: #000;
+    text-decoration: none;
+    font-size: .9em;
+}
+.category-menu   li > a:before {
+    content: '+';
+    padding-right: 4px;
+    font-weight: bold;
+}
+
+.category-menu li >a.active:before {
+    content: '-';
+    padding-right: 4px;
+    font-weight: bold;
+}
+
+.category-menu li ul {
+    margin: 0.5em 0 0.5em 2em;
+    display: none;
+}

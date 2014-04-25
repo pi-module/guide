@@ -1,6 +1,6 @@
-<div class="shop-block">
+<div class="guide-block">
 	<?php if ($block['type'] == 'simple') { ?>
-	<div class="shop-block-category clearfix">
+	<div class="guide-block-category clearfix">
 		<ul class="nav nav-pills nav-stacked">
 			<?php foreach($block['resources'] as $category) { ?>
 			    <li><a title="<?php echo $this->escape($category['title']); ?>" href="<?php echo $this->escape($category['url']); ?>"><?php echo $this->escape($category['title']); ?></a></li>
@@ -8,8 +8,8 @@
         </ul>
 	</div>
 	<?php } elseif($block['type'] == 'advanced') { ?>
-	<?php $this->css($this->assetModule('css/tree.css', 'shop')); ?>
-	<div class="shop-block-category-advanced">
+	<?php $this->css($this->assetModule('css/tree.css', 'guide')); ?>
+	<div class="guide-block-category-advanced">
     	<?php echo $block['treeHtml']; ?>
 	</div>
 	<script type="text/javascript">
@@ -18,7 +18,7 @@
         	element.slideToggle(600);
     	},
     	walk: function() {
-        	$('a', '.shop-block-category-advanced').each(function() {
+        	$('a', '.guide-block-category-advanced').each(function() {
             	var $a = $(this);
             	var $li = $a.parent();
             	if ($a.next().is('ul')) {
