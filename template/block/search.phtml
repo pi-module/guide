@@ -1,166 +1,23 @@
-<?php
-    $this->jQuery();
-    $this->backbone();
-?>
-<div id="item-form" class="guide-search-block">
-    <?php $form = $block['form']; ?>
-    <?php $locationLevel = $block['locationLevel']; ?>
-<?php
-/*
- * Message at form top
- */
-$hiddenMessages = $form->getHiddenMessages();
-if ($hiddenMessages) {
-?>
-    <div class="alert alert-danger">
-        <?php
-        if (!empty($hiddenMessages['security'])) {
-            foreach ($hiddenMessages['security'] as $elMessage) {
-                echo '<p>' . $elMessage . '</p>';
-            }
-            unset($hiddenMessages['security']);
-        }
-        ?>
-        <?php foreach ($hiddenMessages as $elName => $elMessages) { ?>
-            <dl>
-                <dt><?php echo $elName; ?></dt>
-                <?php foreach ($elMessages as $elMessage) { ?>
-                    <dd><?php echo $message; ?></dd>
-                <?php } ?>
-            </dl>
-         <?php } ?>
-    </div>
-<?php
-}
-
-$form->prepare();
-$form->setAttribute('class', 'form-horizontal');
-echo $this->form()->openTag($form);
-
-/**#@+
- * Preparation
- */
-$elements   = $form->elementList();
-$validate   = $form->getMessages();
-$groups     = $form->getGroups();
-$this->FormElementErrors()->setMessageOpenFormat('')->setMessageCloseString('');
-/**#@-**/
-
-/**#@++
- * Temporary function for element display
- */
-$_this = $this;
-$renderElement = function ($element) use ($_this)
-{
-    $emptyControl = array('checkbox', 'multi_checkbox', 'radio', 'file');
-    $type = $element->getAttribute('type') ? : 'text';
-    $isEmptyControl = in_array($type, $emptyControl);
-    $isCheckbox = $type == 'checkbox';
-    $desc = $element->getAttribute('description');
-
-    if (!$isEmptyControl) {
-        $class      = $element->getAttribute('class');
-        $attrClass  = 'form-control' . ($class ? ' ' . $class : '');
-        $element->setAttribute('class', $attrClass);
-    }
-
-    $rendered = sprintf(
-        '<div class="form-group%s"><label class="col-md-3 control-label">%s</label>',
-        $element->getMessages() ? ' has-error' : '',
-        $isCheckbox ?  '' : $element->getLabel()
-    );
-
-    $rendered .= sprintf(
-        '<div class="col-md-9">%s</div><div class="col-md-9 help-block">%s</div></div>',
-        $_this->formElement($element),
-        $_this->formElementErrors($element)
-    );
-    echo $rendered;
-};
-
-$renderRow = function ($element) use ($_this, $validate, $renderElement)
-{
-    if (method_exists($element, 'getElements')) {
-        echo '<legend>' .  $_this->formLabel($element) . '</legend>';
-
-        $eles = $element->elementList();
-        foreach ($eles['active'] as $ele) {
-            $renderElement($ele);
-        }
-    } else {
-        $renderElement($element);
-    }
-};
-/**#@-**/
-
-if (!$groups) {
-    foreach ($elements['active'] as $element) {
-        $renderRow($element);
-    }
-} else {
-    foreach ($groups as $group) {
-    ?>
-        <legend><?php echo _escape($group['label']); ?></legend>
-        <?php
-        foreach ($group['elements'] as $name) {
-            $element = $form->get($name);
-            $renderRow($element);
-        }
-    }
-}
-/**#@+
- * Add hidden elements
- */
-foreach ($elements['hidden'] as $element) {
-    echo $this->formElement($element);
-}
-/**#@-**/
-
-echo sprintf(
-        '<div class="form-group"><div class="col-md-offset-2 col-md-10">%s</div></div>', 
-        $this->formElement($elements['submit'])
-    );
-echo $this->form()->closeTag();
-?>
+<div class="guide-search-block">
+    <form class="<?php echo $block['form-class']; ?>" role="form" action="<?php echo $block['form-action']; ?>" method="post">
+        <div class="form-group">
+            <label class="sr-only" for="guideSearchTitle"><?php echo _b('Title'); ?></label>
+            <input type="text" name="title" class="form-control" id="guideSearchTitle" placeholder="<?php echo _b('Title'); ?>">
+        </div>
+        <div class="form-group">
+            <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="guideSearchLocation"><?php echo _b('Location'); ?></label>
+            <input type="text" name="location" class="form-control" id="guideSearchLocation" placeholder="<?php echo _b('Location'); ?>">
+        </div>
+        <div class="form-group">
+            <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="guideSearchService"><?php echo _b('Service'); ?></label>
+            <input type="text" name="service" class="form-control" id="guideSearchService" placeholder="<?php echo _b('Service'); ?>">
+        </div>
+        <button type="submit" class="btn btn-default"><?php echo _b('Search'); ?></button>
+    </form>
 </div>
-<script>
-(function($) {
-    var page = {
-        el: $('#item-form'),
-        $: function(selector) {
-            return this.el.find(selector);
-        },
-        init: function() {
-            _.bindAll(this);
-            this.$('#item-find-location').on("click",this.locationAction);
-            <?php foreach($locationLevel as $location) { ?>
-            this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
-            <?php } ?>
-        },
-        <?php foreach($locationLevel as $location) { ?>
-        locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
-            var url = "<?php echo $this->url('guide', array('module' => 'guide', 'controller' => 'search', 'action' => 'ajax')); ?>";
-            var level = <?php echo $this->escape($location["child"]); ?>;
-            var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
-            $.getJSON(url + "/level/" + level + "/parent/" + parent).done(function(result) {
-                var htmlOptins = "<option value='0'><?php _b('Select element'); ?></option>";
-                $.each(result, function( index, value ) {
-                    htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
-                });
-                $('#form-location-' + level).html(htmlOptins);
-            });
-        },
-        <?php } ?>
-    }
-    page.init();
-})(jQuery)
-</script>
-<?php 
-_b('Title search type');
-_b('Included');
-_b('Start with');
-_b('According');
-_b('Category');
-_b('All Category');
-_b('Title');
-?>

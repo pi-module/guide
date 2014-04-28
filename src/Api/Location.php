@@ -21,6 +21,7 @@ use Zend\Json\Json;
  * Pi::api('location', 'guide')->locationForm($location);
  * Pi::api('location', 'guide')->locationFormElement($level, $parent);
  * Pi::api('location', 'guide')->locationSearch($form);
+ * Pi::api('location', 'guide')->locationSearchTitle($title);
  */
 
 class Location extends AbstractApi
@@ -101,6 +102,41 @@ class Location extends AbstractApi
         }
         $allChild = $this->getTree($locationList, $location_id);
         $allChild[] = $location_id;
+        return $allChild;
+    }
+
+    public function locationSearchTitle($title)
+    {
+        $allChild = array();
+        // Check title
+        if (empty($title)) {
+            return $allChild;
+        }
+        // find and check location id
+        $locationSearch = array();
+        $where = array('title' => $title);
+        $select = Pi::model('location', $this->getModule())->select()->where($where);
+        $rowset = Pi::model('location', $this->getModule())->selectWith($select);
+        foreach ($rowset as $row) {
+            $locationSearch[$row->id]['id'] = $row->id;
+            $locationSearch[$row->id]['level'] = $row->level;
+        }
+        if (empty($locationSearch)) {
+            return $allChild;
+        }
+        // Set location child array
+        foreach ($locationSearch as $location) {
+            $where = array('level > ?' => $location['level']);
+            $select = Pi::model('location', $this->getModule())->select()->where($where);
+            $rowset = Pi::model('location', $this->getModule())->selectWith($select);
+            foreach ($rowset as $row) {
+                $locationList[$row->id]['id'] = $row->id;
+                $locationList[$row->id]['parent'] = $row->parent;
+            }
+            $childs = $this->getTree($locationList, $location['id']);
+            $childs[] = $location['id'];
+            $allChild = array_merge($childs, $allChild);
+        }
         return $allChild;
     }
 

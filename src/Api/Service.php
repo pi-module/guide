@@ -19,6 +19,7 @@ use Zend\Json\Json;
 /*
  * Pi::api('service', 'guide')->getService($item);
  * Pi::api('service', 'guide')->getServiceCategory();
+ * Pi::api('service', 'guide')->searchService($title);
  */
 
 class Service extends AbstractApi
@@ -70,5 +71,18 @@ class Service extends AbstractApi
             $viewPrice = '';
         }
         return $viewPrice;
+    }
+
+    public function searchService($title)
+    {
+        $list = array();
+        $where = array('title' => $title, 'status' => 1);
+        $select = Pi::model('service', $this->getModule())->select()->where($where);
+        $rowset = Pi::model('service', $this->getModule())->selectWith($select);
+        foreach ($rowset as $row) {
+            $list[] = $row->item;
+        }
+        $list = array_unique($list);
+        return $list;
     }
 }

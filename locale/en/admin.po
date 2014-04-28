@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-25 18:29+0330\n"
+"POT-Creation-Date: 2014-04-28 14:14+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,7 +37,7 @@ msgstr ""
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:83
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:22
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:86
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:90
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:87
 msgid "Category"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:16
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:92
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:91
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:88
 msgid "Category list"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr ""
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:49
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:130
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:114
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:110
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:45
 msgid "Search"
 msgstr ""
@@ -130,56 +130,72 @@ msgstr ""
 msgid "Tag"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:137
+msgid "Search result"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:15
 msgid "New Items"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:17
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:16
 msgid "New Items list"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:22
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:59
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:21
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:57
 msgid "Number"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:29
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:66
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:28
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:64
 msgid "Show just recommended"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:36
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:73
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:35
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:71
 msgid "Show More link to module page"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:43
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:80
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:42
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:78
 msgid "Set More link to module page"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:53
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:51
 msgid "Random Item"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:54
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:52
 msgid "Random Item list"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:96
-msgid "Category show type"
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:93
+msgid "Category list type"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:102
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:99
 msgid "Simple list"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:103
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:100
 msgid "Advanced list"
 msgstr ""
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:115
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:111
 msgid "Item search form"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:116
+msgid "Search form type"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:122
+msgid "Horizontal"
+msgstr ""
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:123
+msgid "Inline"
 msgstr ""
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:16

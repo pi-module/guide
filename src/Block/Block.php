@@ -102,19 +102,16 @@ class Block
         // Set options
         $block = array();
         $block = array_merge($block, $options);
-        // Set info
-        $formOption = array();
-        $formOption['field'] = '';
-        $formOption['location'] = Pi::api('location', 'guide')->locationForm();
-        // Set form
-        $action = Pi::url(Pi::service('url')->assemble('guide', array(
+        // Set action
+        $block['form-action'] = Pi::url(Pi::service('url')->assemble('guide', array(
             'module'        => $module,
             'controller'    => 'search',
+            'action'        => 'block',
         )));
-        $form = new SearchForm('search', $formOption);
-        $form->setAttribute('action', $action);
-        $block['form'] = $form;
-        $block['locationLevel'] = $formOption['location'];
+        // Set form-class
+        if (!isset($block['form-class']) || !in_array($block['form-class'], array('form-horizontal', 'form-inline'))) {
+            $block['form-class'] = 'form-inline';
+        }
         return $block;
     }
 

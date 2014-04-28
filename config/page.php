@@ -129,6 +129,14 @@ return array(
         array(
             'title'         => _a('Search'),
             'controller'    => 'search',
+            'action'        => 'index',
+            'permission'    => 'public',
+            'block'         => 1,
+        ),
+        array(
+            'title'         => _a('Search result'),
+            'controller'    => 'search',
+            'action'        => 'result',
             'permission'    => 'public',
             'block'         => 1,
         ),

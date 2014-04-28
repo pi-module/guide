@@ -123,7 +123,9 @@ class Guide extends Standard
                         $matches['action'] = 'ajax';
                         $matches['level'] = $parts[3];
                         $matches['parent'] = $parts[5];
-                    }
+                    } elseif ($parts[1] == 'block') {
+                        $matches['action'] = 'block';
+                    }    
                     break;
 
                 // tag controller

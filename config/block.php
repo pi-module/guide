@@ -12,13 +12,12 @@
  */
 return array(
     'item-new'    => array(
-        'name'          => 'item-new',
         'title'         => _a('New Items'),
         'description'   => _a('New Items list'),
-        'render'        => array('block', 'itemNew'),
+        'render'        => 'block::itemNew',
         'template'      => 'item_new',
         'config'        => array(
-            'number' => array(
+            'number'    => array(
                 'title' => _a('Number'),
                 'description' => '',
                 'edit' => 'text',
@@ -30,7 +29,7 @@ return array(
                 'description' => '',
                 'edit' => 'checkbox',
                 'filter' => 'number_int',
-                'value' => 1,
+                'value' => 0,
             ),
             'more-show' => array(
                 'title' => _a('Show More link to module page'),
@@ -49,10 +48,9 @@ return array(
         ),
     ),
     'item-random'    => array(
-        'name'          => 'item-random',
         'title'         => _a('Random Item'),
         'description'   => _a('Random Item list'),
-        'render'        => array('block', 'itemRandom'),
+        'render'        => 'block::itemRandom',
         'template'      => 'item_random',
         'config'        => array(
             'number' => array(
@@ -67,7 +65,7 @@ return array(
                 'description' => '',
                 'edit' => 'checkbox',
                 'filter' => 'number_int',
-                'value' => 1,
+                'value' => 0,
             ),
             'more-show' => array(
                 'title' => _a('Show More link to module page'),
@@ -86,14 +84,13 @@ return array(
         ),
     ),
     'category'    => array(
-        'name'          => 'category',
         'title'         => _a('Category'),
         'description'   => _a('Category list'),
-        'render'        => array('block', 'category'),
+        'render'        => 'block::category',
         'template'      => 'category',
         'config'        => array(
             'type' => array(
-                'title' => _a('Category show type'),
+                'title' => _a('Category list type'),
                 'description' => '',
                 'edit' => array(
                     'type' => 'select',
@@ -110,10 +107,26 @@ return array(
         ),
     ),
     'search'    => array(
-        'name'          => 'search',
         'title'         => _a('Search'),
         'description'   => _a('Item search form'),
-        'render'        => array('block', 'search'),
+        'render'        => 'block::search',
         'template'      => 'search',
+        'config'        => array(
+            'type' => array(
+                'title' => _a('Search form type'),
+                'description' => '',
+                'edit' => array(
+                    'type' => 'select',
+                    'options' => array(
+                        'options' => array(
+                            'form-horizontal' => _a('Horizontal'),
+                            'form-inline' => _a('Inline'),
+                        ),
+                    ),
+                ),
+                'filter' => 'text',
+                'value' => 'form-inline',
+            ),
+        ),
     ),
 );

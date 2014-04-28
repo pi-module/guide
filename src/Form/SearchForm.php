@@ -67,8 +67,7 @@ class SearchForm  extends BaseForm
             ),
             'attributes' => array(
                 'type' => 'text',
-                'description' => '',
-                
+                'description' => '',   
             )
         ));
         // category
@@ -110,8 +109,19 @@ class SearchForm  extends BaseForm
                 ));
             }
         }
+        // service
+        $this->add(array(
+            'name' => 'service',
+            'options' => array(
+                'label' => __('Service'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // Set extra field
-        if (!empty($this->field)) {
+        /* if (!empty($this->field)) {
             foreach ($this->field as $field) {
                 if ($field['search']) {
                     if ($field['type'] == 'select') {
@@ -136,7 +146,7 @@ class SearchForm  extends BaseForm
                     }
                 }
             }
-        }
+        } */
         // Save
         $this->add(array(
             'name' => 'submit',

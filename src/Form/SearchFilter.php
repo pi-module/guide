@@ -48,8 +48,18 @@ class SearchFilter extends InputFilter
                 ));
             }
         }
+        // service
+        $this->add(array(
+            'name' => 'service',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // Set extra field
-        if (!empty($option['field'])) {
+        /* if (!empty($option['field'])) {
             foreach ($option['field'] as $field) {
                 if ($field['search']) {
                     $this->add(array(
@@ -58,6 +68,6 @@ class SearchFilter extends InputFilter
                     ));
                 }
             }
-        }
+        } */
     }
 }    	

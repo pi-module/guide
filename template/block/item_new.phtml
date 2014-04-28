@@ -10,10 +10,10 @@
                 <?php } ?>
                 <div class="caption">
                     <h4><a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a></h4>
-                    <p><?php echo $this->escape($item['address1']); ?></p>
-                    <p><?php echo $this->escape($item['phone1']); ?></p>
-                    <p><?php echo $this->escape($item['type']); ?></p>
-                    <p><?php echo $this->escape($item['city']); ?> | <?php echo $this->escape($item['area']); ?></p>
+                    <p><strong><?php echo _b('Address'); ?></strong> : <?php echo $this->escape($item['address1']); ?></p>
+                    <p><strong><?php echo _b('Location'); ?></strong> : <?php echo $this->escape($item['city']); ?> | <?php echo $this->escape($item['area']); ?></p>
+                    <p><strong><?php echo _b('Phone'); ?></strong> : <?php echo $this->escape($item['phone1']); ?></p>
+                    <p><strong><?php echo _b('Type'); ?></strong> : <?php echo $this->escape($item['type']); ?></p>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
     </div>
     <?php if ($block['more-show'] && !empty($block['more-link'])) { ?>
     <div class="guide-block-more clearfix">
-        <a title="<?php echo _b('More items'); ?>" href="<?php echo $block['more-link']; ?>"><?php _b('More items'); ?></a>
+        <a title="<?php echo _b('More items'); ?>" href="<?php echo $block['more-link']; ?>"><?php echo _b('More items'); ?></a>
     </div>
     <?php } ?>
 </div>
