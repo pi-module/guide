@@ -99,10 +99,11 @@ class ServiceController extends ActionController
             }
         }
         // Set form
-        $form = new ServiceCategoryForm('serviceCategory');
+        $form = new ServiceCategoryForm('serviceCategory', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
         if ($this->request->isPost()) {
         	$data = $this->request->getPost();
+            $file = $this->request->getFiles();
             $form->setInputFilter(new ServiceCategoryFilter);
             $form->setData($data);
             if ($form->isValid()) {

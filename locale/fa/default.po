@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-28 14:15+0330\n"
+"POT-Creation-Date: 2014-04-28 17:35+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -161,7 +161,7 @@ msgstr "خلاصه"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ServiceForm.php:80
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/CategoryForm.php:86
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/PackageForm.php:61
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:80
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:75
 msgid "Description"
 msgstr "توضیحات"
 
@@ -204,12 +204,12 @@ msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:262
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:95
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:89
 msgid "Address 1"
 msgstr "آدرس ۱"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:273
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:98
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:92
 msgid "Address 2"
 msgstr "آدرس ۲"
 
@@ -218,37 +218,37 @@ msgid "Area"
 msgstr "ناحیه"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:295
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:101
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:95
 msgid "City"
 msgstr "شهر"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:306
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:104
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:98
 msgid "Zip code"
 msgstr "کد پستی"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:317
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:107
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:101
 msgid "Phone 1"
 msgstr "تلفن"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:328
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:110
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:104
 msgid "Phone 2"
 msgstr "تلفن سفارش"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:339
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:113
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:107
 msgid "Mobile"
 msgstr "تلفن همراه"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:350
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:116
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:110
 msgid "Website"
 msgstr "وب سایت"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Form/ItemForm.php:361
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:119
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:113
 msgid "Email"
 msgstr "ایمیل"
 
@@ -525,8 +525,8 @@ msgstr "از ۰ یا ۱ برای گزینه بلی / خیر استفاده کن�
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ExtraController.php:83
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:138
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:126
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:128
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:229
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:129
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:230
 msgid "Problem in upload image. please try again"
 msgstr "خطا در بارگذاری تصویر، لطفا مجددا تلاش نمایید"
 
@@ -562,7 +562,7 @@ msgstr "خطا در تنظیم %s به عنوان ویژه"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:410
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:228
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:193
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:295
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:296
 #, php-format
 msgid "Image of %s removed"
 msgstr "تصویر %s حذف شد"
@@ -570,7 +570,7 @@ msgstr "تصویر %s حذف شد"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ItemController.php:413
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:231
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:196
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:298
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:299
 msgid "Image not remove"
 msgstr "تصویر حذف نشد"
 
@@ -603,8 +603,8 @@ msgstr "همه تغییرات در فایل با موفقیت ذخیره شد"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ScoreController.php:90
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:190
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/PackageController.php:151
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:157
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:260
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:158
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:261
 msgid "Invalid data, please check and re-submit."
 msgstr "اطلاعات اشتباه ، مججدا تلاش کنید"
 
@@ -671,17 +671,17 @@ msgid "Please select field"
 msgstr "لطفا یک فیلد انتخاب کنید"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:187
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:154
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:155
 msgid "Category data saved successfully."
 msgstr "اطلاعات شاخه با موفقیت ذخیره شد"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:203
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:167
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:168
 msgid "Add a category"
 msgstr "شاخه جدید"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/CategoryController.php:235
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:302
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:303
 msgid "Please select category"
 msgstr "لطفا یک شاخه انتخاب کنید"
 
@@ -740,11 +740,11 @@ msgstr "بررسی یافت نشد"
 msgid "Review data saved successfully."
 msgstr "اطلاعات بررسی با موفقیت ذخیره شد"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:257
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:258
 msgid "Service data saved successfully."
 msgstr "اطلاعات سرویس با موفقیت ذخیره شد"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:270
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/src/Controller/Admin/ServiceController.php:271
 #, php-format
 msgid "Add a service to %s"
 msgstr "اظافه کردن سرویس به %s"
@@ -998,7 +998,6 @@ msgid "List of all service from %s"
 msgstr "فهرست تمام سرویس های مربوط به %s"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/admin/service_item.phtml:10
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/service.phtml:6
 #, php-format
 msgid "List of all servies from %s category"
 msgstr "فهرست تمام سرویس های مربوط به %s"
@@ -1105,10 +1104,6 @@ msgstr "عنوان فایل"
 msgid "Item title"
 msgstr "عنوان مورد"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/search_formÙwide.phtml:82
-msgid "Cancel"
-msgstr "لغو"
-
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/attach.phtml:5
 msgid "Attached archives"
 msgstr "آرشیو های پیوست شده"
@@ -1137,25 +1132,34 @@ msgstr "نمایش"
 msgid "Times"
 msgstr "بار"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:79
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:74
 msgid "Map"
 msgstr "نقشه"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:81
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:76
 msgid "Services"
 msgstr "خدمات"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:82
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:77
 msgid "Attachs"
 msgstr "پیوست"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:83
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:78
 msgid "Reviews"
 msgstr "بررسی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:140
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/item_item.phtml:141
 msgid "Not yet"
 msgstr "تنظیم نشده"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/search_form_wide.phtml:82
+msgid "Cancel"
+msgstr "لغو"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/service.phtml:12
+#, php-format
+msgid "List of all servies from <strong>%s</strong> category"
+msgstr "فهرست تمام سرویس های مربوط به <strong>%s</strong>"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/front/tag_list.phtml:8
 msgid "Tag list"

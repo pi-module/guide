@@ -38,16 +38,11 @@
 		<div class="panel-body">
 			<div class="col-md-8">
 				<div class="itemInfoBox well clearfix">
-					<p><strong><?php _e('Type activity'); ?></strong> : <?php echo $this->escape($itemItem['type']); ?></p>
-					<p><strong><?php _e('Date'); ?></strong> : <?php echo $this->escape($itemItem['time_create_view']); ?></p>
-					<p><strong><?php _e('Viewed'); ?></strong> : <?php echo _number($this->escape($itemItem['hits'])); ?> <?php _e('Times'); ?></p>
+					<div class="col-md-12"><strong><?php _e('Type activity'); ?></strong> : <?php echo $this->escape($itemItem['type']); ?></div>
+					<div class="col-md-6"><strong><?php _e('Date'); ?></strong> : <?php echo $this->escape($itemItem['time_create_view']); ?></div>
+					<div class="col-md-6"><strong><?php _e('Viewed'); ?></strong> : <?php echo _number($this->escape($itemItem['hits'])); ?> <?php _e('Times'); ?></div>
 				</div>
-				<div class="itemInfoBox well clearfix">
-					<div class="clearfix"><?php include $this->template('front/category'); ?></div>
-				</div>
-				<div class="itemInfoBox well clearfix">
-					<div class="clearfix"><?php include $this->template('front/tag'); ?></div>
-				</div>
+				<div class="itemInfoBox well clearfix itemSummary"><?php echo $itemItem['summary']; ?></div>
 				<div class="itemInfoBox clearfix">
             		<?php if($config['social_facebook']) { ?>
             		<span class="productFacebook"><?php echo $this->facebook(); ?></span>
@@ -76,18 +71,17 @@
 			<!-- Nav tabs -->
 			<div class="col-md-12">
 				<ul class="nav nav-tabs nav-pills nav-justified">
-					<li><a href="#tab-1" data-toggle="tab"><?php _e('Map'); ?></a></li>
-					<li class="active"><a href="#tab-2" data-toggle="tab"><?php _e('Description'); ?></a></li>
+					<li class="active"><a href="#tab-1" data-toggle="tab"><?php _e('Map'); ?></a></li>
+					<li><a href="#tab-2" data-toggle="tab"><?php _e('Description'); ?></a></li>
 					<li><a href="#tab-3" data-toggle="tab"><?php _e('Services'); ?></a></li>
 					<li><a href="#tab-4" data-toggle="tab"><?php _e('Attachs'); ?></a></li>
 					<li><a href="#tab-5" data-toggle="tab"><?php _e('Reviews'); ?></a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane itemTabBody" id="tab-1">
+					<div class="tab-pane active itemTabBody" id="tab-1">
 						<div id="map_canvas"></div>
 					</div>
-					<div class="tab-pane active itemTabBody" id="tab-2">
-						<div class="itemSummary"><?php echo $itemItem['summary']; ?></div>
+					<div class="tab-pane itemTabBody" id="tab-2">
 						<div class="itemDescription"><?php echo $itemItem['description']; ?></div>
 						<div class="clearfix">
 							<div class="col-md-6">
@@ -122,6 +116,13 @@
 							<div class="col-md-6">
 								<?php include $this->template('front/extra'); ?>
 							</div>
+						</div>
+						<br />
+						<div class="itemInfoBox well clearfix">
+							<div class="clearfix"><?php include $this->template('front/category'); ?></div>
+						</div>
+						<div class="itemInfoBox well clearfix">
+							<div class="clearfix"><?php include $this->template('front/tag'); ?></div>
 						</div>
 					</div>
 					<div class="tab-pane itemTabBody" id="tab-3">

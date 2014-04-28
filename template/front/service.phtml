@@ -1,19 +1,35 @@
 <?php if (isset($services) && !empty($services)) { ?>
-	<div class="itemServiceList">
+<div class="itemServiceList">
 	<?php foreach($services as $service) { ?>
-		<div class="panel panel-default">
-			<div class="panel-heading"><h3 class="panel-title"><?php echo $this->escape($service['title']); ?></h3></div>
-			<div class="panel-body"><?php echo sprintf(__('List of all servies from %s category'), $service['title']); ?></div>
-			<ul class="list-group">
-				<?php foreach($service['parameter'] as $parameter) { ?>
-				<li class="list-group-item">
-					<strong><?php echo $this->escape($parameter['title']); ?></strong>
-					<?php if (!empty($parameter['description'])) { ?> | <?php echo $this->escape($parameter['description']); ?><?php } ?>
-					<?php if (!empty($parameter['price_view'])) { ?> | <?php echo $this->escape($parameter['price_view']); ?><?php } ?>
-				</li>
-				<?php } ?>
-			</ul>
-	    </div>
+	<div class="col-sm-12 col-md-6">
+		<div class="list-group">
+			<div class="list-group-item list-group-item-success clearfix">
+				<div class="col-md-3 col-sm-4">
+					<img class="img-thumbnail" src="<?php echo $this->escape($service['thumbUrl']); ?>" alt="<?php echo $this->escape($service['title']); ?>" />
+				</div>
+				<div class="col-md-9 col-sm-8">
+					<h3 class="list-group-item-heading"><?php echo $this->escape($service['title']); ?></h3>
+					<p class="list-group-item-text"><?php echo sprintf(__('List of all servies from <strong>%s</strong> category'), $service['title']); ?></p>
+				</div>
+			</div>
+			<?php foreach($service['parameter'] as $parameter) { ?>
+			<div class="list-group-item clearfix">
+				<div class="col-md-3 col-sm-4">
+					<img class="img-thumbnail" src="<?php echo $this->escape($parameter['thumbUrl']); ?>" alt="<?php echo $this->escape($parameter['title']); ?>" />
+				</div>
+				<div class="col-md-9 col-sm-8">
+					<h4 class="list-group-item-heading"><?php echo $this->escape($parameter['title']); ?></h4>
+					<?php if (!empty($parameter['description'])) { ?>
+					<p class="list-group-item-text"><?php echo $this->escape($parameter['description']); ?></p>
+					<?php } ?>
+					<?php if (!empty($parameter['price_view'])) { ?>
+					<p class="list-group-item-text"><?php echo $this->escape($parameter['price_view']); ?></p>
+					<?php } ?>
+				</div>
+			</div>
+			<?php } ?>
+		</div>
+	</div>    
 	<?php } ?>
-	</div>
+</div>
 <?php } ?>

@@ -58,17 +58,17 @@ foreach ($elements['active'] as $element) {
         );
     } else {
         $rendered .= sprintf(
-            '<div class="col-sm-12 js-form-element">%s%s</div>',
+            '<div class="col-sm-12 js-form-element">%s%s</div></div>',
             $this->formElement($element),
             $desc && !$isCheckbox ? '<div class="text-muted">' . $desc . '</div>' : ''
         );
-        if (!empty($this->formElementErrors($element))) {
+        /* if (!empty($this->formElementErrors($element))) {
             $rendered .= sprintf(
                 '<div class="col-sm-12 col-lg-12"></div><div class="col-sm-12 help-block">%s</div>',
                 $this->formElementErrors($element)
             );
-        }
-        $rendered .= '</div>';
+        } */
+        //$rendered .= '</div>';
     }
     echo $rendered;
 }
