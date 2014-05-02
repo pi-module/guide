@@ -1,3 +1,20 @@
+<?php if ($config['view_category'] && isset($category) && !empty($category)) { ?>
+<div class="clearfix categoryItem">
+	<div class="panel panel-default">
+  		<div class="panel-heading">
+  			<h2 class="panel-title"><?php echo $this->escape($category['title']); ?></h2>
+  		</div>
+		<div class="panel-body">
+			<?php if(!empty($category['image'])) {  ?>
+			<div class="pull-left gallery itemImageList">
+				<img class="img-thumbnail" src="<?php echo $category['thumbUrl']; ?>" alt="<?php echo $this->escape($category['title']); ?>" />
+			</div>
+			<?php } ?>  
+			<?php echo $category['description']; ?>
+		</div>
+	</div>
+</div>
+<?php } ?>
 <?php if ($config['view_category'] && isset($categories) && !empty($categories)) { ?>
 <div class="clearfix categoryList">
 	<?php if($config['view_title']) { ?>
@@ -16,7 +33,8 @@
 	</div>
 	<?php } ?>
 </div>
-<?php } elseif (isset($categoryItem) && !empty($categoryItem)) { ?>
+<?php } ?>
+<?php if (isset($categoryItem) && !empty($categoryItem)) { ?>
 <div class="clearfix categoryItemList">
 	<?php foreach($categoryItem as $category) { ?>
 	<span class="categoryTitle">

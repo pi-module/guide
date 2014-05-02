@@ -21,6 +21,7 @@ use Zend\Json\Json;
  * Pi::api('category', 'guide')->findFromCategory($category);
  * Pi::api('category', 'guide')->categoryList($parent);
  * Pi::api('category', 'guide')->categoryCount();
+ * Pi::api('category', 'guide')->canonizeCategory($category);
  */
 
 class Category extends AbstractApi
@@ -110,5 +111,61 @@ class Category extends AbstractApi
         $select = Pi::model('category', $this->getModule())->select()->columns($columns);
         $count = Pi::model('category', $this->getModule())->selectWith($select)->current()->count;
         return $count;
+    }
+
+    public function canonizeCategory($category)
+    {
+        // Check
+        if (empty($category)) {
+            return '';
+        }
+        // Get config
+        $config = Pi::service('registry')->config->read($this->getModule());
+        // boject to array
+        $category = $category->toArray();
+        // Set description text
+        $category['description'] = Pi::service('markup')->render($category['description'], 'html', 'html');
+        // Set times
+        $category['time_create_view'] = _date($category['time_create']);
+        $category['time_update_view'] = _date($category['time_update']);
+        // Set item url
+        $category['categoryUrl'] = Pi::service('url')->assemble('guide', array(
+            'module'        => $this->getModule(),
+            'controller'    => 'category',
+            'slug'          => $category['slug'],
+        ));
+        // Set image url
+        if ($category['image']) {
+            // Set image original url
+            $category['originalUrl'] = Pi::url(
+                sprintf('upload/%s/original/%s/%s', 
+                    $config['image_path'], 
+                    $category['path'], 
+                    $category['image']
+                ));
+            // Set image large url
+            $category['largeUrl'] = Pi::url(
+                sprintf('upload/%s/large/%s/%s', 
+                    $config['image_path'], 
+                    $category['path'], 
+                    $category['image']
+                ));
+            // Set image medium url
+            $category['mediumUrl'] = Pi::url(
+                sprintf('upload/%s/medium/%s/%s', 
+                    $config['image_path'], 
+                    $category['path'], 
+                    $category['image']
+                ));
+            // Set image thumb url
+            $category['thumbUrl'] = Pi::url(
+                sprintf('upload/%s/thumb/%s/%s', 
+                    $config['image_path'], 
+                    $category['path'], 
+                    $category['image']
+                ));
+        }
+        // return item
+        return $category; 
     }
 }
