@@ -1,6 +1,7 @@
 <?php if (isset($services) && !empty($services)) { ?>
 <div class="itemServiceList">
 	<?php foreach($services as $service) { ?>
+	<?php if (!empty($service['parameter'])) { ?>
 	<div class="col-sm-12 col-md-6">
 		<div class="list-group">
 			<div class="list-group-item list-group-item-success clearfix">
@@ -30,6 +31,7 @@
 			<?php } ?>
 		</div>
 	</div>    
+	<?php } ?>
 	<?php } ?>
 </div>
 <?php } ?>
