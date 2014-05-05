@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-28 17:35+0330\n"
+"POT-Creation-Date: 2014-05-05 13:35+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,51 +16,44 @@ msgstr ""
 "X-Poedit-SearchPath-0: /var/www/html/local/pi/pi-release-2.4.0/usr/module/"
 "guide\n"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:13
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:13
-msgid "Address"
-msgstr "آدرس"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:14
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:14
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:11
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:12
-msgid "Location"
-msgstr "مکان"
-
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:15
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:15
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:19
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:19
 msgid "Phone"
 msgstr "تلفن"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:16
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:16
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:22
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:22
 msgid "Type"
 msgstr "نوع فعالیت"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:24
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:24
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_random.phtml:31
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/item_new.phtml:31
 msgid "More items"
 msgstr "موارد بیشتر"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:4
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:5
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:11
 msgid "Title"
 msgstr "عنوان"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:8
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:15
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:14
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:23
 msgid "And / Or"
 msgstr "و / یا"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:18
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:19
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:20
+msgid "Location"
+msgstr "مکان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:29
 msgid "Service"
 msgstr "خدمات"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:21
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/template/block/search.phtml:31
 msgid "Search"
 msgstr "جستجو"
+
+#~ msgid "Address"
+#~ msgstr "آدرس"
 
 #~ msgid "Select element"
 #~ msgstr "لطفا انتخاب فرمایید"

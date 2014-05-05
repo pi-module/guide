@@ -9,14 +9,18 @@
                 </a>
                 <?php } ?>
                 <div class="caption">
+                    <?php if($block['showtitle']) { ?>
                     <h4><a title="<?php echo $this->escape($item['title']); ?>" href="<?php echo $this->escape($item['itemUrl']); ?>"><?php echo $this->escape($item['title']); ?></a></h4>
-                    <p><strong><?php echo _b('Address'); ?></strong> : <?php echo $this->escape($item['address1']); ?></p>
-                    <p>
-                        <strong><?php _e('Location'); ?></strong> : <?php echo $this->escape($item['city']); ?>
-                        <?php if(!empty($item['area'])) { ?> | <?php echo $this->escape($item['area']); ?><?php } ?>
-                    </p>
+                    <?php } ?>
+                    <?php if($block['showlocation']) { ?>
+                    <p><strong><?php _e('Location'); ?></strong> : <?php echo $this->escape($item['city']); ?><?php if(!empty($item['area'])) { ?> | <?php echo $this->escape($item['area']); ?><?php } ?></p>
+                    <?php } ?>
+                    <?php if($block['showphone']) { ?>
                     <p><strong><?php echo _b('Phone'); ?></strong> : <?php echo $this->escape($item['phone1']); ?></p>
+                    <?php } ?>
+                    <?php if($block['showtype']) { ?>
                     <p><strong><?php echo _b('Type'); ?></strong> : <?php echo $this->escape($item['type']); ?></p>
+                    <?php } ?>
                 </div>
             </div>
         </div>

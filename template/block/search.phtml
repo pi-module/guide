@@ -1,23 +1,34 @@
 <div class="guide-search-block">
-    <form class="<?php echo $block['form-class']; ?>" role="form" action="<?php echo $block['form-action']; ?>" method="post">
-        <div class="form-group">
-            <label class="sr-only" for="guideSearchTitle"><?php echo _b('Title'); ?></label>
-            <input type="text" name="title" class="form-control" id="guideSearchTitle" placeholder="<?php echo _b('Title'); ?>">
-        </div>
-        <div class="form-group">
-            <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
-        </div>
-        <div class="form-group">
-            <label class="sr-only" for="guideSearchLocation"><?php echo _b('Location'); ?></label>
-            <input type="text" name="location" class="form-control" id="guideSearchLocation" placeholder="<?php echo _b('Location'); ?>">
-        </div>
-        <div class="form-group">
-            <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
-        </div>
-        <div class="form-group">
-            <label class="sr-only" for="guideSearchService"><?php echo _b('Service'); ?></label>
-            <input type="text" name="service" class="form-control" id="guideSearchService" placeholder="<?php echo _b('Service'); ?>">
-        </div>
-        <button type="submit" class="btn btn-default"><?php echo _b('Search'); ?></button>
-    </form>
+    <?php if(empty($block['descriptionform'])) { ?>
+    <div class="guide-search-block-desc"><?php echo $block['descriptionform']; ?></div>
+    <?php } ?>
+    <div class="guide-search-block-form">
+        <form class="<?php echo $block['form-class']; ?>" role="form" action="<?php echo $block['form-action']; ?>" method="post">
+            <div class="form-group has-success">
+                <?php if(empty($block['descriptiontitle'])) { ?>
+                <div class="guide-form-lable"><label for="guideSearchTitle"><?php echo $block['descriptiontitle']; ?></label></div>
+                <?php } ?>
+                <input type="text" name="title" class="form-control" id="guideSearchTitle" placeholder="<?php echo _b('Title'); ?>">
+            </div>
+            <div class="form-group">
+                <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
+            </div>
+            <div class="form-group has-warning">
+                <?php if(empty($block['descriptionlocation'])) { ?>
+                <div class="guide-form-lable"><label for="guideSearchLocation"><?php echo $block['descriptionlocation']; ?></label></div>
+                <?php } ?>
+                <input type="text" name="location" class="form-control" id="guideSearchLocation" placeholder="<?php echo _b('Location'); ?>">
+            </div>
+            <div class="form-group">
+                <div class="form-control-static"> <?php echo _b('And / Or'); ?> </div>
+            </div>
+            <div class="form-group has-error">
+                <?php if(empty($block['descriptionservice'])) { ?>
+                <div class="guide-form-lable"><label for="guideSearchService"><?php echo $block['descriptionservice']; ?></label></div>
+                <?php } ?>
+                <input type="text" name="service" class="form-control" id="guideSearchService" placeholder="<?php echo _b('Service'); ?>">
+            </div>
+            <button type="submit" class="btn btn-danger"><?php echo _b('Search'); ?></button>
+        </form> 
+    </div>
 </div>

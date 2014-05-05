@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: guide\n"
-"POT-Creation-Date: 2014-04-28 17:35+0330\n"
+"POT-Creation-Date: 2014-05-05 13:36+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,13 +37,14 @@ msgstr "مورد"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:83
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:22
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:86
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:87
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:143
 msgid "Category"
 msgstr "شاخه"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:45
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:94
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:27
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:205
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:53
 msgid "Location"
 msgstr "مکان"
@@ -51,6 +52,7 @@ msgstr "مکان"
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/permission.php:51
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:105
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:32
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:212
 msgid "Service"
 msgstr "خدمات"
 
@@ -106,7 +108,7 @@ msgstr "گزارش ها"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:16
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:92
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:88
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:144
 msgid "Category list"
 msgstr "فهرست شاخه ها"
 
@@ -117,7 +119,7 @@ msgstr "فهرست برچسب ها"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/navigation.php:49
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/page.php:130
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:110
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:166
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/config.php:45
 msgid "Search"
 msgstr "جستجو"
@@ -143,60 +145,100 @@ msgid "New Items list"
 msgstr "فهرست موارد جدید"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:21
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:57
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:85
 msgid "Number"
 msgstr "تعداد"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:28
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:64
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:92
 msgid "Show just recommended"
 msgstr "فقط نمایش موارد پیشنهاد شده"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:35
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:71
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:99
+msgid "Show title"
+msgstr "نمایش عنوان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:42
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:106
+msgid "Show location"
+msgstr "نمایش مکان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:49
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:113
+msgid "Show phone"
+msgstr "نمایش تلفن"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:56
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:120
+msgid "Show type activity"
+msgstr "نمایش نوع فعالیت"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:63
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:127
 msgid "Show More link to module page"
 msgstr "نمایش لینک ادامه به ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:42
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:78
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:70
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:134
 msgid "Set More link to module page"
 msgstr "درج لینک ادامه به ماژول"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:51
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:79
 msgid "Random Item"
 msgstr "موارد تصادفی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:52
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:80
 msgid "Random Item list"
 msgstr "فهرست موارد تصادفی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:93
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:149
 msgid "Category list type"
 msgstr "نوع فهرست شاخه ها"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:99
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:155
 msgid "Simple list"
 msgstr "فهرست ساده"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:100
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:156
 msgid "Advanced list"
 msgstr "فهرست پیشرفته"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:111
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:167
 msgid "Item search form"
 msgstr "فرم جستجو"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:116
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:172
 msgid "Search form type"
 msgstr "نوع فرم جستجو"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:122
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:178
 msgid "Horizontal"
 msgstr "عمودی"
 
-#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:123
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:179
 msgid "Inline"
 msgstr "افقی"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:187
+msgid "Form description"
+msgstr "تتوضیحات اصلی فرم جستجو"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:194
+msgid "Title feild description"
+msgstr "توضیح فیلد عنوان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:198
+msgid "Title"
+msgstr "عنوان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:201
+msgid "Location feild description"
+msgstr "توضیح فیلد مکان"
+
+#: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/block.php:208
+msgid "Service feild description"
+msgstr "توضیح فیلد خدمات"
 
 #: /var/www/html/local/pi/pi-release-2.4.0/usr/module/guide/config/module.php:16
 msgid "Guide"
