@@ -5,65 +5,8 @@
 		<h4><?php echo $itemTitle; ?></h4>
 	</div>
 	<?php } ?>
-	<?php if (isset($form)) { ?>
-	<div class="row">
-		<div class="col-md-3 well">
-			<?php
-    			$this->css(array(
-        			$this->assetModule('css/front.css'),
-        			$this->assetModule('script/system-ui.css', 'system'),
-    			));
-    			$this->jQuery();
-    			$this->backbone();
-    			$this->js($this->assetModule('script/system-msg.js', 'system'));
-			?>
-			<div id="item-form">
-            	<?php include $this->template('front/search_form_wide'); ?>
-			</div>
-			<script>
-			(function($) {
-    			var page = {
-        			el: $('#item-form'),
-        			modal: $('<div class="modal fade">').appendTo(document.body),
-        			$: function(selector) {
-            			return this.el.find(selector);
-        			},
-        			init: function() {
-            			_.bindAll(this);
-            			this.$('#item-find-location').on("click",this.locationAction);
-            			<?php foreach($locationLevel as $location) { ?>
-            			this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
-            			<?php } ?>
-        			},
-        			<?php foreach($locationLevel as $location) { ?>
-        			locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
-            			var url = "<?php echo $this->url('', array('controller' => 'search', 'action' => 'ajax')); ?>";
-            			var level = <?php echo $this->escape($location["child"]); ?>;
-            			var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
-            			$.getJSON(url + "/level/" + level + "/parent/" + parent).done(function(result) {
-                			var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
-                			$.each(result, function( index, value ) {
-                    			htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
-                			});
-                			$('#form-location-' + level).html(htmlOptins);
-            			});
-        			},
-        			<?php } ?>
-    			}
-    			page.init();
-			})(jQuery)
-			</script>
-		</div>
-		<div class="col-md-9">
-			<?php foreach($itemList as $item) { ?>
-	        <?php include $this->template('front/box'); ?>
-	        <?php } ?>
-		</div>
-	</div>
-	<?php } else { ?>
 	<?php foreach($itemList as $item) { ?>
 	<?php include $this->template('front/box'); ?>
-	<?php } ?>
 	<?php } ?>
 </div>
 <div class="clearfix"></div>

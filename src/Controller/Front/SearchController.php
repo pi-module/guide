@@ -185,7 +185,7 @@ class SearchController extends IndexController
         $this->view()->headTitle($seoTitle);
         $this->view()->headDescription($seoDescription, 'set');
         $this->view()->headKeywords($seoKeywords, 'set');
-        $this->view()->setTemplate('item_list');
+        $this->view()->setTemplate('search_result');
         $this->view()->assign('itemList', $itemList);
         $this->view()->assign('itemTitle', $title);
         $this->view()->assign('paginator', $paginator);

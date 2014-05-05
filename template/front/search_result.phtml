@@ -1,0 +1,69 @@
+<?php
+    $this->css(array(
+        $this->assetModule('css/front.css'),
+        $this->assetModule('script/system-ui.css', 'system'),
+    ));
+    $this->jQuery();
+    $this->backbone();
+    $this->js($this->assetModule('script/system-msg.js', 'system'));
+?>
+<div class="guide">
+	<?php include $this->template('front/category'); ?>
+	<?php include $this->template('front/special'); ?>
+	<?php if (isset($itemList)) { ?>
+	<div class="itemList clearfix">
+		<?php if ($config['view_title'] && isset($itemTitle) && !empty($itemTitle)) { ?>
+		<div class="page-header">
+			<h4><?php echo $itemTitle; ?></h4>
+		</div>
+		<?php } ?>
+		<div class="row">
+			<div class="col-md-3 well">
+				<div id="item-form">
+            		<?php include $this->template('front/search_form_wide'); ?>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<?php foreach($itemList as $item) { ?>
+	        	<?php include $this->template('front/box'); ?>
+	        	<?php } ?>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<?php } ?>
+	<div class="paginator"><?php echo $this->paginationControl($paginator, 'Sliding', 'paginator.phtml'); ?></div>
+</div>
+<script>
+(function($) {
+	var page = {
+        el: $('#item-form'),
+        modal: $('<div class="modal fade">').appendTo(document.body),
+        $: function(selector) {
+            return this.el.find(selector);
+        },
+        init: function() {
+        	_.bindAll(this);
+        	this.$('#item-find-location').on("click",this.locationAction);
+        	<?php foreach($locationLevel as $location) { ?>
+        		this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
+        	<?php } ?>
+        },
+        <?php foreach($locationLevel as $location) { ?>
+        locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
+        	var url = "<?php echo $this->url('', array('controller' => 'search', 'action' => 'ajax')); ?>";
+        	var level = <?php echo $this->escape($location["child"]); ?>;
+        	var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
+        	$.getJSON(url + "/level/" + level + "/parent/" + parent).done(function(result) {
+        		var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
+        		$.each(result, function( index, value ) {
+           			htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
+        		});
+        		$('#form-location-' + level).html(htmlOptins);
+        	});
+        },
+        <?php } ?>
+    }
+    page.init();
+})(jQuery)
+</script>

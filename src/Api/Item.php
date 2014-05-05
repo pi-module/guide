@@ -204,7 +204,7 @@ class Item extends AbstractApi
         $item['category'] = Json::decode($item['category']);
         foreach ($item['category'] as $category) {
             $item['categories'][$category]['title'] = $categoryList[$category]['title'];
-            $item['categories'][$category]['url'] = Pi::service('url')->assemble('guide', array(
+            $item['categories'][$category]['categoryUrl'] = Pi::service('url')->assemble('guide', array(
                 'module'        => $this->getModule(),
                 'controller'    => 'category',
                 'slug'          => $categoryList[$category]['slug'],

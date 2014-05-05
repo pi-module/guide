@@ -89,18 +89,7 @@ class Category extends AbstractApi
         $select = Pi::model('category', $this->getModule())->select()->where($where)->order($order);
         $rowset = Pi::model('category', $this->getModule())->selectWith($select);
         foreach ($rowset as $row) {
-            $return[$row->id] = $row->toArray();
-            $return[$row->id]['url'] = Pi::service('url')->assemble('guide', array(
-                'module'        => $this->getModule(),
-                'controller'    => 'category',
-                'slug'          => $return[$row->id]['slug'],
-            ));
-            $return[$row->id]['thumbUrl'] = Pi::url(
-                sprintf('upload/%s/thumb/%s/%s', 
-                    $config['image_path'], 
-                    $return[$row->id]['path'], 
-                    $return[$row->id]['image']
-                ));
+            $return[$row->id] = $this->canonizeCategory($row);
         }
         return $return;
     }  

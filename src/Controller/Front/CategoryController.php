@@ -82,12 +82,7 @@ class CategoryController extends IndexController
         $rowset = $this->getModel('category')->selectWith($select);
         // Make list
         foreach ($rowset as $row) {
-            $categories[$row->id] = $row->toArray();
-            $categories[$row->id]['url'] = $this->url('', array(
-                'module'        => $module,
-                'controller'    => 'category',
-                'slug'          => $categories[$row->id]['slug'],
-            ));
+            $categories[$row->id] = Pi::api('category', 'guide')->canonizeCategory($row);
         }
         // Set header and title
         $title = __('Category list');

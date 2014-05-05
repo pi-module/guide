@@ -66,24 +66,16 @@ class ItemController extends ActionController
         foreach ($rowset as $id) {
             $itemId[] = $id['item'];
         }
+        // Get category List
+        $categoryList = Pi::api('category', 'guide')->categoryList();
         // Set info
-        $columnItem = array('id', 'title', 'slug', 'status', 'time_create', 'time_update', 'time_start', 'time_end', 'recommended');
         $whereItem = array('id' => $itemId);
         // Get list of item
-        $select = $this->getModel('item')->select()->columns($columnItem)->where($whereItem)->order($order);
+        $select = $this->getModel('item')->select()->where($whereItem)->order($order);
         $rowset = $this->getModel('item')->selectWith($select);
         // Make list
         foreach ($rowset as $row) {
-            $item[$row->id] = $row->toArray();
-            $item[$row->id]['time_create_view'] = _date($item[$row->id]['time_create']);
-            $item[$row->id]['time_update_view'] = _date($item[$row->id]['time_update']);
-            $item[$row->id]['time_start_view'] = _date($item[$row->id]['time_start']);
-            $item[$row->id]['time_end_view'] = _date($item[$row->id]['time_end']);
-            $item[$row->id]['itemUrl'] = $this->url('guide', array(
-                'module'        => $module,
-                'controller'    => 'item',
-                'slug'          => $item[$row->id]['slug'],
-            ));
+            $item[$row->id] = Pi::api('item', 'guide')->canonizeItem($row, $categoryList);
         }
         // Go to update page if empty
         if (empty($item)) {
