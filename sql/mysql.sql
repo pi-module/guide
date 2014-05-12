@@ -249,7 +249,6 @@ CREATE TABLE `{customer}` (
     `uid` int(10) unsigned NOT NULL,
     `first_name` varchar (255) NOT NULL,
     `last_name` varchar (255) NOT NULL,
-    `email` varchar (64) NOT NULL,
     `phone` varchar (16) NOT NULL,
     `mobile` varchar (16) NOT NULL,
     `company` varchar (255) NOT NULL,
@@ -258,11 +257,13 @@ CREATE TABLE `{customer}` (
     `city` varchar (64) NOT NULL,
     `zip_code` varchar (16) NOT NULL,
     `ip` char(15) NOT NULL,
+    `time_create` int(10) unsigned NOT NULL,
+    `time_update` int(10) unsigned NOT NULL,
+    `status` tinyint(1) unsigned NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `uid` (`uid`),
     KEY `first_name` (`first_name`),
     KEY `last_name` (`last_name`),
-    KEY `email` (`email`),
     KEY `phone` (`phone`),
     KEY `mobile` (`mobile`)
 );

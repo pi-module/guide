@@ -1,0 +1,18 @@
+<?php
+    $this->css($this->assetModule('css/front.css'));
+?>
+<div class="guide">
+	<div class="guide-manage clearfix">
+        <div class="col-md-3">
+			<div class="list-group">
+				<a title="<?php _e('List of items'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'dashboard')); ?>" class="list-group-item"><?php _e('List of items'); ?></a>
+				<a title="<?php _e('New item'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'update')); ?>" class="list-group-item"><?php _e('New item'); ?></a>
+				<a title="<?php _e('Payment history'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'log')); ?>" class="list-group-item"><?php _e('Payment history'); ?></a>
+				<a title="<?php _e('Edit information'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'edit')); ?>" class="list-group-item active"><?php _e('Edit information'); ?></a>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<?php include $this->templateComponent('forms'); ?>
+		</div>
+	</div>
+</div>

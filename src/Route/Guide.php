@@ -82,7 +82,7 @@ class Guide extends Standard
                         $matches['slug'] = $this->decode($parts[2]);
                     } elseif($parts[1] == 'addReview') {
                         $matches['action'] = 'addReview';
-                        $matches['slug'] = $this->decode($parts[2]);    
+                        $matches['slug'] = $this->decode($parts[2]);
                     } elseif($parts[1] == 'service') {
                         $matches['action'] = 'service';
                         $matches['slug'] = $this->decode($parts[2]);
@@ -104,6 +104,7 @@ class Guide extends Standard
 
                 // manage controller
                 case 'manage':
+                    $matches['action'] = $this->decode($parts[1]);
 
                     break;
 

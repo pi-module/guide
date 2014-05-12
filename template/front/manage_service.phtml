@@ -1,0 +1,24 @@
+<?php
+    $this->css($this->assetModule('css/front.css'));
+?>
+<div class="guide">
+	<div class="guide-manage clearfix">
+        <div class="col-md-3">
+			<div class="list-group">
+				<a title="<?php _e('List of items'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'dashboard')); ?>" class="list-group-item"><?php _e('List of items'); ?></a>
+				<a title="<?php _e('New item'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'update')); ?>" class="list-group-item active"><?php _e('New item'); ?></a>
+				<a title="<?php _e('Payment history'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'log')); ?>" class="list-group-item"><?php _e('Payment history'); ?></a>
+				<a title="<?php _e('Edit information'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'edit')); ?>" class="list-group-item"><?php _e('Edit information'); ?></a>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="progress progress-striped active">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+					<span class="sr-only">60% Complete</span>
+				</div>
+			</div>
+			<div class="well well-small">Add extra service</div>
+			<p><a class="btn btn-success" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'payment')); ?>">Next</a></p>
+		</div>
+	</div>
+</div>
