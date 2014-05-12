@@ -98,19 +98,8 @@ class ManageController extends ActionController
 
     public function editAction()
     {
-        // Check user is login or not
-        Pi::service('authentication')->requireLogin();
-        // Get uid
-        $uid = Pi::user()->getId();
-        // Check is customer or not
-        $customer = $this->getModel('customer')->find($uid, 'uid');
-        if (empty($customer)) {
-        	return $this->redirect()->toRoute('', array(
-            	'controller' => 'manage',
-            	'action'     => 'register',
-        	));
-        }
-        $customer = $customer->toArray();
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set form
         $form = new CustomerForm('customer');
         if ($this->request->isPost()) {
@@ -142,61 +131,99 @@ class ManageController extends ActionController
         }
         // Set view
         $this->view()->setTemplate('manage_edit');
+        $this->view()->assign('customer', $customer);
         $this->view()->assign('form', $form);
     }
 
     public function dashboardAction()
     {
-        // Check user is login or not
-        Pi::service('authentication')->requireLogin();
-        // Get uid
-        $uid = Pi::user()->getId();
-        // Get is customer or not
-        $customer = $this->getModel('customer')->find($uid, 'uid');
-        if (empty($customer)) {
-        	return $this->redirect()->toRoute('', array(
-            	'controller' => 'manage',
-            	'action'     => 'register',
-        	));
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
+        // Set info
+        $where = array('customer' => $customer['id']);
+        $order = array('time_start DESC', 'id DESC');
+        // Get list of item
+        $select = $this->getModel('item')->select()->where($where)->order($order);
+        $rowset = $this->getModel('item')->selectWith($select);
+        foreach ($rowset as $row) {
+            $item[$row->id] = Pi::api('item', 'guide')->canonizeItemLight($row);
         }
-        $customer = $customer->toArray();
-
-
-
-
-
         // Set view
         $this->view()->setTemplate('manage_dashboard');
         $this->view()->assign('customer', $customer);
+        $this->view()->assign('list', $item);
     }
 
     public function updateAction()
     {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set view
         $this->view()->setTemplate('manage_update');
+        $this->view()->assign('customer', $customer);
     }
 
     public function attachAction()
     {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set view
         $this->view()->setTemplate('manage_attach');
+        $this->view()->assign('customer', $customer);
     }
 
     public function serviceAction()
     {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set view
         $this->view()->setTemplate('manage_service');
+        $this->view()->assign('customer', $customer);
     }
 
     public function paymentAction()
     {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set view
         $this->view()->setTemplate('manage_payment');
+        $this->view()->assign('customer', $customer);
+    }
+
+    public function finishAction()
+    {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
+        // Set view
+        $this->view()->setTemplate('manage_finish');
+        $this->view()->assign('customer', $customer);
     }
 
     public function logAction()
     {
+        // Canonize customer
+        $customer = $this->canonizeCustomer();
         // Set view
         $this->view()->setTemplate('manage_log');
+        $this->view()->assign('customer', $customer);
+    }
+
+    protected function canonizeCustomer()
+    {
+        // Check user is login or not
+        Pi::service('authentication')->requireLogin();
+        // Get uid
+        $uid = Pi::user()->getId();
+        // Check is customer or not
+        $customer = $this->getModel('customer')->find($uid, 'uid');
+        if (empty($customer)) {
+            return $this->redirect()->toRoute('', array(
+                'controller' => 'manage',
+                'action'     => 'register',
+            ));
+        }
+        $customer = $customer->toArray();
+        $customer['avatar'] = Pi::service('user')->avatar($uid, 'medium');
+        return $customer;
     }
 }

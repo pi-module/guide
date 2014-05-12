@@ -194,6 +194,8 @@ class Item extends AbstractApi
         // Set times
         $item['time_create_view'] = _date($item['time_create']);
         $item['time_update_view'] = _date($item['time_update']);
+        $item['time_start_view'] = _date($item['time_start']);
+        $item['time_end_view'] = _date($item['time_end']);
         // Set item url
         $item['itemUrl'] = Pi::service('url')->assemble('guide', array(
             'module'        => $this->getModule(),
@@ -258,6 +260,8 @@ class Item extends AbstractApi
         // Set times
         $item['time_create_view'] = _date($item['time_create']);
         $item['time_update_view'] = _date($item['time_update']);
+        $item['time_start_view'] = _date($item['time_start']);
+        $item['time_end_view'] = _date($item['time_end']);
         // Set item url
         $item['itemUrl'] = Pi::service('url')->assemble('guide', array(
             'module'        => $this->getModule(),
@@ -274,29 +278,6 @@ class Item extends AbstractApi
                     $item['image']
                 ));
         }
-        // unset
-        /* unset($item['category']);
-        unset($item['summary']);
-        unset($item['description']);
-        unset($item['seo_title']);
-        unset($item['seo_keywords']);
-        unset($item['seo_description']);
-        unset($item['comment']);
-        unset($item['point']);
-        unset($item['count']);
-        unset($item['favorite']);
-        unset($item['attach']);
-        unset($item['extra']);
-        unset($item['related']);
-        unset($item['review']);
-        unset($item['recommended']);
-        unset($item['stock']);
-        unset($item['stock_alert']);
-        unset($item['price_discount']);
-        unset($item['price_discount_view']);
-        unset($item['uid']);
-        unset($item['hits']);
-        unset($item['sales']); */
         // return item
         return $item; 
     }

@@ -4,6 +4,22 @@
 <div class="guide">
 	<div class="guide-manage clearfix">
         <div class="col-md-3">
+			<div class="thumbnail" style="padding: 10px;">
+        		<div class="media">
+            		<div class="pull-left">
+            			<?php echo $customer['avatar']; ?>
+            		</div>
+            		<div class="media-body">
+                		<h5 class="media-heading">
+                			<?php echo $this->escape($customer['first_name']); ?> 
+                			<?php echo $this->escape($customer['last_name']); ?>
+                		</h5>
+                		<span class="text-muted">
+                			<?php echo $this->escape($customer['company']); ?>
+                		</span>
+            		</div>
+        		</div>
+			</div>
 			<div class="list-group">
 				<a title="<?php _e('List of items'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'dashboard')); ?>" class="list-group-item"><?php _e('List of items'); ?></a>
 				<a title="<?php _e('New item'); ?>" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'update')); ?>" class="list-group-item"><?php _e('New item'); ?></a>
