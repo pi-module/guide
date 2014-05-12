@@ -1,7 +1,13 @@
 <?php
-    $this->css($this->assetModule('css/front.css'));
+    $this->css(array(
+        $this->assetModule('css/front.css'),
+        $this->assetModule('script/system-ui.css', 'system'),
+    ));
+    $this->jQuery();
+    $this->backbone();
+    $this->js($this->assetModule('script/system-msg.js', 'system'));
 ?>
-<div class="guide">
+<div id="item-form" class="guide">
 	<div class="guide-manage clearfix">
         <div class="col-md-3">
 			<div class="thumbnail" style="padding: 10px;">
@@ -33,8 +39,54 @@
 					<span class="sr-only">20% Complete</span>
 				</div>
 			</div>
-			<div class="well well-small">Add basic information</div>
-			<p><a class="btn btn-success" href="<?php echo $this->url('', array('controller' => 'manage', 'action' => 'attach')); ?>">Next</a></p>
+            <?php include $this->templateComponent('forms'); ?>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+(function($){
+    $("#item-form").on("click","#item-remove-image",function(){
+        systemMessage.wait("<?php _e('Remove image item in process'); ?>");
+        $.getJSON($(this).attr("data-link")).done(function(result){
+            if(result.status==1){
+                systemMessage.succ(result.message);
+            }else{
+                systemMessage.fail(result.message);
+            }
+        });
+    });
+})(jQuery)
+</script>
+<script>
+(function($) {
+    var page = {
+        el: $('#item-form'),
+        modal: $('<div class="modal fade">').appendTo(document.body),
+        $: function(selector) {
+            return this.el.find(selector);
+        },
+        init: function() {
+            _.bindAll(this);
+            this.$('#item-find-location').on("click",this.locationAction);
+            <?php foreach($locationLevel as $location) { ?>
+            this.$('#form-location-<?php echo $this->escape($location["id"]); ?>').on("change",this.locationElement<?php echo $this->escape($location["id"]); ?>Action);
+            <?php } ?>
+        },
+        <?php foreach($locationLevel as $location) { ?>
+        locationElement<?php echo $this->escape($location["id"]); ?>Action: function(e) {
+            var url = "<?php echo $this->url('', array('controller' => 'location', 'action' => 'formElementAjax')); ?>";
+            var level = <?php echo $this->escape($location["child"]); ?>;
+            var parent = $('#form-location-<?php echo $this->escape($location["id"]); ?>').val();
+            $.getJSON(url + "level/" + level + "/parent/" + parent).done(function(result) {
+                var htmlOptins = "<option value='0'><?php _e('Select element'); ?></option>";
+                $.each(result, function( index, value ) {
+                    htmlOptins = htmlOptins + "<option value='" + value.id + "'>" + value.title + "</option>";
+                });
+                $('#form-location-' + level).html(htmlOptins);
+            });
+        },
+        <?php } ?>
+    }
+    page.init();
+})(jQuery)
+</script>

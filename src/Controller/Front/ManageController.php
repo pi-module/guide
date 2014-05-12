@@ -14,11 +14,31 @@ namespace Module\Guide\Controller\Front;
 
 use Pi;
 use Pi\Mvc\Controller\ActionController;
+use Pi\File\Transfer\Upload;
 use Module\Guide\Form\CustomerForm;
 use Module\Guide\Form\CustomerFilter;
+use Module\Guide\Form\ItemSimpleForm;
+use Module\Guide\Form\ItemSimpleFilter;
+use Zend\Json\Json;
 
 class ManageController extends ActionController
 {
+    /**
+     * Item Image Prefix
+     */
+    protected $ImageItemPrefix = 'item_';
+
+    /**
+     * Item Columns
+     */
+    protected $itemColumns = array(
+        'id', 'title', 'slug', 'type', 'category', 'summary', 'description', 'seo_title', 'seo_keywords', 'seo_description', 
+        'status', 'time_create', 'time_update', 'time_start', 'time_end', 'uid', 'customer', 'package','hits', 'image', 
+        'path', 'vote', 'rating', 'favourite', 'service', 'attach', 'extra', 'review', 'recommended', 'map_longitude', 
+        'map_latitude', 'location', 'location_level', 'address1', 'address2', 'city', 'area', 'zipcode', 'phone1', 
+        'phone2', 'mobile', 'website', 'email'
+    );
+
     /**
      * customer Columns
      */
@@ -158,9 +178,153 @@ class ManageController extends ActionController
     {
         // Canonize customer
         $customer = $this->canonizeCustomer();
+        // Get id
+        $id = $this->params('id');
+        $module = $this->params('module');
+        $option = array();
+        $location = '';
+        // Find item
+        if ($id) {
+            $item = $this->getModel('item')->find($id)->toArray();
+            $item['category'] = Json::decode($item['category']);
+            // Set image
+            if ($item['image']) {
+                $thumbUrl = sprintf('upload/%s/thumb/%s/%s', $this->config('image_path'), $item['path'], $item['image']);
+                $option['thumbUrl'] = Pi::url($thumbUrl);
+                $option['removeUrl'] = $this->url('', array('action' => 'remove', 'id' => $item['id']));
+            }
+            // Set location
+            $location = $item['location'];
+        }
+        // Get extra field
+        $fields = Pi::api('extra', 'guide')->Get();
+        $option['field'] = $fields['extra'];
+        // Get location
+        $option['location'] = Pi::api('location', 'guide')->locationForm($location);
+        // Set form
+        $form = new ItemSimpleForm('item', $option);
+        $form->setAttribute('enctype', 'multipart/form-data');
+        if ($this->request->isPost()) {
+            $data = $this->request->getPost();
+            $file = $this->request->getFiles();
+            // Form filter
+            $form->setInputFilter(new ItemSimpleFilter($option));
+            $form->setData($data);
+            if ($form->isValid()) {
+                $values = $form->getData();
+                // Set extra data array
+                if (!empty($fields['field'])) {
+                    foreach ($fields['field'] as $field) {
+                        $extra[$field]['field'] = $field;
+                        $extra[$field]['data'] = $values[$field];
+                    }
+                }
+                // Set location
+                if (!empty($option['location'])) {
+                    foreach ($option['location'] as $location) {
+                        $element = sprintf('location-%s', $location['id']);
+                        $element = $values[$element];
+                        if (isset($element) && !empty($element)) {
+                            $values['location'] = $element;
+                            $values['location_level'] = $location['id'];
+                        }
+                    }
+                }
+                // upload image
+                if (!empty($file['image']['name'])) {
+                    // Set upload path
+                    $values['path'] = sprintf('%s/%s', date('Y'), date('m'));
+                    $originalPath = Pi::path(sprintf('upload/%s/original/%s', $this->config('image_path'), $values['path']));
+                    // Upload
+                    $uploader = new Upload;
+                    $uploader->setDestination($originalPath);
+                    $uploader->setRename($this->ImageItemPrefix . '%random%');
+                    $uploader->setExtension($this->config('image_extension'));
+                    $uploader->setSize($this->config('image_size'));
+                    if ($uploader->isValid()) {
+                        $uploader->receive();
+                        // Get image name
+                        $values['image'] = $uploader->getUploaded('image');
+                        // process image
+                        Pi::api('image', 'guide')->process($values['image'], $values['path']);
+                    } else {
+                        $this->jump(array('action' => 'update'), __('Problem in upload image. please try again'));
+                    }
+                } elseif (!isset($values['image'])) {
+                    $values['image'] = '';  
+                }
+                // Set just item fields
+                foreach (array_keys($values) as $key) {
+                    if (!in_array($key, $this->itemColumns)) {
+                        unset($values[$key]);
+                    }
+                }
+                // Category
+                $values['category'] = Json::encode(array_unique($values['category']));
+                // Set seo_title
+                $values['seo_title'] = Pi::api('text', 'guide')->title($values['title']);
+                // Set seo_keywords
+                $values['seo_keywords'] = Pi::api('text', 'guide')->keywords($values['title']);
+                // Set seo_description
+                $values['seo_description'] = Pi::api('text', 'guide')->description($values['title']);
+                // Set slug
+                $values['slug'] = Pi::api('text', 'guide')->slug($values['title'] . ' ' . rand('100', '999'));
+                // Set time
+                if (empty($values['id'])) {
+                    $values['time_create'] = time();
+                    $values['uid'] = Pi::user()->getId();
+                    $values['customer'] = $customer['id'];
+                }
+                $values['time_update'] = time();
+                // Save values
+                if (!empty($values['id'])) {
+                    $row = $this->getModel('item')->find($values['id']);
+                } else {
+                    $row = $this->getModel('item')->createRow();
+                }
+                $row->assign($values);
+                $row->save();
+                // Category
+                Pi::api('category', 'guide')->setLink(
+                    $row->id, 
+                    $row->category, 
+                    $row->time_create, 
+                    $row->time_update, 
+                    $row->time_start, 
+                    $row->time_end, 
+                    $row->status,
+                    $row->rating,
+                    $row->hits
+                );
+                // Extra
+                if (!empty($extra)) {
+                    Pi::api('extra', 'guide')->Set($extra, $row->id);
+                }
+                // Check it save or not
+                if ($row->id) {
+                    $message = __('Item data saved successfully.');
+                    $this->jump(array('action' => 'attach'), $message);
+                }
+            }   
+        } else {
+            if ($id) {
+                // Get Extra
+                $item = Pi::api('extra', 'guide')->Form($item);
+                // Set time
+                $item['time_start'] = date('Y-m-d', $item['time_start']);
+                $item['time_end'] = date('Y-m-d', $item['time_end']);
+                // Set location
+                $name = sprintf('location-%s', $item['location_level']);
+                $item[$name] = $item['location'];
+                // Set data 
+                $form->setData($item);
+            }
+        }
         // Set view
         $this->view()->setTemplate('manage_update');
         $this->view()->assign('customer', $customer);
+        $this->view()->assign('form', $form);
+        $this->view()->assign('locationLevel', $option['location']);
     }
 
     public function attachAction()

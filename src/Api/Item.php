@@ -194,8 +194,8 @@ class Item extends AbstractApi
         // Set times
         $item['time_create_view'] = _date($item['time_create']);
         $item['time_update_view'] = _date($item['time_update']);
-        $item['time_start_view'] = _date($item['time_start']);
-        $item['time_end_view'] = _date($item['time_end']);
+        $item['time_start_view'] = (empty($item['time_start'])) ? '' : _date($item['time_start']);
+        $item['time_end_view'] = (empty($item['time_end'])) ? '' : _date($item['time_end']);
         // Set item url
         $item['itemUrl'] = Pi::service('url')->assemble('guide', array(
             'module'        => $this->getModule(),
@@ -260,8 +260,8 @@ class Item extends AbstractApi
         // Set times
         $item['time_create_view'] = _date($item['time_create']);
         $item['time_update_view'] = _date($item['time_update']);
-        $item['time_start_view'] = _date($item['time_start']);
-        $item['time_end_view'] = _date($item['time_end']);
+        $item['time_start_view'] = (empty($item['time_start'])) ? '' : _date($item['time_start']);
+        $item['time_end_view'] = (empty($item['time_end'])) ? '' : _date($item['time_end']);
         // Set item url
         $item['itemUrl'] = Pi::service('url')->assemble('guide', array(
             'module'        => $this->getModule(),
