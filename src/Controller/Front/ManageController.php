@@ -372,6 +372,17 @@ class ManageController extends ActionController
         $this->view()->assign('customer', $customer);
     }
 
+    public function formElementAjaxAction()
+    {
+        $this->view()->setTemplate(false);
+        // Get id
+        $level = $this->params('level');
+        $parent = $this->params('parent');
+        // find
+        $element = Pi::api('location', 'guide')->locationFormElement($level, $parent);
+        return $element;
+    }
+
     protected function canonizeCustomer()
     {
         // Check user is login or not

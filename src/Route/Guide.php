@@ -105,7 +105,12 @@ class Guide extends Standard
                 // manage controller
                 case 'manage':
                     $matches['action'] = $this->decode($parts[1]);
-
+                    if (isset($parts[2]) && $parts[2] == 'level') {
+                        $matches['level'] = intval($parts[3]);
+                    }
+                    if (isset($parts[4]) && $parts[4] == 'parent') {
+                        $matches['parent'] = intval($parts[5]);
+                    }
                     break;
 
                 // package controller
@@ -143,7 +148,6 @@ class Guide extends Standard
                     break;
             }    
         } 
-
         return $matches;
     }
 
@@ -187,6 +191,16 @@ class Guide extends Standard
         // Set slug
         if (!empty($mergedParams['slug'])) {
             $url['slug'] = $mergedParams['slug'];
+        }
+
+        // Set level
+        if (!empty($mergedParams['level'])) {
+            $url['level'] = $mergedParams['level'];
+        }
+
+        // Set parent
+        if (!empty($mergedParams['parent'])) {
+            $url['parent'] = $mergedParams['parent'];
         }
 
         // Set id
